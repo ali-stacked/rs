@@ -1,0 +1,25 @@
+
+:host(.add-actions-divider, .add-user-divider) {
+
+
+
+  --divider-color: var(--top-navbar-divider-color);
+  --divider-spacing: calc(var(--top-navbar-spacing) * 2);
+
+  &.add-actions-divider {
+    .navbar-actions {
+      position: relative;
+      padding-inline-start: calc(var(--divider-spacing) + var(--divider-width));
+
+    }
+  }
+
+  &.add-user-divider {
+    .navbar-user {
+      position: relative;
+      padding-inline-start: calc(var(--divider-spacing) + var(--divider-width));
+
+
+    }
+  }
+}

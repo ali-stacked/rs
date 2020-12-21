@@ -1,0 +1,54 @@
+@import 'third-party/font-awesome';
+@import 'third-party/bootstrap';
+@import 'third-party/override-material-variables';
+
+html, body { height: 100%; }
+body { margin: 0;}
+
+/* top navigation */
+.mat-toolbar-row, .mat-toolbar-single-row {
+  background-color: #000000;
+}
+
+.navbar-user.bigal {
+
+}
+
+.fa-bars:before {
+  padding-left:10px !important;
+}
+.banner-text {
+  font-weight:100 !important;
+  margin-left:2rem;
+  margin-bottom: 16rem;
+}
+.lead {display: none;}
+.lead {
+  text-align: center !important;
+  font-size: 10em;
+}
+.site-footer .section .container {
+  max-width: 1490px;
+  padding-top: 100px;
+  padding-bottom: 88px;
+}
+.banner-h1-bigal {
+  font-family: "Helvetica | Raleway";
+  font-size: 2.5rem;
+  font-weight: 100 !important;
+  color: #fff;
+}
+
+mat-icon {
+  // Override Bootstrap reboot styles
+  svg {
+    vertical-align: baseline;
+  }
+}
+
+// Include Color Palettes
+@import './palettes/palette-1/root';
+@import './palettes/palette-2/root';
+
+// Just to debug responsive stuff
+//@import 'mixins/debug-breakpoints';

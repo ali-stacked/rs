@@ -1,0 +1,67 @@
+<div class="container-fluid content-wrapper">
+
+  <div class="page-title-wrapper">
+    <h1 class="page-title">Big Data, Big Performance</h1>
+    <span class="page-subtitle">Simple table with or without stripes. To remove the stripes, just remove the <code>table-striped</code> class.</span>
+  </div>
+
+  <div class="row">
+    <div class="col-12 table-wrapper table-responsive">
+      <table mat-table [dataSource]="dataSource" class="table table-borderless table-striped">
+        <ng-container matColumnDef="singles_winner_player">
+          <th mat-header-cell *matHeaderCellDef> Player </th>
+          <td mat-cell *matCellDef="let element"> {{element.singles_winner_player}} </td>
+        </ng-container>
+        <ng-container matColumnDef="singles_winner_player_id">
+          <th mat-header-cell *matHeaderCellDef> ID</th>
+          <td mat-cell *matCellDef="let element"> {{element.singles_winner_player_id}} </td>
+        </ng-container>
+        <ng-container matColumnDef="rankingPoints">
+          <th mat-header-cell *matHeaderCellDef> Ranking Points </th>
+          <td mat-cell *matCellDef="let element"> {{element.rankingPoints}} </td>
+        </ng-container>
+        <ng-container matColumnDef="tourney_name">
+          <th mat-header-cell *matHeaderCellDef> Tournament </th>
+          <td mat-cell *matCellDef="let element"> {{element.tourney_name}} </td>
+        </ng-container>
+        <ng-container matColumnDef="tourney_surface">
+          <th mat-header-cell *matHeaderCellDef> Tournament Surface </th>
+          <td mat-cell *matCellDef="let element"> {{element.tourney_surface}} </td>
+        </ng-container>
+        <ng-container matColumnDef="tourney_dates">
+          <th mat-header-cell *matHeaderCellDef> Tournament Dates</th>
+          <td mat-cell *matCellDef="let element"> {{element.tourney_dates}} </td>
+        </ng-container>
+        <ng-container matColumnDef="tourney_year">
+          <th mat-header-cell *matHeaderCellDef> Year </th>
+          <td mat-cell *matCellDef="let element"> {{element.tourney_year}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="tourney_conditions">
+          <th mat-header-cell *matHeaderCellDef> Conditions </th>
+          <td mat-cell *matCellDef="let element"> {{element.tourney_conditions}} </td>
+        </ng-container>
+
+    
+
+        <ng-container matColumnDef="tourney_location">
+          <th mat-header-cell *matHeaderCellDef> Location </th>
+          <td mat-cell *matCellDef="let element"> {{element.tourney_location}} </td>
+        </ng-container>
+
+         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,94 @@
+@import 'palettes/shared';
+
+@mixin button() {
+  // colors that can be redefined:
+  // --button-background-color
+  // --button-border-color
+  // --button-color
+
+  $default-background-color: #{palette-color('primary')}; // --button-background-color
+  $default-border-color: #{palette-color('primary')}; // --button-border-color
+  $default-color: #{palette-color('white')}; // --button-color
+
+  background-color: var(--button-background-color, $default-background-color);
+  border-color: var(--button-border-color, $default-border-color);
+  border-radius: 6px;
+  border-style: solid;
+  border-width: 1px;
+  color: var(--button-color, $default-color);
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: normal;
+  padding: 6px 12px;
+  transition: border-color .5s, color .5s, background-color .5s;
+
+  &:hover {
+    &:not([disabled]) {
+      background-color: var(--button-color, $default-color);
+      border-color: var(--button-border-color, $default-border-color);
+      color: var(--button-background-color, $default-background-color);
+    }
+  }
+
+  &:active,
+  &.active,
+  &:focus,
+  &.focus {
+    &:not([disabled]) {
+      background-color: var(--button-color, $default-color);
+      border-color: var(--button-border-color, $default-border-color);
+      color: var(--button-background-color, $default-background-color);
+    }
+  }
+
+  &[disabled] {
+    cursor: not-allowed;
+    opacity: .5;
+  }
+}
+
+@mixin button-outline() {
+  // colors that can be redefined:
+  // --button-background-color
+  // --button-border-color
+  // --button-color
+
+  $default-background-color: #{palette-color('white')}; // --button-background-color
+  $default-border-color: #{palette-color('primary')}; // --button-border-color
+  $default-color: #{palette-color('primary')}; // --button-color
+
+  background-color: var(--button-background-color, $default-background-color);
+  border-color: var(--button-border-color, $default-border-color);
+  border-radius: 6px;
+  border-style: solid;
+  border-width: 1px;
+  color: var(--button-color, $default-color);
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: normal;
+  padding: 6px 12px;
+  transition: border-color .5s, color .5s, background-color .5s;
+
+  &:hover {
+    &:not([disabled]) {
+      background-color: var(--button-color, $default-color);
+      border-color: var(--button-border-color, $default-border-color);
+      color: var(--button-background-color, $default-background-color);
+    }
+  }
+
+  &:active,
+  &.active,
+  &:focus,
+  &.focus {
+    &:not([disabled]) {
+      background-color: var(--button-color, $default-color);
+      border-color: var(--button-border-color, $default-border-color);
+      color: var(--button-background-color, $default-background-color);
+    }
+  }
+  &[disabled] {
+    cursor: not-allowed;
+    opacity: .5;
+  }
+}
