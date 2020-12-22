@@ -8,7 +8,6 @@ const apiKey: string = environment.weatherApiKey;
 @Injectable()
 export class WeatherService {
 
-
   constructor(private http: HttpClient) {}
 
   getCurrentWeather(loc: string) {
@@ -18,8 +17,8 @@ export class WeatherService {
     return this.http.get(`${environment.weatherApiKey}/forecast?q=${loc}&appid=${apiKey}`)
   }
   getUv(lat: number, lon: number) {
-    let startDate = Math.round(+moment(new Date()).subtract(1, 'week').toDate() / 1000);
-    let endDate = Math.round(+moment(new Date()).add(1, 'week').toDate() / 1000);
+    const startDate = Math.round(+moment(new Date()).subtract(1, 'week').toDate() / 1000);
+    const endDate = Math.round(+moment(new Date()).add(1, 'week').toDate() / 1000);
     return this.http.get(`${environment.weatherApiKey}/uvi/history?lat=${lat}&lon=${lon}&start=${startDate}&end=${endDate}&appid=${apiKey}`)
   }
 

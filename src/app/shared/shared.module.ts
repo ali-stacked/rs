@@ -50,16 +50,14 @@ import { ShowHidePasswordComponent } from './show-hide-password/show-hide-passwo
 import { ShowHideInputDirective } from './show-hide-password/show-hide-input.directive';
 import { AlertTemplateComponent } from './alert-template/alert-template.component';
 import { NotificationTemplateComponent } from './notification-template/notification-template.component';
-import { SpinnerComponent } from './spinner/spinner.component';
-
+import { NgxSpinnerModule } from 'ngx-spinner';
 @NgModule({
   declarations: [
     FileUploaderDirective,
     ShowHidePasswordComponent,
     ShowHideInputDirective,
     AlertTemplateComponent,
-    NotificationTemplateComponent,
-    SpinnerComponent
+    NotificationTemplateComponent
   ],
   entryComponents: [
     AlertTemplateComponent,
@@ -74,6 +72,7 @@ import { SpinnerComponent } from './spinner/spinner.component';
     MatDialogModule,
     MatSnackBarModule,
     ReactiveFormsModule,
+    NgxSpinnerModule
     // HttpClientModule
   ],
   exports: [
@@ -124,6 +123,7 @@ import { SpinnerComponent } from './spinner/spinner.component';
     NgbCarouselModule,
     NgbTabsetModule,
     NgbTypeaheadModule,
+    NgxSpinnerModule,
     NgbDropdownModule
   ]
 })

@@ -14,8 +14,8 @@ import {CrmDashboardResolver} from '../resolvers/dashboards.resolver';
 import {DashboardsService} from '../services/dashboards.service';
 import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material';
-
-
+import {WorkComponent } from './work/work.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 
 export const homeRoutes = [
@@ -56,7 +56,8 @@ export const homeRoutes = [
     AutocompleteComponent,
     FileUploaderComponent,
     CreateAccountModalComponent,
-    SignInModalComponent
+    SignInModalComponent,
+    WorkComponent
   ],
   providers: [
     UtilitiesService,
@@ -72,7 +73,8 @@ export const homeRoutes = [
     SharedModule,
     RouterModule.forChild(homeRoutes),
     MatListModule,
-    MatCardModule
-  ]
+    MatCardModule,
+    NgxSpinnerModule
+  ],  exports: [AliComponent]
 })
 export class HomeModule { }

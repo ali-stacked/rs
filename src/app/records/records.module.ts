@@ -20,6 +20,7 @@ import {environment} from '../../environments/environment';
 import {AngularFireModule} from '@angular/fire';
 import {AngularFireStorageModule} from '@angular/fire/storage';
 import { BigDataComponent } from './big-data/big-data.component';
+import { PlayerDetailComponent } from './player-detail/player-detail.component';
 
 export const recordRoutes = [
   {
@@ -62,7 +63,8 @@ export const recordRoutes = [
     ExtendedTablesComponent,
     SmartTablesComponent,
     TennisFiltersComponent,
-    BigDataComponent
+    BigDataComponent,
+    PlayerDetailComponent
   ],
   imports: [
     CommonModule,
