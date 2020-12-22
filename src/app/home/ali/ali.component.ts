@@ -35,6 +35,6 @@ export class AliComponent implements OnInit {
     this.spinner.show();
     setTimeout(() => {
       this.spinner.hide();
-    }, 2000);
+    }, 6000);
   }
 }
