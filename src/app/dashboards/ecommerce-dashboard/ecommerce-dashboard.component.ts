@@ -1,10 +1,12 @@
 import { Component, PLATFORM_ID, Inject, ViewChild, OnInit } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import * as echarts from 'echarts/lib/echarts';
+import {NewsService} from '../../services/news.service';
 /** echarts theme: */
 import '../../../theme/echarts-theme.js';
 import { ActivatedRoute } from '@angular/router';
 import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
+
 
 @Component({
   selector: 'app-ecommerce-dashboard',
@@ -17,6 +19,7 @@ import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
 export class EcommerceDashboardComponent implements OnInit {
 
   isBrowser: boolean;
+  news;
   values: any;
   chartColors: any = {
     success: '#28a745',
@@ -43,9 +46,11 @@ export class EcommerceDashboardComponent implements OnInit {
 
 
   constructor(
-    @Inject(PLATFORM_ID) private platformId: object,
-    private route: ActivatedRoute
+      @Inject(PLATFORM_ID) private platformId: object,
+      private newsService: NewsService,
+      private route: ActivatedRoute
   ) {
+
     this.isBrowser = isPlatformBrowser(platformId);
     // tslint:disable-next-line:no-string-literal
     this.recentOrdersTableDataSource = new MatTableDataSource(route.snapshot.data['data'].recentOrdersData);
@@ -379,7 +384,7 @@ export class EcommerceDashboardComponent implements OnInit {
         barMaxWidth: 8
       },
       {
-        name: 'Afilliate Driven',
+        name: 'Affiliate Driven',
         type: 'bar',
         data: [300, 350, 420, 370, 390, 370, 400, 421, 589, 650, 500, 400],
         animationDelay: (idx) => idx * 10,
@@ -638,28 +643,26 @@ export class EcommerceDashboardComponent implements OnInit {
     animationEasing: 'elasticOut',
     animationDelayUpdate: (idx) => idx * 5
   };
-
   ngOnInit() {
-
+  this.getNews();
     // define a custom sort for the date field
-    this.recentOrdersTableDataSource.sortingDataAccessor = (item, property) => {
+  this.recentOrdersTableDataSource.sortingDataAccessor = (item, property) => {
       switch (property) {
         case 'date': return new Date(item.date);
         default: return item[property];
       }
     };
-    this.recentOrdersTableDataSource.sort = this.recentOrdersSort;
+  this.recentOrdersTableDataSource.sort = this.recentOrdersSort;
 
     // define a custom sort for the date field
-    this.latestTicketsTableDataSource.sortingDataAccessor = (item, property) => {
+  this.latestTicketsTableDataSource.sortingDataAccessor = (item, property) => {
       switch (property) {
         case 'created_date': return new Date(item.created_date);
         default: return item[property];
       }
     };
-    this.latestTicketsTableDataSource.sort = this.latestTicketsSort;
-
-    this.latestTicketsTableDataSource.paginator = this.latestTicketsPaginator;
+  this.latestTicketsTableDataSource.sort = this.latestTicketsSort;
+  this.latestTicketsTableDataSource.paginator = this.latestTicketsPaginator;
   }
 
   generateSalesTodayXAxis(items: number) {
@@ -668,5 +671,12 @@ export class EcommerceDashboardComponent implements OnInit {
       data.push(i.toString());
     }
     return data;
+  }
+
+  getNews(): void {
+    this.newsService.getTopNews().subscribe(result => {
+      this.news = result;
+    });
+
   }
 }

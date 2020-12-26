@@ -13,7 +13,7 @@
   // Used mainly at the start and end of the navbar
   --top-navbar-padding: 55px;
   // Used mainly to space items inside the navbar
-  --top-navbar-spacing: 10px;
+  --top-navbar-spacing: 5px;
 
   --top-navbar-controls-height: calc(var(--top-navbar-height) / 2);
   --top-navbar-icon-size: calc(var(--top-navbar-spacing) * 3);
@@ -26,11 +26,12 @@
     .navbar-title {
       display: block;
       flex-grow: 1;
-      padding-inline-end: calc(var(--top-navbar-spacing) * 2);
+      //padding-inline-end: calc(var(--top-navbar-spacing) * 2);
     }
 
     .navbar-user {
-      margin-inline-start: auto;
+      //margin-inline-start: auto;
+      margin-inline-start: 2px;
     }
 
     .navbar-search {
@@ -46,7 +47,7 @@
   mat-toolbar {
     background: #000000;
     color: var(--top-navbar-color);
-    padding: 0px var(--top-navbar-padding);
+    //padding: 0px var(--top-navbar-padding);
   }
   mat-toolbar-row {
     height: var(--top-navbar-height);
@@ -57,7 +58,7 @@
     .navbar-controls {
       flex: 1 0 auto;
       display: flex;
-      align-items: center;
+      //align-items: center;
     } // .navbar-controls
 
     .navbar-search {

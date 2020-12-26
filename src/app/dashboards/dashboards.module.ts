@@ -9,11 +9,28 @@ import { NgxEchartsModule } from 'ngx-echarts';
 import { DashboardsService } from '../services/dashboards.service';
 import { CrmDashboardComponent } from './crm-dashboard/crm-dashboard.component';
 import { EcommerceDashboardResolver, CrmDashboardResolver } from '../resolvers/dashboards.resolver';
+import { NewsService } from '../services/news.service';
+import {NewsDashboardComponent} from './news-dashboard/crm-dashboard.component';
+import {TeamDashboardComponent} from './team-dashboard/crm-dashboard.component';
 
 export const dashboardRoutes = [
   {
     path: '',
-    redirectTo: 'ecommerce'
+    redirectTo: 'news'
+  },
+  {
+    path: 'news',
+    component: NewsDashboardComponent,
+    resolve: {
+      data : CrmDashboardResolver
+    }
+  },
+  {
+    path: 'team',
+    component: TeamDashboardComponent,
+    resolve: {
+      data : CrmDashboardResolver
+    }
   },
   {
     path: 'ecommerce',
@@ -32,7 +49,7 @@ export const dashboardRoutes = [
 ];
 
 @NgModule({
-  declarations: [EcommerceDashboardComponent, CrmDashboardComponent],
+  declarations: [EcommerceDashboardComponent, TeamDashboardComponent, NewsDashboardComponent, CrmDashboardComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(dashboardRoutes),
@@ -42,7 +59,8 @@ export const dashboardRoutes = [
   providers: [
     DashboardsService,
     EcommerceDashboardResolver,
-    CrmDashboardResolver
+    CrmDashboardResolver,
+    NewsService
   ]
 })
 export class DashboardsModule { }

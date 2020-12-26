@@ -15,7 +15,7 @@ import {DashboardsService} from '../services/dashboards.service';
 import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material';
 import {WorkComponent } from './work/work.component';
-import { NgxSpinnerModule } from 'ngx-spinner';
+import {NgxSpinnerModule } from 'ngx-spinner';
 
 
 export const homeRoutes = [

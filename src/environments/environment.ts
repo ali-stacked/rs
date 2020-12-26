@@ -15,7 +15,12 @@ export const environment = {
     messagingSenderId: '741097820073'
   }
 };
-
+    // projectId: 'realstack-fdadf',
+    //   apiKey:'AIzaSyCfuuM10IhiMDqK-IJiRc-dPFEjHcpcnR4',
+    // storageBucket: 'realstack-fdadf.appspot.com',
+    // messagingSenderId: '832322303841',
+    // authDomain: 'realstack-fdadf.firebaseapp.com',
+    // databaseURL: 'https://realstack-fdadf-default-rtdb.firebaseio.com',
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.

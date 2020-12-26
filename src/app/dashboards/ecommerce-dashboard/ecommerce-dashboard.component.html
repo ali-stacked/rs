@@ -7,8 +7,9 @@
         <div class="visualization-heading col-12">
           <div class="heading-info">
             <h2 class="heading-title">Overview</h2>
-            <p class="heading-message">
-              Ecommerce Data from <b>3 Sept 19</b> - <b>2 Feb 20</b>
+
+            <p class="heading-message" *ngFor=" let i of news">
+              {{i.source.name}} <b>3 Sept 19</b> - <b>2 Feb 20</b>
             </p>
           </div>
           <div class="heading-actions">

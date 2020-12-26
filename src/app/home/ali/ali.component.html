@@ -3,20 +3,27 @@
 <section class="top-banner-section">
   <!-- The CSS grid area that displays the image src="/assets/imgs/articles/key.jpeg" (layer 1) -->
   <div class="banner-image-div">
-    <img class="banner-image" src="/assets/imgs/articles/background.jpg" alt="Banner Image" />
+    <img class="banner-image" src="/assets/imgs/boss/pitt.jpg" alt="Banner Image" />
   </div>
   <!-- The CSS grid area that displays the semi-transparent gradient overlay (layer 2) -->
   <div class="banner-overlay-div"></div>
   <!-- The CSS grid area that displays the content (layer 3) -->
   <div class="banner-text-div">
     <span class="banner-text">
-      <p class="banner-h1-bigal nova">Lets Build The World Today </p>
-      <p class="lead nova">One Line of Tested Code At A Time.</p>
+      <h2 class="ship-it">Lets Build The World Today,<span class="contrast-color"> In Real-Time </span></h2>
+      <p class="lead nova">Stop Listening To Excuses, Stop Looking at Old Information</p>
       <p class="lead nova">People Science In Software Engineering.</p>
+      <p class="lead nova">One Line of Tested Code At A Time.</p>
+         <div class="flex-allday">
 
-      <p class="bigdata banner-btn" (click)="showSpinner()"><a class="banner-btn-item" [routerLink]="['/records/big-data']">Big Data</a></p>
+                     <p class="whoweare banner-btn" (click)="showSpinner()"><a class="banner-btn-item" [routerLink]="['/records/who-we-are/']">Who We Are</a></p>
+               <p class="viz banner-btn" (click)="showSpinner()"> <a class="banner-btn-item" [routerLink]="['/dashboards/ecommerce/']">Visualizations</a></p>
+              <p class="bigdata banner-btn" (click)="showSpinner()"> <a class="banner-btn-item" [routerLink]="['/records/big-data/']">Big Data</a></p>
 
-    </span>
+
+    </div>
+ </span>
+
 
     <ngx-spinner
             bdColor = "rgba(51, 51, 51, 0.8)"
@@ -25,7 +32,7 @@
             type = "pacman"></ngx-spinner>
   </div>
 </section>
-
+<div class="bg-na-blue white" style="letter-spacing:-1px; padding:5px 0 5px 6px;"><span class="bg-white na-blue" style="margin:0 3px 0 8px; padding:0 8px;"></span></div>
 
 <section id="test">
   <article class="content">

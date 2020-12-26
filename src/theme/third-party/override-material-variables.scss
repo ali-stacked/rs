@@ -1,11 +1,9 @@
 // Override Material Variables
 @import '~@angular/material/theming';
 // Define a custom typography config that overrides the font-family
-$custom-typography: mat-typography-config(
-  $font-family: 'Nunito, sans-serif'
-);
+
 // Override the typography in the core CSS.
-@include mat-core($custom-typography);
+
 
 // you can redefine these colors with your choosen palette colors
 

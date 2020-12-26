@@ -5,11 +5,17 @@
         <div class="item-header-content">
           <mat-panel-title>
             <mat-icon class="menu-item-icon" svgIcon="dashboards"></mat-icon>
-            <span class="menu-item-title">Visualizations</span>
+            <span class="menu-item-title">Real-Time Dashboards</span>
           </mat-panel-title>
         </div>
       </mat-expansion-panel-header>
       <ul class="menu-sub-navigation nav flex-column">
+        <li class="menu-item nav-item" [routerLinkActive]="['active']">
+          <a class="menu-link nav-link" [routerLinkActive]="['active']" [routerLink]="['/dashboards/news']">
+            <i class="menu-item-icon"></i>
+            <span class="menu-item-title">Real-Time News</span>
+          </a>
+        </li>
         <li class="menu-item nav-item" [routerLinkActive]="['active']">
           <a class="menu-link nav-link" [routerLinkActive]="['active']" [routerLink]="['/dashboards/ecommerce']">
             <i class="menu-item-icon"></i>
@@ -31,7 +37,7 @@
         <div class="item-header-content">
           <mat-panel-title>
             <mat-icon class="menu-item-icon" svgIcon="forms"></mat-icon>
-            <span class="menu-item-title">About Me</span>
+            <span class="menu-item-title">Business Intelligence Integrations</span>
           </mat-panel-title>
         </div>
       </mat-expansion-panel-header>
@@ -45,7 +51,7 @@
         <li class="menu-item nav-item" [routerLinkActive]="['active']">
           <a class="menu-link nav-link" [routerLinkActive]="['active']" [routerLink]="['/forms/stepper']">
             <i class="menu-item-icon"></i>
-            <span class="menu-item-title">Stepper / Wizard</span>
+            <span class="menu-item-title">Clients</span>
           </a>
         </li>
       </ul>
@@ -57,7 +63,7 @@
         <div class="item-header-content">
           <mat-panel-title>
             <mat-icon class="menu-item-icon" svgIcon="layouts"></mat-icon>
-            <span class="menu-item-title">Data Grids</span>
+            <span class="menu-item-title">Big Data Performance</span>
           </mat-panel-title>
         </div>
       </mat-expansion-panel-header>
@@ -90,3 +96,7 @@
     </mat-expansion-panel>
   </li>
 </ul>
+<ul>
+  <p [routerLink]="['/dashboards/team']" class="team">Who We Are</p>
+</ul>
+

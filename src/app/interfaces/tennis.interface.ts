@@ -1,5 +1,5 @@
 export interface BigData {
-singles_winner_player: string;
+singles_winner_name: string;
 tourney_dates: string;
 tourney_conditions: string;
 tourney_location: string;

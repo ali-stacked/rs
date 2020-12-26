@@ -4,12 +4,12 @@
   // // Default variables
 }
 
-.banner-h1-bigal {
-  font-family: "Helvetica | Raleway";
-  font-size: 6.5rem;
-  font-weight: 100 !important;
-  color: #fff;
-}
+//.banner-h1-bigal {
+//  font-family: "Helvetica | Raleway";
+//  font-size: 6.5rem;
+//  font-weight: 100 !important;
+//  color: #fff;
+//}
 
 .wrapper{
   display:grid;
@@ -113,12 +113,12 @@
   top: 80%;
 }
 
-.lead {
-  font-family: proxima-nova-1,proxima-nova-2,sans-serif;
-  font-size: 3.5rem;
-  font-weight: 100 !important;
-  color: #fff;
-}
+//.lead {
+//  font-family: Canela,Georgia,serif !important;
+//  font-size: 3.5rem;
+//  font-weight: 100 !important;
+//  color: #5553ff;
+//}
 
 .top-banner-section {
   display: grid;
@@ -155,14 +155,23 @@
 .banner-overlay-div {
   display: grid;
   max-width: 100%;
-  background: black;
+  background: none;
   background: linear-gradient(
       60deg,
-      rgba(0, 0, 0, 0.38) 20%,
+      rgba(0, 0, 0, 0.2) 20%,
       rgba(255, 255, 255, 0) 100%
   ); // start at black at the bottom left'ish and goes at a 60% angle. This will make the white easy to read with nearly any image.
 }
+.bg-na-blue {
+  background: #5553ff;
 
+}
+
+.white {
+  color: #fff;
+}
+.f2 {
+  font-size: 2.25rem;}
 // Banner html components (layer 3)
 // banner text
 .banner-text-div {
@@ -206,22 +215,7 @@
   margin-top: 1em;
 }
 
-.banner-btn-item {
-  color: #FFFFFF;
-  text-align: center;
-  padding: 1em;
-  margin-top: 2rem;
-  text-transform: uppercase;
-  font-weight: bold;
-  border: 1px solid white;
 
-  &:link {
-    text-decoration: none;
-  }
-  &:visited {
-    text-decoration: none;
-  }
-}
 
 .flex-container {
   display: flex;
@@ -249,11 +243,11 @@
     margin-bottom: calc(var(--page-spacing) * 3);
   }
 
-  .btn {
-    @include button();
-    margin-bottom: calc(var(--page-spacing) * 2.5);
-    width: 100%;
-  }
+  //.btn {
+  //  @include button();
+  //  margin-bottom: calc(var(--page-spacing) * 2.5);
+  //  width: 100%;
+  //}
 }
 
 

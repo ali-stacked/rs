@@ -2,37 +2,117 @@
 @import 'third-party/bootstrap';
 @import 'third-party/override-material-variables';
 
-html, body { height: 100%; }
-body { margin: 0;}
+html, body { height: 100%;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  font-family: Canela,Georgia,serif !important;
+}
 
 /* top navigation */
 .mat-toolbar-row, .mat-toolbar-single-row {
   background-color: #000000;
 }
 
+.mat-toolbar-row, .mat-toolbar-single-row .navbar-user {
+
+}
+
+//body > app-root > app-option-c-layout > mat-sidenav-container > mat-sidenav-content > app-top-navbar > mat-toolbar > mat-toolbar-row > div.navbar-user > div > cc-aspect-ratio > div > cc-image-shell > img {
+//  align-items: center !important;
+//}
+.ali-home {
+  color: #5553ff;
+  //margin-left:2px;
+  font-weight:500;
+  font-size: 1.7em;
+  font-style:oblique;
+}
+.contrast-color {
+  color:#fff;
+  font-weight: bolder;
+  //background-color: (0,0,0,0.7);
+}
+.ship-it {
+  font-size: 4em !important;
+  color:#5553ff;
+  line-height:.1.1;
+  font-weight:100 !important;
+  font-family: Canela,Georgia,serif !important;
+
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  font-feature-settings: 'lnum';
+  font-variant-numeric: lining-nums;
+}
+.ali-home:hover {
+cursor: pointer !important;
+}
+
+.strip-style a {
+  text-decoration: none !important;
+  color: #5553ff;
+  font-size: large;
+}
+
+.flex-allday {
+  margin: 10px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 .navbar-user.bigal {
-pointer-events: auto;
+  cursor: pointer;
 }
 .nav-user:hover {
-  pointer-events: auto;
+  cursor: pointer;
 }
 .bigdata.banner-btn:hover {
   pointer-events: auto;
+
 }
 
+.bigdata.banner-btn {
+  float:left;
+  margin-right:1em;
+}
+.wewhoare.banner-btn {
+float:right;
+}
+.banner-btn-item:hover {
+  color: #fff;
+  background-color: navy;
+  border: 1px navy solid;
+}
+.banner-btn-item {
+  color: #5553ff;
+  background-color: #FFFFFF;
+  border: 1px #5553ff solid;
+  font-size:1.1em;
+  padding: 1em;
+  text-transform: capitalize;
+}
 .fa-bars:before {
   padding-left:10px !important;
 }
 .banner-text {
-  font-weight:100 !important;
+  //font-weight:100 !important;
+  font-family: Canela,Georgia,serif;
   margin-left:2rem;
-  margin-bottom: 16rem;
+  margin-bottom: 30rem;
 }
 .lead {display: none;}
 .lead {
-  text-align: center !important;
-  font-weight:200;
-  font-size: 11em;
+  font-size: 2.4em !important;
+  color:#FFFFFF;
+  line-height:1;
+  text-align: center;
+  font-weight:600 !important;
+  font-family: Canela,Georgia,serif !important;
+  margin-bottom: 1em;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  font-feature-settings: 'lnum';
+  font-variant-numeric: lining-nums;
 }
 .site-footer .section .container {
   max-width: 1490px;
@@ -40,10 +120,14 @@ pointer-events: auto;
   padding-bottom: 88px;
 }
 .banner-h1-bigal {
-  font-family: "Helvetica | Raleway";
-  font-size: 12em;
-  font-weight: 100 !important;
+  font: 300 41px/1.05 Canela,Georgia,serif;
+  //font-size: 12em;
+  //font-weight: 100 !important;
   color: #fff;
+}
+
+.mat-toolbar h1 {
+  font-weight:100 !important;
 }
 
 mat-icon {

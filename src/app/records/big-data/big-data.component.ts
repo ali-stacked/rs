@@ -25,7 +25,7 @@ export class BigDataComponent implements OnInit {
   toggleFiltersLabel = 'Hide filters';
   tennisStats;
 
-  displayedColumns: string[] = ['singles_winner_player',
+  displayedColumns: string[] = ['singles_winner_name',
     'tourney_dates',
     'tourney_conditions',
     'tourney_location',
@@ -56,7 +56,7 @@ export class BigDataComponent implements OnInit {
     this.filtersForm = new FormGroup({
       search: new FormControl(''),
       categories: new FormControl([[]]),
-      date: new FormControl('')
+      tourney_dates: new FormControl('')
     });
     this.filtersForm.valueChanges.subscribe(form => this.applyFilters(form));
   }
@@ -72,7 +72,7 @@ export class BigDataComponent implements OnInit {
     // define a custom sort for the date field
     this.dataSource.sortingDataAccessor = (item, property) => {
       switch (property) {
-        case 'date': return new Date(item.date);
+        case 'tourney_dates': return new Date(item.date);
         default: return item[property];
       }
     };
@@ -90,15 +90,15 @@ export class BigDataComponent implements OnInit {
 
   // Run the filters for the table
   applyFilters(form): void {
-    const date = form.date ? new Date(form.date.year, (form.date.month - 1), form.date.day) : '';
+    const tourney_dates = form.tourney_dates ? new Date(form.tourney_dates.year, (form.tourney_dates.month - 1), form.tourney_dates.day) : '';
     // Note: JavaScript counts months from 0 to 11.
 
     const results = [];
     this.originalData.forEach(row => {
-      const filterDate = this.datePipe.transform(date, 'yyyy-MM-dd');
+      const filterDate = this.datePipe.transform(tourney_dates, 'yyyy-MM-dd');
       if (
         (this.categoryContains(row.category, this.categories)) &&
-        ((form.date === '') || (new Date(filterDate) > new Date(row.date)))
+        ((form.date === '') || (new Date(filterDate) > new Date(row.tourney_dates)))
       ) {
         results.push(row);
       }
@@ -117,7 +117,7 @@ export class BigDataComponent implements OnInit {
     this.filtersForm.reset({
       search: '',
       categories: [],
-      date: ''
+      tourney_dates: ''
     });
 
     this.categories = [];
@@ -129,7 +129,7 @@ export class BigDataComponent implements OnInit {
   }
 
   resetDatePicker(): void {
-    this.filtersForm.controls.date.reset('');
+    this.filtersForm.controls.tourney_dates.reset('');
   }
 
   // Check if a string contains another

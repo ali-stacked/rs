@@ -1,7 +1,5 @@
 <!-- Conditional template Outlet (see: https://stackoverflow.com/a/52448001/1116959) -->
 <ng-container *ngTemplateOutlet="(_mode === 'condensed') ? condensedToolbar : expandedToolbar;"></ng-container>
-
-
 <ng-template #condensedToolbar>
   <mat-toolbar class="top-navbar-toolbar">
     <div class="navbar-branding">
@@ -9,7 +7,7 @@
         <i class="fa fa-bars"></i>
       </button>
     </div>
-    <span [routerLink]="['/home/ali']" class="navbar-title">Ali Faqih</span>
+    <span [routerLink]="['/home/ali']" class="navbar-title">Real Stack</span>
     <div class="navbar-user">
       <div class="user-image-wrapper">
         <cc-aspect-ratio [ratio]="{w: 1, h: 1}">
@@ -17,12 +15,10 @@
                           [alt]="'user image'"></cc-image-shell>
         </cc-aspect-ratio>
       </div>
-
     </div>
   </mat-toolbar>
 </ng-template>
-
-  <ng-template #expandedToolbar>
+ <ng-template #expandedToolbar>
   <mat-toolbar class="top-navbar-toolbar">
     <mat-toolbar-row>
       <div class="navbar-branding">
@@ -31,14 +27,14 @@
           <i class="fa fa-bars"></i>
         </button>
       </div>
-
       <div class="navbar-user" [routerLink]="['/home/ali']">
-        <div class="user-image-wrapper">
-          <cc-aspect-ratio [ratio]="{w: 1, h: 1}">
-            <cc-image-shell class="user-image" animation="spinner" [src]="loggedUser?.image"
-                            [alt]="'user image'"></cc-image-shell>
-          </cc-aspect-ratio>
-        </div>
+<!--        <div class="user-image-wrapper">-->
+<!--          <cc-aspect-ratio [ratio]="{w: 1, h: 1}">-->
+<!--            <cc-image-shell class="user-image" animation="spinner"-->
+<!--                            [alt]="'user image'"></cc-image-shell>-->
+<!--          </cc-aspect-ratio>-->
+<!--        </div>-->
+        <h1 class="ali-home"><a class="home-style" routerLink="'/home/ali">RS APPS</a></h1>
       </div>
     </mat-toolbar-row>
   </mat-toolbar>
