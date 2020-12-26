@@ -8,13 +8,8 @@
       </button>
     </div>
     <span [routerLink]="['/home/ali']" class="navbar-title">Real Stack</span>
-    <div class="navbar-user">
-      <div class="user-image-wrapper">
-        <cc-aspect-ratio [ratio]="{w: 1, h: 1}">
-          <cc-image-shell  class="user-image" animation="spinner" [src]="loggedUser?.image"
-                          [alt]="'user image'"></cc-image-shell>
-        </cc-aspect-ratio>
-      </div>
+    <div class="navbar-user" [routerLink]="['/home/ali']">
+      <h1 class="ali-home"><a class="home-style" routerLink="'/home/ali">RS <img height=-"20px" src="/assets/icons/logos/code-branch.svg"/> APPS</a></h1>
     </div>
   </mat-toolbar>
 </ng-template>
@@ -28,13 +23,7 @@
         </button>
       </div>
       <div class="navbar-user" [routerLink]="['/home/ali']">
-<!--        <div class="user-image-wrapper">-->
-<!--          <cc-aspect-ratio [ratio]="{w: 1, h: 1}">-->
-<!--            <cc-image-shell class="user-image" animation="spinner"-->
-<!--                            [alt]="'user image'"></cc-image-shell>-->
-<!--          </cc-aspect-ratio>-->
-<!--        </div>-->
-        <h1 class="ali-home"><a class="home-style" routerLink="'/home/ali">RS APPS</a></h1>
+        <h1 class="ali-home"><a class="home-style" routerLink="'/home/ali">RS <img height="27px" src="/assets/icons/logos/code-branch.svg"/> APPS</a></h1>
       </div>
     </mat-toolbar-row>
   </mat-toolbar>
