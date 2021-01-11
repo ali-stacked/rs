@@ -3,28 +3,49 @@ import { CommonModule } from '@angular/common';
 import { EcommerceDashboardComponent } from './ecommerce-dashboard/ecommerce-dashboard.component';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
-
+import { ArticleService } from "../services/article.service";
+import { LandingDashboardComponent } from "./landing-dashboard/landing-dashboard.component";
 // echarts - lib: https://github.com/xieziyu/ngx-echarts
 import { NgxEchartsModule } from 'ngx-echarts';
 import { DashboardsService } from '../services/dashboards.service';
 import { CrmDashboardComponent } from './crm-dashboard/crm-dashboard.component';
-import { EcommerceDashboardResolver, CrmDashboardResolver } from '../resolvers/dashboards.resolver';
+import { EcommerceDashboardResolver, CrmDashboardResolver} from '../resolvers/dashboards.resolver';
 import { NewsService } from '../services/news.service';
-import {NewsDashboardComponent} from './news-dashboard/crm-dashboard.component';
-import {TeamDashboardComponent} from './team-dashboard/crm-dashboard.component';
+import { NewsDashboardComponent } from './news-dashboard/news-dashboard.component';
+import { TeamDashboardComponent } from './team-dashboard/team-dashboard.component';
+import { CovidDashboardComponent } from './covid-dashboard/covid-dashboard.component';
+import { CovidTablesResolver } from "../resolvers/grid.resolver";
+import { DataVizComponent } from "./data-viz/data-viz.component";
+import { DataVizResolver } from "../resolvers/dashboards.resolver";
+import { CovidVizComponent } from "./covid-viz/covid-viz.component";
 
 export const dashboardRoutes = [
   {
     path: '',
-    redirectTo: 'news'
+    redirectTo: 'covid'
   },
   {
-    path: 'news',
+    path: 'covid',
     component: NewsDashboardComponent,
     resolve: {
       data : CrmDashboardResolver
     }
   },
+  {
+    path: 'covid-viz',
+    component: CovidVizComponent,
+    resolve: {
+      data : DataVizResolver
+    }
+  },
+  {
+    path: 'data-viz',
+    component: DataVizComponent,
+    resolve: {
+      data : DataVizResolver
+    }
+  },
+
   {
     path: 'team',
     component: TeamDashboardComponent,
@@ -33,7 +54,7 @@ export const dashboardRoutes = [
     }
   },
   {
-    path: 'ecommerce',
+    path: 'covid-test',
     component: EcommerceDashboardComponent,
     resolve: {
       data : EcommerceDashboardResolver
@@ -45,11 +66,20 @@ export const dashboardRoutes = [
     resolve: {
       data : CrmDashboardResolver
     }
+  },
+  {
+    path: 'test',
+    component: CovidDashboardComponent,
+    resolve: {
+      data : CrmDashboardResolver
+    }
   }
 ];
 
 @NgModule({
-  declarations: [EcommerceDashboardComponent, TeamDashboardComponent, NewsDashboardComponent, CrmDashboardComponent],
+  declarations: [EcommerceDashboardComponent, TeamDashboardComponent,
+    LandingDashboardComponent,CovidDashboardComponent,
+     NewsDashboardComponent, CovidVizComponent, DataVizComponent, CrmDashboardComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(dashboardRoutes),
@@ -60,7 +90,9 @@ export const dashboardRoutes = [
     DashboardsService,
     EcommerceDashboardResolver,
     CrmDashboardResolver,
-    NewsService
-  ]
+    NewsService,
+    ArticleService,
+    DataVizResolver,
+    CovidTablesResolver]
 })
 export class DashboardsModule { }

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
-import { CountryPhone } from '../forms/validators/country-phone.model';
+import { CountryPhone } from '../widget-library/validators/country-phone.model';
 
 @Injectable()
 export class UtilitiesService {

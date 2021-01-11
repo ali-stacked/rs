@@ -1,16 +1,19 @@
 <!-- Conditional template Outlet (see: https://stackoverflow.com/a/52448001/1116959) -->
 <ng-container *ngTemplateOutlet="(_mode === 'condensed') ? condensedToolbar : expandedToolbar;"></ng-container>
 <ng-template #condensedToolbar>
-  <mat-toolbar class="top-navbar-toolbar">
+  <mat-toolbar class="real top-navbar-toolbar">
     <div class="navbar-branding">
+      <a routerLink="/home/ali/">
+  <img src="/assets/RealStack.svg" class="real-svg">
+      </a>
       <button class="btn toggle-sidenav-btn" type="button" (click)="toggleMainMenu()">
         <i class="fa fa-bars"></i>
       </button>
     </div>
-    <span [routerLink]="['/home/ali']" class="navbar-title">Real Stack</span>
-    <div class="navbar-user" [routerLink]="['/home/ali']">
-      <h1 class="ali-home"><a class="home-style" routerLink="'/home/ali">RS <img height=-"20px" src="/assets/icons/logos/code-branch.svg"/> APPS</a></h1>
-    </div>
+
+<!--    <div class="real navbar-user" [routerLink]="['/home/ali']">-->
+<!--      <h1 class="ali-home"><a class="home-style" routerLink="'/home/ali"> </a></h1>-->
+<!--    </div>-->
   </mat-toolbar>
 </ng-template>
  <ng-template #expandedToolbar>
@@ -22,8 +25,13 @@
           <i class="fa fa-bars"></i>
         </button>
       </div>
-      <div class="navbar-user" [routerLink]="['/home/ali']">
-        <h1 class="ali-home"><a class="home-style" routerLink="'/home/ali">RS <img height="27px" src="/assets/icons/logos/code-branch.svg"/> APPS</a></h1>
+      <div class="real navbar-user" [routerLink]="['/home/ali']">
+        <a routerLink="/home/ali/">
+          <img src="/assets/RealStack.svg" class="real-svg">
+        </a>
+      </div>
+      <div class="navbar-right" [routerLink]="['/home/ali']">
+<!--        <img  src="/assets/RealStack.svg" class="real-svg">-->
       </div>
     </mat-toolbar-row>
   </mat-toolbar>

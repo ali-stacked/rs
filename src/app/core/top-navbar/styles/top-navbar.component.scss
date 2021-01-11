@@ -3,24 +3,28 @@
 
 :host {
 
-  --top-navbar-color: #CCCCCC;
+  --top-navbar-color: #000fff;
   --top-navbar-alt-color: #E6E6E6;
-  --top-navbar-background: #000;
-  --top-navbar-border-color: #CCCCCC;
+  --top-navbar-background: #fff;
+  --top-navbar-border-color: #fff;
 
-  --top-navbar-height: 30px;
+  --top-navbar-height: 10px;
 
   // Used mainly at the start and end of the navbar
-  --top-navbar-padding: 55px;
+  --top-navbar-padding: 95px;
   // Used mainly to space items inside the navbar
-  --top-navbar-spacing: 5px;
+  --top-navbar-spacing: 2px;
 
-  --top-navbar-controls-height: calc(var(--top-navbar-height) / 2);
-  --top-navbar-icon-size: calc(var(--top-navbar-spacing) * 3);
+  --top-navbar-controls-height: 30px;
+  --top-navbar-icon-size: 27px;
+}
+
+.real-svg {
+  height:30px !important;
 }
 
 :host([mode = 'condensed']) {
-  --top-navbar-controls-height: 40px;
+  --top-navbar-controls-height: 30px;
 
   .top-navbar-toolbar {
     .navbar-title {
@@ -29,9 +33,13 @@
       //padding-inline-end: calc(var(--top-navbar-spacing) * 2);
     }
 
+    a{
+      color:#FFFFFF !important;
+    }
+
     .navbar-user {
       //margin-inline-start: auto;
-      margin-inline-start: 2px;
+      //margin-inline-start: 2px;
     }
 
     .navbar-search {
@@ -45,13 +53,14 @@
 
   // Override Material styles
   mat-toolbar {
-    background: #000000;
-    color: var(--top-navbar-color);
+    background: #fff;
+    color: #000;
     //padding: 0px var(--top-navbar-padding);
   }
   mat-toolbar-row {
     height: var(--top-navbar-height);
     padding: 0px;
+    margin-top:20px;
   }
 
   .top-navbar-toolbar {
@@ -65,7 +74,7 @@
       width: 50%;
 
       .search-input {
-        font-family: Nunito;
+        //font-family: Nunito;
 
         // Override Bootstrap styles
         &.form-control-lg {
@@ -76,7 +85,7 @@
           border-bottom: 1px solid var(--top-navbar-border-color);
           border-radius: 0px;
           font-size: 16px;
-          color: var(--top-navbar-color);
+          color: #fff;
           background-color: var(--top-navbar-background);
 
           &::placeholder {
@@ -111,7 +120,8 @@
       //margin-inline-start: calc(var(--top-navbar-spacing) * 2);
       display: flex;
       align-items: flex-end;
-
+      margin-top:20px;
+      padding-top: 14px;
       .user-image-wrapper {
         width: var(--top-navbar-controls-height);
         flex-shrink: 0;
@@ -165,7 +175,7 @@
         .user-name {
           font-family: proxima-nova-1, proxima-nova-2, sans-serif;
           font-size: 16px;
-          color: var(--top-navbar-color);
+          color: pink;
           margin-inline-end: var(--top-navbar-spacing);
         }
 

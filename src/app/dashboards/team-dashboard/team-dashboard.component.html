@@ -1,0 +1,90 @@
+<div class="content-wrapper">
+
+  <div class="highlighted-section">
+    <div class="container-fluid">
+
+      <div class="row no-gutters">
+        <div class="visualization-heading col-12">
+          <div class="heading-info">
+            <h2 class="heading-title">Real-Stack Executive Team</h2>
+            <p class="heading-message">
+        Excellence In Relevant Expertise
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="knowledge-articles-list row">
+    <div class="knowledge-article-wrapper col-12 col-md-6 col-lg-4 col-xl-3" >
+      <div class="knowledge-article">
+
+
+      </div>
+    </div>
+
+
+
+  <div class="visualizations-section knowledge-articles-visualization">
+    <div class="row">
+      <div class="visualization-heading col-12">
+        <div class="heading-info">
+          <h4 class="heading-title">team dashboard</h4>
+        </div>
+      </div>
+    </div>
+    <div class="knowledge-articles-list row">
+      <div *ngFor="let t of team" class="knowledge-article-wrapper col-12 col-md-6 col-lg-4 col-xl-3">
+        <div class="knowledge-article">
+          <div class="article-cover-wrapper">
+            <cc-aspect-ratio [ratio]="{w: 35, h: 23}">
+              <cc-image-shell [alt]="'cover image'" [mode]="'cover'" [src]="t.featured_image"
+                              animation="spinner"
+                              class="cover-image"></cc-image-shell>
+            </cc-aspect-ratio>
+          </div>
+          <div class="article-info">
+            <div class="author-image-wrapper">
+              <cc-aspect-ratio [ratio]="{w: 1, h: 1}">
+                <cc-image-shell [alt]="'author image'" [src]="t.image"
+                                animation="spinner"
+                                class="author-image"></cc-image-shell>
+              </cc-aspect-ratio>
+            </div>
+            <div class="article-details">
+              <span class="author-name">{{ t.name }}</span>
+<!--              <span class="article-date">{{ t.published_date }}</span>-->
+            </div>
+          </div>
+          <h3 class="article-title">{{ t.title }}</h3>
+<!--          <span [attr.category]="t.category"-->
+<!--                class="article-category badge">{{ t.category }}</span>-->
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

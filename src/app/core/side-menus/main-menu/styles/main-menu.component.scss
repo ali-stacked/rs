@@ -10,10 +10,10 @@
   --main-menu-active-color: #333333;
   --main-menu-alt-color: #E6E6E6;
 
-  --main-menu-width: 300px;
+  --main-menu-width: 400px;
 
   // Used mainly at the start and end of the menu
-  --main-menu-padding: 35px;
+  --main-menu-padding: 55px;
   // Used mainly to space items inside the menu
   --main-menu-spacing: 10px;
 
@@ -21,11 +21,13 @@
   --main-menu-h-padding-start: var(--main-menu-padding);
   --main-menu-h-padding-end: var(--main-menu-padding);
 
-  --main-menu-icon-size: calc(var(--main-menu-spacing) * 2);
+  --main-menu-icon-size: calc(var(--main-menu-spacing) * 5);
 
   --main-menu-expansion-indicator-width: 15px;
 }
-
+[_nghost-serverApp-c4] .side-menu-navigation[_ngcontent-serverApp-c4] .menu-item.expandable-item[_ngcontent-serverApp-c4] mat-expansion-panel[_ngcontent-serverApp-c4] mat-expansion-panel-header[_ngcontent-serverApp-c4] {
+  margin-top:1rem;
+}
 :host {
   display: block;
   min-height: 100%;
@@ -33,7 +35,7 @@
   background-color: var(--main-menu-background);
 
   .side-menu-navigation {
-    padding-top: calc(var(--main-menu-spacing) * 4);
+    padding-top: calc(var(--main-menu-spacing) * 5);
     padding-bottom: calc(var(--main-menu-spacing) * 4);
 
     .menu-sub-navigation {
@@ -41,7 +43,7 @@
       padding-bottom: var(--main-menu-spacing);
 
       .menu-item {
-        font-size: 16px;
+        font-size: .8rem;
       }
 
       .menu-link {
@@ -50,7 +52,7 @@
     }
 
     .menu-item {
-      font-size: 16px;
+      font-size: .7rem;
       color: var(--main-menu-color);
 
       &.active {
@@ -99,7 +101,7 @@
             padding-inline-end: var(--main-menu-h-padding-end);
 
             // Use property from .menu-item
-            font-family: inherit;
+            font-family: operetta-12, serif !important;
             // Use property from .menu-item
             font-size: inherit;
             width: var(--main-menu-width);
@@ -115,15 +117,17 @@
 
             mat-panel-title {
               // Use property from .menu-item
-              color: inherit;
+              color: #000 !important;
+              font-family: operetta-52, serif;
+              font-style: oblique;
               margin-inline-end: auto;
             }
 
             mat-panel-description {
               color: var(--main-menu-alt-color);
-              font-size: 14px;
+              font-size: 1rem;
               line-height: var(--main-menu-icon-size);
-              margin-top: calc(var(--main-menu-spacing) / 2);
+              margin-top: calc(var(--main-menu-spacing) / 1);
 
               display: block;
               margin-inline-end: auto;
@@ -157,7 +161,7 @@
             .mat-expansion-panel-body {
               padding-inline-start: var(--main-menu-h-padding-start);
               padding-inline-end: var(--main-menu-h-padding-end);
-              padding-bottom: 0px;
+              padding-bottom: 5px;
             }
           } // ::ng-deep
         } // <mat-expansion-panel>
@@ -165,7 +169,11 @@
 
       .menu-item-title {
         display: block;
-        line-height: var(--main-menu-icon-size);
+        font-family: operetta-12, serif !important;
+        color:#000 !important;
+        margin-top:1rem !important;;
+        font-size: 1.2rem !important;
+        line-height: 1.1;
       }
 
       mat-icon.menu-item-icon {

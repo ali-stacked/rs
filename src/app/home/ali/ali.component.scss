@@ -2,17 +2,57 @@
 
 :host {
   // // Default variables
+  font-family: Operetta;
 }
 
-//.banner-h1-bigal {
-//  font-family: "Helvetica | Raleway";
-//  font-size: 6.5rem;
-//  font-weight: 100 !important;
-//  color: #fff;
-//}
+.lead {
+  font-family: realistnarrow, sans-serif !important;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.ship-it {
+  font-family: operetta-12, serif !important;
+}
+
+.detail-grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 10px;
+}
+.detail-grid-item {
+  /*  border: 1px solid rgba(0, 0, 0, 0.8);*/
+  margib:10px;
+  text-align: left;
+}
+.banner-svg {
+  vertical-align: top !important;
+}
+
+
+
+/* Generic styles */
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+/* footer */
+footer {
+  background-color: #333;
+  padding: .75rem;
+  color: white;
+  text-align: center;
+  font-size: .75rem;
+}
+
+
+
 
 .wrapper{
   display:grid;
+  height:100%;
   grid-template-columns: auto;
   grid-template-rows: auto 30% 40% auto auto;
   grid-template-areas:
@@ -33,19 +73,7 @@
   justify-self: stretch;
   margin:3px;
 }
-.work{
-  background-color:#F4FAFF;
-  grid-column: span 3;
-  height: auto;
-  padding: 1rem;
-  margin:0;
-}
-.work h2{
-  color: #333745;
-  font-size: 3rem;
-  font-weight:300;
-  text-align: center;
-}
+
 .content{
   position:relative;
 }
@@ -97,11 +125,22 @@
   left: 50%;
   opacity: 1;
 }
+.highlighted-section{
+  --highlighted-background: rgb(var(--palette-primary-rgb));
+  --heading-color: rgb(var(--palette-primary-contrast-rgb));
+  padding-bottom: var(--overlap-padding);
+
+
+}
 
 .content-details h2{
   color: #F4FAFF;
   font-weight: 100;
   margin-bottom: 0.5rem;
+}
+
+.big-al {
+
 }
 
 .content-details p{
@@ -110,27 +149,21 @@
 }
 
 .fadeIn-bottom{
-  top: 80%;
+  top: 70%;
 }
-
-//.lead {
-//  font-family: Canela,Georgia,serif !important;
-//  font-size: 3.5rem;
-//  font-weight: 100 !important;
-//  color: #5553ff;
-//}
 
 .top-banner-section {
   display: grid;
   grid-template-columns: 1fr; // stretch to the full frame
-  grid-template-rows: 55rem; //  tall
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  grid-template-rows: 100vh !important; //  tall
+  grid-column-gap: 2px;
+  grid-row-gap: 2px;
   align-content: center;
   justify-content: center;
 
   .banner-image-div {
     grid-area: 1 / 1 / 2 / 2;
+    height:100%;
   } // image
   .banner-overlay-div {
     grid-area: 1 / 1 / 2 / 2;
@@ -145,58 +178,40 @@
   display: grid;
   min-width: 350px; // Min for mobile
   width: 100%;
-  height: 55rem;
+  height:fit-content;
+  margin-left:auto;
+  margin-right: auto;
+
   object-fit: cover; // Using this so the image can be any size and still look halfway decent.
 }
 
 // Gradient overlay (layer 2)
 // gradient overlay going from black to transparent.
-// note: search for a gradient overlay generator to make this easier.
+
 .banner-overlay-div {
   display: grid;
   max-width: 100%;
-  background: none;
+  min-height:100%;
+  background: #fff;
   background: linear-gradient(
-      60deg,
-      rgba(0, 0, 0, 0.2) 20%,
-      rgba(255, 255, 255, 0) 100%
-  ); // start at black at the bottom left'ish and goes at a 60% angle. This will make the white easy to read with nearly any image.
-}
-.bg-na-blue {
-  background: #5553ff;
-
+      75deg,
+      rgba(0, 0, 0, 0.4) 20%,
+      rgba(0, 0, 0, 0.5) 20%
+  );
 }
 
-.white {
-  color: #fff;
-}
-.f2 {
-  font-size: 2.25rem;}
-// Banner html components (layer 3)
+//  (layer 3)
 // banner text
 .banner-text-div {
   display: grid;
   align-items: center;
-  //margin-left: 15px;
-  //margin-right: 15px;
-  //margin-bottom: 3rem;
   justify-content: center;
   margin: auto;
-}
 
-.banner-h1-text {
-  // font can get larger, but no smaller than 10 points.
-  //font-size: calc(10pt + 0.15vw);
-  //letter-spacing: 0.05em;
-  //font-weight: bolder;
-  //text-transform: uppercase;
-  //color: white;
 }
 
 .banner-body-text {
-  // font can get larger, but no smaller than 10 points.
-  font-size: calc(10pt + 0.15vw);
-  margin-top: 0.5em;
+
   color: white;
   text-decoration: none;
 
@@ -211,16 +226,6 @@
   }
 }
 
-.banner-btn {
-  margin-top: 1em;
-}
-
-
-
-.flex-container {
-  display: flex;
-}
-
 .content-wrapper {
   padding: var(--page-padding);
 
@@ -229,25 +234,7 @@
     font-size: 30px;
   }
 
-  .section-title {
-    margin-top: calc(var(--page-spacing) * 6);
-    font-size: 26px;
-    color: var(--section-title-color);
-    padding-bottom: var(--page-spacing);
-    border-bottom: 1px solid var(--section-subtitle-border-color);
-    margin-bottom: calc(var(--page-spacing) * 3);
-  }
 
-  .section-text {
-    color: var(--section-subtitle-color);
-    margin-bottom: calc(var(--page-spacing) * 3);
-  }
-
-  //.btn {
-  //  @include button();
-  //  margin-bottom: calc(var(--page-spacing) * 2.5);
-  //  width: 100%;
-  //}
 }
 
 

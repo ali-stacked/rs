@@ -19,6 +19,7 @@ import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
 export class EcommerceDashboardComponent implements OnInit {
 
   isBrowser: boolean;
+  coronaNumbers: number[] = [10, 13, 18, 16, 15, 21];
   news;
   values: any;
   chartColors: any = {
@@ -56,10 +57,10 @@ export class EcommerceDashboardComponent implements OnInit {
     this.recentOrdersTableDataSource = new MatTableDataSource(route.snapshot.data['data'].recentOrdersData);
     // tslint:disable-next-line:no-string-literal
     this.latestTicketsTableDataSource =  new MatTableDataSource(route.snapshot.data['data'].latestTicketsData);
-
+// 4 top box indicators
     this.values = [
       {
-        name: 'Orders',
+        name: 'Deaths',
         value: '7500',
         icon: 'orders',
         trend: 6.2,
@@ -113,7 +114,7 @@ export class EcommerceDashboardComponent implements OnInit {
         name: 'mini chart',
         type: 'line',
         smooth: true,
-        data: [23, 16, 25, 16, 20, 14],
+        data: this.coronaNumbers,
         showSymbol: false,
         itemStyle: {
           color: this.chartColors.error
@@ -674,7 +675,7 @@ export class EcommerceDashboardComponent implements OnInit {
   }
 
   getNews(): void {
-    this.newsService.getTopNews().subscribe(result => {
+    this.newsService.getNewsHeadlines().subscribe(result => {
       this.news = result;
     });
 

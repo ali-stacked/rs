@@ -9,14 +9,14 @@ import { ActivatedRoute } from '@angular/router';
 import { FormGroup, FormControl } from '@angular/forms';
 import { DatePipe } from '@angular/common';
 import { COMMA, ENTER } from '@angular/cdk/keycodes';
-import {BigData} from '../../interfaces/tennis.interface';
-import {TennisService} from '../../services/tennis.service';
+import { BigData } from '../../interfaces/tennis.interface';
+import { TennisService } from '../../services/tennis.service';
 
 @Component({
   selector: 'app-big-data',
   templateUrl: './big-data.component.html',
   styleUrls: ['./big-data.component.scss'],
-  providers: [DatePipe]
+  providers: [ DatePipe ]
 })
 export class BigDataComponent implements OnInit {
   // Filters for the smart table
@@ -24,7 +24,6 @@ export class BigDataComponent implements OnInit {
   filtersVisible = true;
   toggleFiltersLabel = 'Hide filters';
   tennisStats;
-
   displayedColumns: string[] = ['singles_winner_name',
     'tourney_dates',
     'tourney_conditions',
@@ -33,7 +32,7 @@ export class BigDataComponent implements OnInit {
     'tourney_surface',
     'tourney_year',
     'singles_winner_player_id'];
-  dataSource: any;
+    dataSource: any;
 
   @ViewChild(MatSort, {static: true}) sort: MatSort;
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;

@@ -21,6 +21,10 @@ import {AngularFireModule} from '@angular/fire';
 import {AngularFireStorageModule} from '@angular/fire/storage';
 import { BigDataComponent } from './big-data/big-data.component';
 import { PlayerDetailComponent } from './player-detail/player-detail.component';
+import {CovidComponent} from "./covid-data/covid-data.component";
+import {NewsService} from "../services/news.service";
+import {DashboardsService} from "../services/dashboards.service";
+import {CovidTablesResolver} from "../resolvers/grid.resolver";
 
 export const recordRoutes = [
   {
@@ -49,6 +53,13 @@ export const recordRoutes = [
     }
   },
   {
+    path: 'covid-data',
+    component: CovidComponent,
+    resolve: {
+      tableData : CovidTablesResolver
+    }
+  },
+  {
     path: 'tennis-filters',
     component: TennisFiltersComponent,
     resolve: {
@@ -64,7 +75,8 @@ export const recordRoutes = [
     SmartTablesComponent,
     TennisFiltersComponent,
     BigDataComponent,
-    PlayerDetailComponent
+    PlayerDetailComponent,
+    CovidComponent
   ],
   imports: [
     CommonModule,
@@ -85,7 +97,10 @@ export const recordRoutes = [
     ExternalFiltersTableResolver,
     TennisResolver,
     TennisService,
-    BigDataResolver
+    BigDataResolver,
+    NewsService,
+    DashboardsService,
+    CovidTablesResolver
   ]
 })
 

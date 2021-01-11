@@ -2,13 +2,11 @@
 
   <div class="highlighted-section">
     <div class="container-fluid">
-
       <div class="row no-gutters">
         <div class="visualization-heading col-12">
           <div class="heading-info">
-            <h2 class="heading-title">Statistics</h2>
-            <p class="heading-message">
-              Ecommerce Data from <b>3 Sept 19</b> - <b>2 Feb 20</b>
+            <h2 class="heading-title">Daily Covid Statistics</h2>
+            <p class="heading-message"><b></b>
             </p>
           </div>
           <div class="heading-actions">
@@ -23,7 +21,7 @@
                 <a class="period-action nav-link">This week</a>
               </li>
               <li class="period-item nav-item">
-                <a class="period-action nav-link disabled" tabindex="-1" aria-disabled="true">Today</a>
+                <a aria-disabled="true" class="period-action nav-link disabled" tabindex="-1">Today</a>
               </li>
               <li class="period-item period-alt-item nav-item">
                 <a class="period-action nav-link">
@@ -36,49 +34,27 @@
       </div>
 
       <div class="highlighted-stats-visualization row no-gutters">
-        <div class="stat-item" *ngFor="let item of statistics; let i = index">
+        <div *ngFor="let item of statistics; let i = index" class="stat-item">
           <span class="stat-reference">{{item.name}}</span>
           <div class="stat-info">
             <span class="stat-value">{{item.value}}</span>
-            <div class="stat-trend" [ngClass]="{'positive-trend': (item.positive), 'negative-trend': (!item.positive)}">
+            <div [ngClass]="{'positive-trend': (item.positive), 'negative-trend': (!item.positive)}"
+                 class="stat-trend">
               <div class="trend-value-wrapper">
                 <span class="trend-value">{{item.valueChange}}</span>
-                <mat-icon class="trend-icon" [svgIcon]="(item.positive) ? 'arrow-up' : 'arrow-down'"></mat-icon>
+                <mat-icon [svgIcon]="(item.positive) ? 'arrow-up' : 'arrow-down'"
+                          class="trend-icon"></mat-icon>
               </div>
               <span class="trend-reference">This week</span>
             </div>
           </div>
-          <div class="stat-mini-chart" *ngIf="isBrowser" echarts [options]="item.miniChartOptions" [theme]="'admin-template'"></div>
+          <div *ngIf="isBrowser" [options]="item.miniChartOptions" [theme]="'admin-template'" class="stat-mini-chart"
+               echarts></div>
         </div>
       </div>
 
     </div>
   </div>
-  <div class="knowledge-articles-list row">
-    <div class="knowledge-article-wrapper col-12 col-md-6 col-lg-4 col-xl-3" *ngFor="let article of articles">
-      <div class="knowledge-article">
-        <div class="article-cover-wrapper">
-          <cc-aspect-ratio [ratio]="{w: 35, h: 23}">
-            <cc-image-shell class="cover-image" animation="spinner" [mode]="'cover'" [src]="article.featured_image" [alt]="'cover image'"></cc-image-shell>
-          </cc-aspect-ratio>
-        </div>
-        <div class="article-info">
-          <div class="author-image-wrapper">
-            <cc-aspect-ratio [ratio]="{w: 1, h: 1}">
-              <cc-image-shell class="author-image" animation="spinner" [src]="article.author.picture" [alt]="'author image'"></cc-image-shell>
-            </cc-aspect-ratio>
-          </div>
-          <div class="article-details">
-            <span class="author-name">{{ article.author.name }}</span>
-            <span class="article-date">{{ article.published_date }}</span>
-          </div>
-        </div>
-        <h3 class="article-title">{{ article.title }}</h3>
-        <span class="article-category badge" [attr.category]="article.category">{{ article.category }}</span>
-      </div>
-    </div>
-  </div>
-</div>
 
   <div class="main-section">
     <div class="container-fluid">
@@ -105,7 +81,8 @@
           </div>
 
           <div class="col-12">
-            <div class="visualization-chart" *ngIf="isBrowser" echarts [options]="referralSourceChartOptions" [theme]="'admin-template'"></div>
+            <div *ngIf="isBrowser" [options]="referralSourceChartOptions" [theme]="'admin-template'"
+                 class="visualization-chart" echarts></div>
           </div>
         </div>
       </div>
@@ -128,7 +105,8 @@
                   <a class="period-action nav-link">This week</a>
                 </li>
                 <li class="period-item nav-item">
-                  <a class="period-action nav-link disabled" tabindex="-1" aria-disabled="true">Today</a>
+                  <a aria-disabled="true" class="period-action nav-link disabled"
+                     tabindex="-1">Today</a>
                 </li>
                 <li class="period-item period-alt-item nav-item">
                   <a class="period-action nav-link">
@@ -141,13 +119,16 @@
         </div>
         <div class="row no-gutters">
           <div class="visualization-table col-12 table-responsive">
-            <table class="leads-table table table-borderless table-sm" mat-table matSort #leadsSort="matSort" [dataSource]="leadsTableDataSource">
+            <table #leadsSort="matSort" [dataSource]="leadsTableDataSource" class="leads-table table table-borderless table-sm"
+                   mat-table matSort>
               <ng-container matColumnDef="name">
-                <th mat-header-cell *matHeaderCellDef> Name </th>
-                <td mat-cell *matCellDef="let element" class="user-row">
+                <th *matHeaderCellDef mat-header-cell> Name</th>
+                <td *matCellDef="let element" class="user-row" mat-cell>
                   <div class="user-image-wrapper">
                     <cc-aspect-ratio [ratio]="{w: 1, h: 1}">
-                      <cc-image-shell class="user-image" animation="spinner" [src]="element.picture" [alt]="'user image'"></cc-image-shell>
+                      <cc-image-shell [alt]="'user image'" [src]="element.picture"
+                                      animation="spinner"
+                                      class="user-image"></cc-image-shell>
                     </cc-aspect-ratio>
                   </div>
                   <div class="user-details">
@@ -157,25 +138,26 @@
                 </td>
               </ng-container>
               <ng-container matColumnDef="email">
-                <th mat-header-cell *matHeaderCellDef mat-sort-header> Email </th>
-                <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+                <th *matHeaderCellDef mat-header-cell mat-sort-header> Email</th>
+                <td *matCellDef="let element" mat-cell> {{element.email}} </td>
               </ng-container>
               <ng-container matColumnDef="source">
-                <th mat-header-cell *matHeaderCellDef mat-sort-header> Source </th>
-                <td mat-cell *matCellDef="let element"> {{element.source}} </td>
+                <th *matHeaderCellDef mat-header-cell mat-sort-header> Source</th>
+                <td *matCellDef="let element" mat-cell> {{element.source}} </td>
               </ng-container>
               <ng-container matColumnDef="mobile">
-                <th mat-header-cell *matHeaderCellDef mat-sort-header> Mobile </th>
-                <td mat-cell *matCellDef="let element"> {{element.mobile}} </td>
+                <th *matHeaderCellDef mat-header-cell mat-sort-header> Mobile</th>
+                <td *matCellDef="let element" mat-cell> {{element.mobile}} </td>
               </ng-container>
               <ng-container matColumnDef="last_contact">
-                <th mat-header-cell *matHeaderCellDef mat-sort-header> Last contact </th>
-                <td mat-cell *matCellDef="let element"> {{element.last_contact}} </td>
+                <th *matHeaderCellDef mat-header-cell mat-sort-header> Last contact</th>
+                <td *matCellDef="let element" mat-cell> {{element.last_contact}} </td>
               </ng-container>
               <ng-container matColumnDef="stage">
-                <th mat-header-cell *matHeaderCellDef mat-sort-header> Stage </th>
-                <td [attr.cell-name]="'stage'" [attr.cell-value]="element.stage" mat-cell *matCellDef="let element">
-                  <div ngbDropdown class="lead-stage">
+                <th *matHeaderCellDef mat-header-cell mat-sort-header> Stage</th>
+                <td *matCellDef="let element" [attr.cell-name]="'stage'" [attr.cell-value]="element.stage"
+                    mat-cell>
+                  <div class="lead-stage" ngbDropdown>
                     <div class="lead-stage-toggle" ngbDropdownToggle>
                       <div class="lead-stage-value-wrapper">
                         <i class="fas fa-circle circle-icon"></i>
@@ -184,28 +166,32 @@
                       <mat-icon class="half-arrow-icon" svgIcon="half-arrow-down"></mat-icon>
                     </div>
                     <div ngbDropdownMenu>
-                      <div ngbRadioGroup [(ngModel)]="element.stage">
+                      <div [(ngModel)]="element.stage" ngbRadioGroup>
                         <div ngbDropdownItem>
-                          <label ngbButtonLabel class="stage-option">
-                            <input ngbButton class="stage-option-radio" type="radio" [value]="'First contact'">
+                          <label class="stage-option" ngbButtonLabel>
+                            <input [value]="'First contact'" class="stage-option-radio" ngbButton
+                                   type="radio">
                             <span class="stage-option-text">First contact</span>
                           </label>
                         </div>
                         <div ngbDropdownItem>
-                          <label ngbButtonLabel class="stage-option">
-                            <input ngbButton class="stage-option-radio" type="radio" [value]="'Demo'">
+                          <label class="stage-option" ngbButtonLabel>
+                            <input [value]="'Demo'" class="stage-option-radio" ngbButton
+                                   type="radio">
                             <span class="stage-option-text">Demo</span>
                           </label>
                         </div>
                         <div ngbDropdownItem>
-                          <label ngbButtonLabel class="stage-option">
-                            <input ngbButton class="stage-option-radio" type="radio" [value]="'Negociations'">
+                          <label class="stage-option" ngbButtonLabel>
+                            <input [value]="'Negociations'" class="stage-option-radio" ngbButton
+                                   type="radio">
                             <span class="stage-option-text">Negociations</span>
                           </label>
                         </div>
                         <div ngbDropdownItem>
-                          <label ngbButtonLabel class="stage-option">
-                            <input ngbButton class="stage-option-radio" type="radio" [value]="'Legals'">
+                          <label class="stage-option" ngbButtonLabel>
+                            <input [value]="'Legals'" class="stage-option-radio" ngbButton
+                                   type="radio">
                             <span class="stage-option-text">Legals</span>
                           </label>
                         </div>
@@ -215,15 +201,18 @@
                 </td>
               </ng-container>
               <ng-container matColumnDef="actions">
-                <th mat-header-cell *matHeaderCellDef> </th>
-                <td mat-cell *matCellDef="let element">
-                  <button class="btn" placement="bottom-right" [ngbPopover]="popoverRef" popoverClass="actions-popover"><i class="actions-icon fas fa-ellipsis-h"></i></button>
+                <th *matHeaderCellDef mat-header-cell></th>
+                <td *matCellDef="let element" mat-cell>
+                  <button [ngbPopover]="popoverRef" class="btn" placement="bottom-right"
+                          popoverClass="actions-popover"><i
+                          class="actions-icon fas fa-ellipsis-h"></i></button>
                 </td>
               </ng-container>
-               <tr mat-header-row *matHeaderRowDef="leadsTableDisplayedColumns"></tr>
-               <tr mat-row *matRowDef="let row; columns: leadsTableDisplayedColumns;"></tr>
+              <tr *matHeaderRowDef="leadsTableDisplayedColumns" mat-header-row></tr>
+              <tr *matRowDef="let row; columns: leadsTableDisplayedColumns;" mat-row></tr>
             </table>
-            <mat-paginator class="table-paginator" #leadsPaginator [pageSizeOptions]="[5, 10, 25]" [pageSize]="5"></mat-paginator>
+            <mat-paginator #leadsPaginator [pageSizeOptions]="[5, 10, 25]" [pageSize]="5"
+                           class="table-paginator"></mat-paginator>
           </div>
         </div>
       </div>
@@ -237,7 +226,8 @@
                   <h4 class="heading-title">Activity Overview</h4>
                 </div>
                 <div class="heading-actions">
-                  <div class="visualization-period-dropdown-selector" ngbDropdown placement="bottom-right">
+                  <div class="visualization-period-dropdown-selector" ngbDropdown
+                       placement="bottom-right">
                     <button class="period-dropdown-toggle btn" ngbDropdownToggle>
                       This year
                       <mat-icon class="toggle-icon" svgIcon="half-arrow-down"></mat-icon>
@@ -269,7 +259,8 @@
                 </div>
               </div>
               <div class="col-12">
-                <div class="visualization-chart" *ngIf="isBrowser" echarts [options]="activityOverviewChartOptions" [theme]="'admin-template'"></div>
+                <div *ngIf="isBrowser" [options]="activityOverviewChartOptions" [theme]="'admin-template'"
+                     class="visualization-chart" echarts></div>
               </div>
             </div>
           </div>
@@ -279,7 +270,8 @@
           <div class="efficiency-banner banner-callout vertical-callout">
             <div class="callout-info">
               <h4 class="callout-title">
-                Your efficiency for this period was <span class="title-highlight">0.31</span> hours/client
+                Your efficiency for this period was <span class="title-highlight">0.31</span>
+                hours/client
               </h4>
               <p class="callout-message">
                 Learn how to improve your conversion rate reading "10 steps to efficiency".
@@ -287,10 +279,12 @@
             </div>
             <div class="callout-illustration-wrapper">
               <cc-aspect-ratio [ratio]="{w: 43, h: 24}">
-                <cc-image-shell class="callout-illustration" [mode]="'cover'" animation="spinner" [src]="'/assets/illustrations/crm-dashboard-efficiency.svg'" [alt]="'Dashboard efficiency'"></cc-image-shell>
+                <cc-image-shell [alt]="'Dashboard efficiency'" [mode]="'cover'" [src]="'/assets/illustrations/crm-dashboard-efficiency.svg'"
+                                animation="spinner"
+                                class="callout-illustration"></cc-image-shell>
               </cc-aspect-ratio>
             </div>
-            <button type="button" class="callout-btn btn">Read guide</button>
+            <button class="callout-btn btn" type="button">Read guide</button>
           </div>
         </div>
       </div>
@@ -308,8 +302,9 @@
             <h2 class="heading-title">Hey!, don't forget to nurture your existing clients</h2>
             <p class="heading-message">
               You are having great results turning leads into clients, keep up the good work.
-              <br />
-              But, don't forget to keep existing clients happy and encourage them to add new products to the platform to increase their revenue
+              <br/>
+              But, don't forget to keep existing clients happy and encourage them to add new products to
+              the platform to increase their revenue
             </p>
           </div>
         </div>
@@ -350,7 +345,7 @@
               <span class="stat-value">8785</span>
               <div class="stat-trend">
                 <span class="trend-reference">Last week</span>
-                <span class="trend-value possitive-trend">+15.25%</span>
+                <span class="trend-value positive-trend">+15.25%</span>
               </div>
             </div>
           </div>
@@ -366,12 +361,14 @@
           </div>
         </div>
         <div class="seller-visualization-list row">
-          <div class="seller-visualization-wrapper col-12 col-md-6 col-lg-4 col-xl-3" *ngFor="let seller of topSellers">
+          <div *ngFor="let seller of topSellers"
+               class="seller-visualization-wrapper col-12 col-md-6 col-lg-4 col-xl-3">
             <div class="seller-visualization possitive-trend">
               <div class="seller-details">
                 <div class="seller-image-wrapper">
                   <cc-aspect-ratio [ratio]="{w: 1, h: 1}">
-                    <cc-image-shell class="seller-image" animation="spinner" [src]="seller.picture" [alt]="'seller image'"></cc-image-shell>
+                    <cc-image-shell [alt]="'seller image'" [src]="seller.picture" animation="spinner"
+                                    class="seller-image"></cc-image-shell>
                   </cc-aspect-ratio>
                 </div>
                 <div class="seller-info">
@@ -379,13 +376,15 @@
                   <span class="seller-company">{{seller.company}}</span>
                 </div>
                 <div class="seller-actions">
-                  <button type="button" class="actions-dropdown-trigger-btn btn" placement="bottom-right" [ngbPopover]="popoverRef" popoverClass="actions-popover">
+                  <button [ngbPopover]="popoverRef" class="actions-dropdown-trigger-btn btn"
+                          placement="bottom-right" popoverClass="actions-popover"
+                          type="button">
                     <i class="actions-icon fas fa-ellipsis-v"></i>
                   </button>
                 </div>
               </div>
               <div class="seller-categories-tags">
-                <span class="category-tag badge" *ngFor="let tag of seller.tags">{{tag}}</span>
+                <span *ngFor="let tag of seller.tags" class="category-tag badge">{{tag}}</span>
               </div>
               <div class="seller-stats row no-gutters">
                 <div class="secondary-stat col-12">
@@ -415,12 +414,14 @@
           </div>
         </div>
         <div class="seller-visualization-list row">
-          <div class="seller-visualization-wrapper col-12 col-md-6 col-lg-4 col-xl-3" *ngFor="let seller of laggingSellers">
+          <div *ngFor="let seller of laggingSellers"
+               class="seller-visualization-wrapper col-12 col-md-6 col-lg-4 col-xl-3">
             <div class="seller-visualization negative-trend">
               <div class="seller-details">
                 <div class="seller-image-wrapper">
                   <cc-aspect-ratio [ratio]="{w: 1, h: 1}">
-                    <cc-image-shell class="seller-image" animation="spinner" [src]="seller.picture" [alt]="'seller image'"></cc-image-shell>
+                    <cc-image-shell [alt]="'seller image'" [src]="seller.picture" animation="spinner"
+                                    class="seller-image"></cc-image-shell>
                   </cc-aspect-ratio>
                 </div>
                 <div class="seller-info">
@@ -428,13 +429,15 @@
                   <span class="seller-company">{{seller.company}}</span>
                 </div>
                 <div class="seller-actions">
-                  <button type="button" class="actions-dropdown-trigger-btn btn" placement="bottom-right" [ngbPopover]="popoverRef" popoverClass="actions-popover">
+                  <button [ngbPopover]="popoverRef" class="actions-dropdown-trigger-btn btn"
+                          placement="bottom-right" popoverClass="actions-popover"
+                          type="button">
                     <i class="actions-icon fas fa-ellipsis-v"></i>
                   </button>
                 </div>
               </div>
               <div class="seller-categories-tags">
-                <span class="category-tag badge" *ngFor="let tag of seller.tags">{{tag}}</span>
+                <span *ngFor="let tag of seller.tags" class="category-tag badge">{{tag}}</span>
               </div>
               <div class="seller-stats row no-gutters">
                 <div class="secondary-stat col-12">
@@ -459,12 +462,15 @@
         <div class="col-12">
           <div class="push-sellers-banner banner-callout horizontal-callout">
             <div class="callout-info">
-              <h3 class="callout-title">These clients are lagging behind, learn how to help them become successful sellers</h3>
-              <button type="button" class="callout-btn btn">See how</button>
+              <h3 class="callout-title">These clients are lagging behind, learn how to help them become
+                successful sellers</h3>
+              <button class="callout-btn btn" type="button">See how</button>
             </div>
             <div class="callout-illustration-wrapper">
               <cc-aspect-ratio [ratio]="{w: 30, h: 25}">
-                <cc-image-shell class="callout-illustration" [mode]="'cover'" animation="spinner" [src]="'/assets/illustrations/crm-dashboard-lagging.svg'" [alt]="'Lagging Sellers'"></cc-image-shell>
+                <cc-image-shell [alt]="'Lagging Sellers'" [mode]="'cover'" [src]="'/assets/illustrations/crm-dashboard-lagging.svg'"
+                                animation="spinner"
+                                class="callout-illustration"></cc-image-shell>
               </cc-aspect-ratio>
             </div>
           </div>
@@ -493,12 +499,15 @@
           <div class="tasks-column col-12 col-lg-6 col-xl-4">
             <div class="column-heading">
               <h4 class="column-title">Marketing</h4>
-              <span class="column-progress-message">{{completedMarketingTasks}} task completed out of {{tasks.marketing_tasks.length}}</span>
-              <ngb-progressbar class="column-progress-bar" [value]="(completedMarketingTasks * 100) / tasks.marketing_tasks.length" ></ngb-progressbar>
+              <span class="column-progress-message">{{completedMarketingTasks}}
+                task completed out of {{tasks.marketing_tasks.length}}</span>
+              <ngb-progressbar [value]="(completedMarketingTasks * 100) / tasks.marketing_tasks.length"
+                               class="column-progress-bar"></ngb-progressbar>
             </div>
             <div class="tasks-list">
               <div *ngFor="let _task of tasks.marketing_tasks">
-                <ng-container *ngTemplateOutlet="taskCard; context: { task: _task, tasksBoardForm: marketingTasksBoardForm }">
+                <ng-container
+                        *ngTemplateOutlet="taskCard; context: { task: _task, tasksBoardForm: marketingTasksBoardForm }">
                 </ng-container>
               </div>
             </div>
@@ -506,12 +515,15 @@
           <div class="tasks-column col-12 col-lg-6 col-xl-4">
             <div class="column-heading">
               <h4 class="column-title">Sales</h4>
-              <span class="column-progress-message">{{completedSalesTasks}} task completed out of {{tasks.sales_tasks.length}}</span>
-              <ngb-progressbar class="column-progress-bar" [value]="(completedSalesTasks * 100) / tasks.sales_tasks.length" ></ngb-progressbar>
+              <span class="column-progress-message">{{completedSalesTasks}}
+                task completed out of {{tasks.sales_tasks.length}}</span>
+              <ngb-progressbar [value]="(completedSalesTasks * 100) / tasks.sales_tasks.length"
+                               class="column-progress-bar"></ngb-progressbar>
             </div>
             <div class="tasks-list">
               <div *ngFor="let _task of tasks.sales_tasks">
-                <ng-container *ngTemplateOutlet="taskCard; context: { task: _task, tasksBoardForm: salesTasksBoardForm }">
+                <ng-container
+                        *ngTemplateOutlet="taskCard; context: { task: _task, tasksBoardForm: salesTasksBoardForm }">
                 </ng-container>
               </div>
             </div>
@@ -520,11 +532,13 @@
             <div class="column-heading">
               <h4 class="column-title">Customer Support</h4>
               <span class="column-progress-message">{{completedCustomerSupportTasks}} task completed out of {{tasks.customer_support_tasks.length}}</span>
-              <ngb-progressbar class="column-progress-bar" [value]="(completedCustomerSupportTasks * 100) / tasks.customer_support_tasks.length" ></ngb-progressbar>
+              <ngb-progressbar [value]="(completedCustomerSupportTasks * 100) / tasks.customer_support_tasks.length"
+                               class="column-progress-bar"></ngb-progressbar>
             </div>
             <div class="tasks-list">
               <div *ngFor="let _task of tasks.customer_support_tasks">
-                <ng-container *ngTemplateOutlet="taskCard; context: { task: _task, tasksBoardForm: customerSupportTasksBoardForm }">
+                <ng-container
+                        *ngTemplateOutlet="taskCard; context: { task: _task, tasksBoardForm: customerSupportTasksBoardForm }">
                 </ng-container>
               </div>
             </div>
@@ -540,7 +554,37 @@
             </div>
           </div>
         </div>
-
+        <div class="knowledge-articles-list row">
+          <div *ngFor="let article of articles"
+               class="knowledge-article-wrapper col-12 col-md-6 col-lg-4 col-xl-3">
+            <div class="knowledge-article">
+              <div class="article-cover-wrapper">
+                <cc-aspect-ratio [ratio]="{w: 35, h: 23}">
+                  <cc-image-shell [alt]="'cover image'" [mode]="'cover'" [src]="article.featured_image"
+                                  animation="spinner"
+                                  class="cover-image"></cc-image-shell>
+                </cc-aspect-ratio>
+              </div>
+              <div class="article-info">
+                <div class="author-image-wrapper">
+                  <cc-aspect-ratio [ratio]="{w: 1, h: 1}">
+                    <cc-image-shell [alt]="'author image'" [src]="article.author.picture"
+                                    animation="spinner"
+                                    class="author-image"></cc-image-shell>
+                  </cc-aspect-ratio>
+                </div>
+                <div class="article-details">
+                  <span class="author-name">{{ article.author.name }}</span>
+                  <span class="article-date">{{ article.published_date }}</span>
+                </div>
+              </div>
+              <h3 class="article-title">{{ article.title }}</h3>
+              <span [attr.category]="article.category"
+                    class="article-category badge">{{ article.category }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
 
     </div>
   </div>
@@ -564,24 +608,25 @@
 
 <ng-template #taskCard let-task="task" let-tasksBoardForm="tasksBoardForm">
   <form [formGroup]="tasksBoardForm">
-    <div class="task-item" [ngClass]="{'completed-task': tasksBoardForm.get(task.id).value}">
+    <div [ngClass]="{'completed-task': tasksBoardForm.get(task.id).value}" class="task-item">
       <div class="task-status">
         <label class="status-checkbox btn" ngbButtonLabel>
-          <input type="checkbox" formControlName="{{task.id}}" ngbButton>
+          <input formControlName="{{task.id}}" ngbButton type="checkbox">
         </label>
       </div>
       <div class="task-content">
         <div class="task-brief">
           <div class="task-assignee-wrapper">
             <cc-aspect-ratio [ratio]="{w: 1, h: 1}">
-              <cc-image-shell class="assignee-image" animation="spinner" [src]="task.assignee.picture" [alt]="'assignee image'"></cc-image-shell>
+              <cc-image-shell [alt]="'assignee image'" [src]="task.assignee.picture" animation="spinner"
+                              class="assignee-image"></cc-image-shell>
             </cc-aspect-ratio>
           </div>
           <div class="task-details">
             <span class="task-assignee">Assigned to {{task.assignee.name}}</span>
             <span class="task-due">Due on {{task.due_date}}</span>
           </div>
-          <span class="task-priority badge" [attr.priority]="task.priority">{{task.priority}}</span>
+          <span [attr.priority]="task.priority" class="task-priority badge">{{task.priority}}</span>
         </div>
         <div class="task-info">
           <span class="task-title">{{task.title}}</span>

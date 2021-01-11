@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { startWith, map, debounceTime, distinctUntilChanged } from 'rxjs/operators';
 import { Observable } from 'rxjs';
-import { CountryPhone } from 'src/app/forms/validators/country-phone.model';
+import { CountryPhone } from 'src/app/widget-library/validators/country-phone.model';
 import { UtilitiesService } from '../utilities.service';
 
 @Component({

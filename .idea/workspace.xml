@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0aaec7ae-7d7d-43fc-8f3a-2ee81d539934" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/dashboards/covid-dashboard/styles/crm-dashboard.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/dashboards/covid-dashboard/styles/crm-dashboard.responsive.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/dashboards/covid-viz/styles/crm-dashboard.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/dashboards/covid-viz/styles/crm-dashboard.responsive.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/dashboards/data-viz/data-viz.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/dashboards/data-viz/data-viz.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/dashboards/data-viz/styles/ecommerce-dashboard.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/dashboards/data-viz/styles/ecommerce-dashboard.responsive.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/dashboards/landing-dashboard/landing-dashboard.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/dashboards/landing-dashboard/landing-dashboard.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/dashboards/landing-dashboard/styles/landing-dashboard.responsive.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/dashboards/news-dashboard/news-dashboard.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/dashboards/news-dashboard/news-dashboard.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/dashboards/team-dashboard/team-dashboard.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/dashboards/team-dashboard/team-dashboard.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/interfaces/covid.class.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/interfaces/numbers.interface.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/tools/tools.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/widget-library/agile/agile.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/widget-library/agile/agile.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/widget-library/agile/agile.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/widget-library/agile/agile.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/widget-library/stepper/stepper.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/RealStack.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/archive.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/arrow-right.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/arrow-up.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/beer.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/bolt.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/castle.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/code.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/coins.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/data/advisors.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/database.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/dna.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/file-csv.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/flag.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/glasses.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/greater-than.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/hamburger.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/heading.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/hourglass-half.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/icons/navbar/real-logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/icons/sidemenu/dashboards-old.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/icons/sidemenu/forms-old.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/icons/sidemenu/layouts-old.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/illustrations/real-1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/illustrations/real-2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/illustrations/real-3.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/advisors/Andrew-Perlmutter.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/advisors/Corey-Gottlieb.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/advisors/James-Barone.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/advisors/angus-durocher.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/advisors/ayham.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/advisors/chip-healey.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/advisors/ibrahim-nassar.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/advisors/islam-nassar.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/advisors/jones-fish.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/advisors/philip-leesha.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/advisors/prudential.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/boss/sexy-tile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/users/Alexey-Novokshonov.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/users/Joseph-DeFranceschi.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/users/Ronald-Baumiller.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/users/angelo-kassab.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/users/ankur-ahmed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/users/chris-jones.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/users/harry-skeffington.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/users/joshua-gee.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/users/kyle-richardson.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/users/mo-faqih.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/users/niraj-patel.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/users/philipp-werminghausen.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/imgs/users/shawn-wise.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/laugh-beam.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/mobile-alt.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/people-carry.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/pepper-hot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/pepper-red-hot.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/plus.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/prescription.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/sms.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/space.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/tablet.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/tags.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/thumbs-up.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/user-tie.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/warehouse.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/wrench.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/mean.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/mean.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/browser/assets/icons/logos/angular-logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/browser/assets/icons/logos/angular-logo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/browser/assets/icons/logos/baby.svg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/browser/assets/icons/logos/baby.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/browser/assets/icons/logos/code-branch.svg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/browser/assets/icons/logos/code-branch.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/browser/assets/icons/sidemenu/dashboards.svg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/browser/assets/icons/sidemenu/dashboards.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/browser/assets/icons/sidemenu/forms.svg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/browser/assets/icons/sidemenu/forms.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/browser/assets/icons/sidemenu/tables.svg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/browser/assets/icons/sidemenu/tables.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/browser/assets/icons/sidemenu/utilities.svg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/browser/assets/icons/sidemenu/utilities.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/browser/assets/imgs/users/user-1.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/browser/assets/imgs/users/user-3.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/browser/charts-charts-module-es2015.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/browser/charts-charts-module-es2015.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/browser/charts-charts-module-es2015.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/browser/charts-charts-module-es2015.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/browser/charts-charts-module-es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/browser/charts-charts-module-es5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/browser/charts-charts-module-es5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/browser/charts-charts-module-es5.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/browser/common-es2015.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/browser/common-es2015.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/browser/common-es2015.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/browser/common-es2015.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/browser/common-es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/browser/common-es5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/browser/common-es5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/browser/common-es5.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/browser/dashboards-dashboards-module-es2015.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/browser/dashboards-dashboards-module-es2015.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/browser/dashboards-dashboards-module-es2015.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/browser/dashboards-dashboards-module-es2015.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/browser/dashboards-dashboards-module-es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/browser/dashboards-dashboards-module-es5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/browser/dashboards-dashboards-module-es5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/browser/dashboards-dashboards-module-es5.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/browser/default~forms-forms-module~home-home-module-es2015.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/browser/default~forms-forms-module~home-home-module-es2015.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/browser/default~forms-forms-module~home-home-module-es5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/browser/default~forms-forms-module~home-home-module-es5.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/browser/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/dist/browser/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/browser/forms-forms-module-es2015.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/browser/forms-forms-module-es2015.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/browser/forms-forms-module-es5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/browser/forms-forms-module-es5.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/browser/home-home-module-es2015.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/browser/home-home-module-es2015.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/browser/home-home-module-es2015.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/browser/home-home-module-es2015.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/browser/home-home-module-es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/browser/home-home-module-es5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/browser/home-home-module-es5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/browser/home-home-module-es5.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/browser/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/browser/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/browser/main-es2015.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/browser/main-es2015.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/browser/main-es2015.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/browser/main-es2015.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/browser/main-es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/browser/main-es5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/browser/main-es5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/browser/main-es5.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/browser/records-records-module-es2015.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/browser/records-records-module-es2015.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/browser/records-records-module-es2015.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/browser/records-records-module-es2015.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/browser/records-records-module-es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/browser/records-records-module-es5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/browser/records-records-module-es5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/browser/records-records-module-es5.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/browser/runtime-es2015.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/browser/runtime-es2015.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/browser/runtime-es2015.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/browser/runtime-es2015.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/browser/runtime-es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/browser/runtime-es5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/browser/runtime-es5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/browser/runtime-es5.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/browser/styles-es2015.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/browser/styles-es2015.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/browser/styles-es2015.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/browser/styles-es2015.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/browser/styles-es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/browser/styles-es5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/browser/styles-es5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/browser/styles-es5.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/browser/vendor-es2015.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/browser/vendor-es2015.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/browser/vendor-es2015.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/browser/vendor-es2015.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/browser/vendor-es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/browser/vendor-es5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/browser/vendor-es5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/browser/vendor-es5.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/charts/chartjs/chartjs-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/charts/chartjs/chartjs-page.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/charts/charts.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/charts/charts.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/charts/echarts/echarts-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/charts/echarts/echarts-page.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/charts/ngx-charts/ngx-charts-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/charts/ngx-charts/ngx-charts-page.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/core.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/core.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/side-menus/main-menu/main-menu.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/side-menus/main-menu/main-menu.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/side-menus/main-menu/main-menu.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/side-menus/main-menu/main-menu.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/side-menus/main-menu/styles/main-menu.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/side-menus/main-menu/styles/main-menu.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/side-navbar/side-navbar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/side-navbar/side-navbar.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/top-navbar/styles/partials/navbar-branding.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/top-navbar/styles/partials/navbar-branding.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/top-navbar/styles/top-navbar.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/top-navbar/styles/top-navbar.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/top-navbar/top-navbar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/top-navbar/top-navbar.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/dashboards/crm-dashboard/crm-dashboard.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dashboards/crm-dashboard/crm-dashboard.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/dashboards/dashboards.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dashboards/dashboards.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/dashboards/ecommerce-dashboard/ecommerce-dashboard.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dashboards/ecommerce-dashboard/ecommerce-dashboard.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/dashboards/ecommerce-dashboard/ecommerce-dashboard.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dashboards/ecommerce-dashboard/ecommerce-dashboard.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/dashboards/news-dashboard/crm-dashboard.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dashboards/covid-viz/covid-viz.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/dashboards/news-dashboard/crm-dashboard.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dashboards/covid-dashboard/covid-dashboard.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/dashboards/team-dashboard/crm-dashboard.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dashboards/covid-dashboard/covid-dashboard.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/dashboards/team-dashboard/crm-dashboard.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dashboards/covid-viz/covid-viz.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/dashboards/team-dashboard/styles/crm-dashboard.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dashboards/team-dashboard/styles/crm-dashboard.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/forms/controls-and-validations/controls-and-validations.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/widget-library/controls-and-validations/controls-and-validations.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/forms/controls-and-validations/controls-and-validations.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/widget-library/controls-and-validations/controls-and-validations.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/forms/controls-and-validations/controls-and-validations.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/widget-library/controls-and-validations/controls-and-validations.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/forms/extended-controls/extended-controls.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/widget-library/extended-controls/extended-controls.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/forms/extended-controls/extended-controls.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/widget-library/extended-controls/extended-controls.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/forms/extended-controls/extended-controls.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/widget-library/extended-controls/extended-controls.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/forms/form-layouts/form-layouts.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/widget-library/form-layouts/form-layouts.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/forms/form-layouts/form-layouts.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dashboards/landing-dashboard/styles/landing-dashboard.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/forms/form-layouts/form-layouts.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/widget-library/form-layouts/form-layouts.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/forms/forms.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/widget-library/widget-library.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/forms/forms.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/widget-library/forms.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/forms/material-forms/material-forms.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/widget-library/material-forms/material-forms.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/forms/material-forms/material-forms.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/widget-library/material-forms/material-forms.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/forms/material-forms/material-forms.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/widget-library/material-forms/material-forms.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/forms/stepper/stepper.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/widget-library/stepper/stepper.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/forms/stepper/stepper.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/widget-library/form-layouts/form-layouts.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/forms/stepper/stepper.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/widget-library/stepper/stepper.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/forms/validators/country-phone.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/widget-library/validators/country-phone.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/forms/validators/equality.validator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/widget-library/validators/equality.validator.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/forms/validators/parent-error-state-matcher.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/widget-library/validators/parent-error-state-matcher.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/forms/validators/phone.validator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/widget-library/validators/phone.validator.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/forms/validators/username.validator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/widget-library/validators/username.validator.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/home/ali/ali.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/home/ali/ali.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/home/ali/ali.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/home/ali/ali.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/home/ali/ali.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/home/ali/ali.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/home/autocomplete/autocomplete.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/home/autocomplete/autocomplete.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/home/utilities.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/home/utilities.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/home/work/work.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/home/work/work.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/records/big-data/big-data.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/records/big-data/big-data.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/records/big-data/big-data.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/records/big-data/big-data.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/records/records.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/records/records.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/resolvers/dashboards.resolver.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/resolvers/dashboards.resolver.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/resolvers/grid.resolver.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/resolvers/grid.resolver.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/services/dashboards.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/dashboards.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/services/grid.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/grid.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/services/news.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/news.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icons/logos/angular-logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icons/logos/angular-logo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icons/sidemenu/dashboards.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icons/sidemenu/dashboards.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icons/sidemenu/forms.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icons/sidemenu/forms.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icons/sidemenu/layouts.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icons/sidemenu/layouts.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icons/sidemenu/tables.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icons/sidemenu/tables.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icons/sidemenu/utilities.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icons/sidemenu/utilities.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imgs/users/user-1.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/imgs/users/user-3.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/environments/environment.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/src/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/theme/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/theme/third-party/override-bootstrap-variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/third-party/override-bootstrap-variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/theme/third-party/override-material-variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/third-party/override-material-variables.scss" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="1mRPEU0RNDNvrUgVwXpwE46B5o2" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="ng serve -o" />
+    </option>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0aaec7ae-7d7d-43fc-8f3a-2ee81d539934" name="Default Changelist" comment="" />
+      <created>1609453330207</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1609453330207</updated>
+      <workItem from="1609453361003" duration="3626000" />
+      <workItem from="1609479888841" duration="3290000" />
+      <workItem from="1609489829027" duration="4603000" />
+      <workItem from="1609506028697" duration="26517000" />
+      <workItem from="1609544027028" duration="29929000" />
+      <workItem from="1609646638771" duration="16954000" />
+      <workItem from="1609693744705" duration="9471000" />
+      <workItem from="1609771978092" duration="1981000" />
+      <workItem from="1609784550558" duration="807000" />
+      <workItem from="1610114849565" duration="9040000" />
+      <workItem from="1610134963444" duration="2510000" />
+      <workItem from="1610201285835" duration="2475000" />
+      <workItem from="1610358623320" duration="12889000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>

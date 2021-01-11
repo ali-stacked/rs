@@ -20,18 +20,18 @@ import { NgxChartsPageComponent } from './ngx-charts/ngx-charts-page.component';
 export const chartsRoutes = [
   {
     path: '',
-    redirectTo: 'echarts'
+    redirectTo: 'rs-charts'
   },
   {
-    path: 'echarts',
+    path: 'rs-charts',
     component: EchartsPageComponent
   },
   {
-    path: 'chart-js',
+    path: 'real-simple',
     component: ChartsJsPageComponent
   },
   {
-    path: 'ngx-charts',
+    path: 'rs',
     component: NgxChartsPageComponent
   }
 ];

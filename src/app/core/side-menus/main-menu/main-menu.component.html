@@ -4,26 +4,32 @@
       <mat-expansion-panel-header class="menu-link">
         <div class="item-header-content">
           <mat-panel-title>
-            <mat-icon class="menu-item-icon" svgIcon="dashboards"></mat-icon>
-            <span class="menu-item-title">Real-Time Dashboards</span>
+            <mat-icon class="menu-item-icon real" svgIcon="dashboards"></mat-icon>
+            <span class="menu-item-title">Dashboards</span>
           </mat-panel-title>
         </div>
       </mat-expansion-panel-header>
       <ul class="menu-sub-navigation nav flex-column">
         <li class="menu-item nav-item" [routerLinkActive]="['active']">
-          <a class="menu-link nav-link" [routerLinkActive]="['active']" [routerLink]="['/dashboards/news']">
+          <a class="menu-link nav-link" [routerLinkActive]="['active']" [routerLink]="['/dashboards/stat/']">
             <i class="menu-item-icon"></i>
-            <span class="menu-item-title">Real-Time News</span>
+            <span class="menu-item-title" (click)="showQuick()">COVID-19</span>
           </a>
         </li>
         <li class="menu-item nav-item" [routerLinkActive]="['active']">
-          <a class="menu-link nav-link" [routerLinkActive]="['active']" [routerLink]="['/dashboards/ecommerce']">
+          <a class="menu-link nav-link" (click)="showQuick()"  [routerLinkActive]="['active']" [routerLink]="['/dashboards/news']">
+            <i class="menu-item-icon"></i>
+            <span class="menu-item-title">Top News</span>
+          </a>
+        </li>
+        <li class="menu-item nav-item" [routerLinkActive]="['active']">
+          <a class="menu-link nav-link" (click)="showQuick()" [routerLinkActive]="['active']" [routerLink]="['/dashboards/ecommerce']">
             <i class="menu-item-icon"></i>
             <span class="menu-item-title">Ecommerce</span>
           </a>
         </li>
         <li class="menu-item nav-item" [routerLinkActive]="['active']">
-          <a class="menu-link nav-link" [routerLinkActive]="['active']" [routerLink]="['/dashboards/crm']">
+          <a class="menu-link nav-link" (click)="showQuick()" [routerLinkActive]="['active']" [routerLink]="['/dashboards/crm']">
             <i class="menu-item-icon"></i>
             <span class="menu-item-title">CRM</span>
           </a>
@@ -36,22 +42,28 @@
       <mat-expansion-panel-header class="menu-link">
         <div class="item-header-content">
           <mat-panel-title>
-            <mat-icon class="menu-item-icon" svgIcon="forms"></mat-icon>
-            <span class="menu-item-title">Business Intelligence Integrations</span>
+            <mat-icon class="menu-item-icon real" svgIcon="forms"></mat-icon>
+            <span class="menu-item-title">Team</span>
           </mat-panel-title>
         </div>
       </mat-expansion-panel-header>
       <ul class="menu-sub-navigation nav flex-column">
         <li class="menu-item nav-item" [routerLinkActive]="['active']">
-          <a class="menu-link nav-link" [routerLinkActive]="['active']" [routerLink]="['/forms/controls-and-validations']">
+          <a class="menu-link nav-link" [routerLinkActive]="['active']" [routerLink]="['/dashboards/team']">
+            <i class="menu-item-icon"></i>
+            <span class="menu-item-title">Team</span>
+          </a>
+        </li>
+        <li class="menu-item nav-item" [routerLinkActive]="['active']">
+          <a class="menu-link nav-link" [routerLinkActive]="['active']" [routerLink]="['/widget-library/stepper']">
             <i class="menu-item-icon"></i>
             <span class="menu-item-title">Case Studies</span>
           </a>
         </li>
         <li class="menu-item nav-item" [routerLinkActive]="['active']">
-          <a class="menu-link nav-link" [routerLinkActive]="['active']" [routerLink]="['/forms/stepper']">
+          <a class="menu-link nav-link" [routerLinkActive]="['active']" [routerLink]="['/widget-library/stepper']">
             <i class="menu-item-icon"></i>
-            <span class="menu-item-title">Clients</span>
+            <span class="menu-item-title">Case Studies</span>
           </a>
         </li>
       </ul>
@@ -62,41 +74,43 @@
       <mat-expansion-panel-header class="menu-link">
         <div class="item-header-content">
           <mat-panel-title>
-            <mat-icon class="menu-item-icon" svgIcon="layouts"></mat-icon>
-            <span class="menu-item-title">Big Data Performance</span>
+            <mat-icon class="menu-item-icon real" svgIcon="layouts"></mat-icon>
+            <span class="menu-item-title">Data Filters</span>
           </mat-panel-title>
         </div>
       </mat-expansion-panel-header>
       <ul class="menu-sub-navigation nav flex-column">
         <li class="menu-item nav-item" [routerLinkActive]="['active']">
-          <a class="menu-link nav-link" [routerLinkActive]="['active']" [routerLink]="['/records/tennis-filters']">
+          <a class="menu-link nav-link" [routerLinkActive]="['active']" [routerLink]="['/records/covid-data']">
             <i class="menu-item-icon"></i>
-            <span class="menu-item-title">Custom Grid Filters</span>
+            <span class="menu-item-title">Custom Covid-Case Sample</span>
           </a>
         </li>
         <li class="menu-item nav-item" [routerLinkActive]="['active']">
-          <a class="menu-link nav-link" [routerLinkActive]="['active']" [routerLink]="['/records/big-data']">
+          <a class="menu-link nav-link" (click)="showSpinner()"  [routerLinkActive]="['active']" [routerLink]="['/records/big-data']">
             <i class="menu-item-icon"></i>
-            <span class="menu-item-title">Big Data</span>
+            <span class="menu-item-title">Big Data Sets</span>
           </a>
         </li>
         <li class="menu-item nav-item" [routerLinkActive]="['active']">
           <a class="menu-link nav-link" [routerLinkActive]="['active']" [routerLink]="['/records/smart-records']">
             <i class="menu-item-icon"></i>
-            <span class="menu-item-title">Smart Tables</span>
+            <span class="menu-item-title">Enhanced Widgets</span>
           </a>
         </li>
         <li class="menu-item nav-item" [routerLinkActive]="['active']">
           <a class="menu-link nav-link" [routerLinkActive]="['active']" [routerLink]="['/records/external-filters-records']">
             <i class="menu-item-icon"></i>
-            <span class="menu-item-title">Tables with Filters</span>
+            <span class="menu-item-title">Server Side Pagination</span>
           </a>
         </li>
       </ul>
     </mat-expansion-panel>
   </li>
-</ul>
-<ul>
-  <p [routerLink]="['/dashboards/team']" class="team">Who We Are</p>
+  <ngx-spinner
+          bdColor = "rgba(51, 51, 51, 0.8)"
+          size = "large"
+          color = "#5553ff"
+          type = "pacman"></ngx-spinner>
 </ul>
 

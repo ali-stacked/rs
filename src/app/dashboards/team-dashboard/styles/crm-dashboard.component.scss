@@ -1,7 +1,15 @@
 @import 'shared';
 @import '../../styles/partials/visualization-heading';
 @import '../../styles/partials/banner-callout';
-
+.cover-image.team-real {
+  border-radius: 1rem !important;
+}
+.article-title.team-title {
+  font-size: 1.3em;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  font-family: Canela,Georgia,serif !important;
+}
 :host-context(.layout-c) {
   --overlap-padding: 80px;
 

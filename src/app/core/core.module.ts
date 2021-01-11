@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { SharedModule } from '../shared/shared.module';
 import { LayoutModule } from '@angular/cdk/layout';
 import { RouterModule } from '@angular/router';
-
+import {NgxSpinnerModule } from 'ngx-spinner';
 
 import {
   // Side Menu
@@ -66,6 +66,7 @@ import { MobileLayoutComponent } from './layouts/mobile/mobile-layout.component'
   imports: [
     CommonModule,
     RouterModule,
+    NgxSpinnerModule,
     SharedModule,
     // Material CDK modules
     PortalModule,

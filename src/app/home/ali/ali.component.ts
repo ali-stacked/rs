@@ -30,7 +30,12 @@ export class AliComponent implements OnInit {
         showNextLead();
       })();
   }
-
+  showSpeed() {
+    this.spinner.show();
+    setTimeout(() => {
+      this.spinner.hide();
+    }, 2000);
+  }
   showSpinner() {
     this.spinner.show();
     setTimeout(() => {

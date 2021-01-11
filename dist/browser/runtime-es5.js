@@ -64,7 +64,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + ({"default~charts-charts-module~dashboards-dashboards-module":"default~charts-charts-module~dashboards-dashboards-module","charts-charts-module":"charts-charts-module","common":"common","dashboards-dashboards-module":"dashboards-dashboards-module","default~forms-forms-module~home-home-module":"default~forms-forms-module~home-home-module","home-home-module":"home-home-module","forms-forms-module":"forms-forms-module","records-records-module":"records-records-module","firebase-auth":"firebase-auth"}[chunkId]||chunkId) +    "-es5.js"
+/******/ 		return __webpack_require__.p + "" + ({"common":"common","home-home-module":"home-home-module","records-records-module":"records-records-module","default~charts-charts-module~dashboards-dashboards-module":"default~charts-charts-module~dashboards-dashboards-module","charts-charts-module":"charts-charts-module","dashboards-dashboards-module":"dashboards-dashboards-module","firebase-auth":"firebase-auth"}[chunkId]||chunkId) +    "-es5.js"
 /******/ 	}
 /******/
 /******/ 	// The require function

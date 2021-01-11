@@ -1,4 +1,5 @@
 import { Routes, Route } from '@angular/router';
+import {WidgetLibraryModule} from "./widget-library/widget-library.module";
 
 const defaultRoute: Route = {
     path: '', redirectTo: '/home/ali', pathMatch: 'full'
@@ -15,8 +16,8 @@ const mainRoutes: Routes = [
     loadChildren: () => import('./records/records.module').then(m => m.RecordsModule)
   },
   {
-    path: 'forms',
-    loadChildren: () => import('./forms/forms.module').then(m => m.FormsModule)
+    path: 'widget-library',
+    loadChildren: () => import('./widget-library/widget-library.module').then(m => WidgetLibraryModule)
   },
   {
     path: 'home',

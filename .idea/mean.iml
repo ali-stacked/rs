@@ -9,5 +9,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="ali-custom" />
+    <orderEntry type="module" module-name="dashboards" />
   </component>
 </module>
