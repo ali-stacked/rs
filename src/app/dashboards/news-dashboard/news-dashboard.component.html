@@ -1,84 +1,108 @@
 <div class="content-wrapper">
-    <div class="highlighted-section">
-        <div class="container-fluid">
-            <div class="row no-gutters">
-                <div class="visualization-heading col-12">
-                    <div class="heading-info">
-                        <h2 class="heading-title">U.S COVID-19 Dashboard</h2>
-                        <p class="heading-message">
-                            Up to Date COVID-19 Aggregated API Data from - <b>{{date | date}}</b>
-                        </p>
-                    </div>
-                    <div class="heading-actions">
-                        <ul class="visualization-period-selector nav">
-<!--                            <li class="period-item nav-item">-->
-<!--                                <a class="period-action nav-link">This year</a>-->
-<!--                            </li>-->
-                            <li class="period-item nav-item">
-                                <a class="period-action nav-link active">{{'Today' + '' + date | date}}</a>
-                            </li>
-<!--                            <li class="period-item nav-item">-->
-<!--                                <a class="period-action nav-link">This week</a>-->
-<!--                            </li>-->
-<!--                            <li class="period-item nav-item">-->
-<!--                                <a aria-disabled="true" class="period-action nav-link disabled" tabindex="-1">Today</a>-->
-<!--                            </li>-->
-                            <li class="period-item period-alt-item nav-item">
-                                <a class="period-action nav-link">
-                                    <mat-icon class="calendar-icon" svgIcon="calendar"></mat-icon>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
 
-            <div class="highlighted-stats-visualization row no-gutters">
-                <div *ngFor="let item of statistics; let i = index" class="stat-item">
-                    <span class="stat-reference">{{item.name}}</span>
-                    <div class="stat-info">
-                        <span class="stat-value">{{item.value | number}}</span>
-                        <div [ngClass]="{'positive-trend': (!item.positive), 'negative-trend': (!item.positive)}"
-                             class="stat-trend">
-<!--                            <div class="trend-value-wrapper">-->
-<!--                                <span class="trend-value">{{item.valueChange}}</span>-->
-<!--                                <mat-icon [svgIcon]="(item.positive) ? 'arrow-up' : 'arrow-down'"-->
-<!--                                          class="trend-icon"></mat-icon>-->
-<!--                            </div>-->
-                            <span class="trend-reference">Yesterday</span>
+<!--    <div class="highlighted-section">-->
+<!--        <div class="container-fluid">-->
+
+<!--            <div class="row no-gutters">-->
+<!--                <div class="visualization-heading col-12">-->
+<!--                    <div class="heading-info">-->
+<!--                        <h2 class="news-title"> Aggregated News Dashboard </h2>-->
+
+<!--                    </div>-->
+
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+    <div class="knowledge-articles-list row">
+        <div class="real-team visualizations-section knowledge-articles-visualization">
+
+            <div class="knowledge-articles-list row">
+            <h2> Trending Global News </h2>
+
+                <div *ngFor="let t of news | slice:0:3" class="knowledge-article-wrapper col-12 col-md-6 col-lg-4 col-xl-3">
+
+                    <div class="knowledge-article">
+                        <div class="article-cover-wrapper">
+                            <cc-aspect-ratio [ratio]="{w: 35, h: 35}">
+                                <cc-image-shell [alt]="'cover image'" [mode]="'cover'" [src]="articles.urlToImage"
+                                                animation="spinner"
+                                                class="cover-image"></cc-image-shell>
+                            </cc-aspect-ratio>
                         </div>
+                        <div class="article-info">
+                            <div class="author-image-wrapper">
+                                <cc-aspect-ratio [ratio]="{w: 1, h: 1}">
+                                    <cc-image-shell [alt]="'author image'" [src]="articles.urlToImage"
+                                                    animation="spinner"
+                                                    class="author-image"></cc-image-shell>
+                                </cc-aspect-ratio>
+                            </div>
+                            <div class="article-details">
+                                <span class="author-name">{{ t.name }}</span>
+                            </div>
+                        </div>
+                        <h3 class="article-title">{{ t.title }}</h3>
                     </div>
-                    <div *ngIf="isBrowser" [options]="item.miniChartOptions" [theme]="'admin-template'" class="stat-mini-chart"
-                         echarts></div>
                 </div>
             </div>
 
         </div>
+
     </div>
 
-    <div class="main-section">
-        <div class="container-fluid">
+    <div class="knowledge-articles-list row">
+        <div class="real-team visualizations-section knowledge-articles-visualization">
 
-            <div class="referrals-visualization visualizations-section">
-                <div class="row no-gutters">
-                    <div class="visualization-heading col-12">
-                        <div class="heading-info">
-                            <h4 class="heading-title">Referral Source</h4>
-                        </div>
-                        <div class="heading-actions">
-                            <div class="visualization-period-dropdown-selector" ngbDropdown placement="bottom-right">
-                                <button class="period-dropdown-toggle btn" ngbDropdownToggle>
-                                    This year
-                                    <mat-icon class="toggle-icon" svgIcon="half-arrow-down"></mat-icon>
-                                </button>
-                                <div class="period-dropdown" ngbDropdownMenu>
-                                    <button class="period-option" ngbDropdownItem>2018</button>
-                                    <button class="period-option" ngbDropdownItem>2017</button>
-                                    <button class="period-option" ngbDropdownItem>2016</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="knowledge-articles-list row">
+                <h2> Trending Technology News </h2>
 
+
+        <div *ngFor="let t of articles | slice:0:3" class="knowledge-article-wrapper col-12 col-md-6 col-lg-4 col-xl-3">
+
+            <div class="knowledge-article">
+                <div class="article-cover-wrapper">
+                    <cc-aspect-ratio [ratio]="{w: 35, h: 35}">
+                        <cc-image-shell [alt]="'cover image'" [mode]="'cover'" [src]="t.urlToImage"
+                                        animation="spinner"
+                                        class="cover-image"></cc-image-shell>
+                    </cc-aspect-ratio>
                 </div>
+                <div class="article-info">
+                    <div class="author-image-wrapper">
+                        <cc-aspect-ratio [ratio]="{w: 1, h: 1}">
+                            <cc-image-shell [alt]="'author image'" [src]="t.urlToImage"
+                                            animation="spinner"
+                                            class="author-image"></cc-image-shell>
+                        </cc-aspect-ratio>
+                    </div>
+                    <div class="article-details">
+                        <span class="author-name">{{ t.name }}</span>
+                    </div>
+                </div>
+                <h3 class="article-title">{{ t.title }}</h3>
             </div>
+        </div>
+    </div>
+
+<app-footer></app-footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

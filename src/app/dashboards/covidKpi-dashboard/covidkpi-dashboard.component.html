@@ -1,0 +1,64 @@
+
+<div class="content-wrapper">
+  <div class="highlighted-section">
+    <div class="container-fluid">
+
+      <div class="row no-gutters">
+        <div class="visualization-heading col-12">
+          <div class="heading-info">
+            <h2 class="heading-title blk">Covid-19 Global Case Study, Density Analysis</h2>
+
+            <p class="heading-message blk" *ngFor="let i of globalData | async">
+<!--              <b>{{i.totalDeaths}}</b>-->
+<!--               <b>REAL-TIME: Cases & Fatalities Per One Million People </b>-->
+            </p>
+          </div>
+        </div>
+      </div>
+        <!--- item 1 live --->
+        <div class="highlighted-stats-visualization row no-gutters">
+            <div class="stat-item col-md-6 col-lg-3" *ngFor="let bigal of rankings | async">
+                <div class="stat-item-wrapper">
+                    <div class="row no-gutters">
+                        <div class="stat-info col-4 col-md-5 col-lg-12 col-xl-6 order-lg-2 order-xl-0">
+                            <span class="blk stat-value">{{bigal.name}} </span>
+                            <span class="blk stat-reference rs">Cases Per Million: <b>{{bigal.points | number}}</b></span>
+                            <span class="blk stat-reference rs">Deaths Per Million: <b>{{bigal.rank | number}}</b></span>
+                        </div>
+
+                        <div class="stat-trend col-4 col-md-4 col-lg-5 col-xl-3">
+                            <span class="trend-reference rs wrap"><b>{{bigal.bestRank | number}}</b> Cases</span>
+                            <span class="trend-reference rs"><b>{{bigal.bestRankDate | date}}</b> Deaths</span>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!--      <div class="highlighted-stats-visualization row no-gutters">-->
+<!--        <div class="stat-item col-md-6 col-lg-3" *ngFor="let bigal of covidMillion | async">-->
+<!--          <div class="stat-item-wrapper">-->
+<!--            <div class="row no-gutters">-->
+<!--              <div class="stat-info col-4 col-md-5 col-lg-12 col-xl-6 order-lg-2 order-xl-0">-->
+<!--                <span class="blk stat-value">{{bigal.name}} </span>-->
+<!--                  <span class="blk stat-reference rs">Cases Per Million: <b>{{bigal.casesMillion | number}}</b></span>-->
+<!--                  <span class="blk stat-reference rs">Deaths Per Million: <b>{{bigal.deathsMillion | number}}</b></span>-->
+<!--              </div>-->
+
+<!--              <div class="stat-trend col-4 col-md-4 col-lg-5 col-xl-3">-->
+<!--                  <span class="trend-reference rs wrap"><b>{{bigal.totalCases | number}}</b> Cases</span>-->
+<!--                  <span class="trend-reference rs"><b>{{bigal.totalDeaths | number}}</b> Deaths</span>-->
+
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+        <!-- item end -->
+      </div>
+    </div>
+  </div>
+
+  <app-kpi-chart></app-kpi-chart>
+    <app-footer></app-footer>
+
+</div>
+

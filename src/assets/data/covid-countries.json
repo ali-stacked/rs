@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Germany",
+    "value": 2500
+  },
+  {
+    "name": "USA",
+    "value": 4000
+  },
+  {
+    "name": "Spain",
+    "value": 1700
+  },
+  {
+    "name": "India",
+    "value": 2000
+  },
+  {
+    "name": "France",
+    "value": 1200
+  }
+];

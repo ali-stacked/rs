@@ -1,4 +1,5 @@
-import { Component, OnInit, ViewChild, AfterViewInit, OnDestroy, HostBinding, PLATFORM_ID, Inject } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit,
+  OnDestroy, HostBinding, PLATFORM_ID, Inject } from '@angular/core';
 import { MatSidenav } from '@angular/material';
 import { SideMenusService } from '../../side-menus/side-menus.service';
 import { Subscription } from 'rxjs';

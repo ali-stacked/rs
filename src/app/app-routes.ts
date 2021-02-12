@@ -1,11 +1,8 @@
 import { Routes, Route } from '@angular/router';
-import {WidgetLibraryModule} from "./widget-library/widget-library.module";
 
 const defaultRoute: Route = {
-    path: '', redirectTo: '/home/ali', pathMatch: 'full'
+    path: '', redirectTo: '/home/landing-page', pathMatch: 'full'
   };
-  // { path: '', redirectTo: '/authentication/signup', pathMatch: 'full' },
-
 const mainRoutes: Routes = [
   {
     path: 'charts',
@@ -16,8 +13,8 @@ const mainRoutes: Routes = [
     loadChildren: () => import('./records/records.module').then(m => m.RecordsModule)
   },
   {
-    path: 'widget-library',
-    loadChildren: () => import('./widget-library/widget-library.module').then(m => WidgetLibraryModule)
+    path: 'widgets',
+    loadChildren: () => import('./widget-library/widget-library.module').then(m => m.WidgetLibraryModule)
   },
   {
     path: 'home',
@@ -27,8 +24,8 @@ const mainRoutes: Routes = [
     path: 'dashboards',
     loadChildren: () => import('./dashboards/dashboards.module').then(m => m.DashboardsModule)
   },
-  { path: '', redirectTo: '/home/ali', pathMatch: 'full' },
-  { path: '**', redirectTo: 'home' }
+  { path: '', redirectTo: '/home/landing-page', pathMatch: 'full' },
+  { path: '**', redirectTo: '/home/landing-page' }
 ];
 
 const authRoutes: Routes = [
@@ -37,5 +34,6 @@ const authRoutes: Routes = [
     loadChildren: () => import('./authentication/authentication.module').then(m => m.AuthenticationModule)
   }
 ];
+export { defaultRoute, mainRoutes, authRoutes};
 
-export { defaultRoute, mainRoutes, authRoutes };
+// export authRoutes after, aws amplify users

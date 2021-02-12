@@ -21,7 +21,7 @@ export class AuthenticationService {
   }
 
   // tslint:disable-next-line:max-line-length
-  setUser(name: string = 'HOME', lastname: string = '', image: string = '../assets/icons/logos/ali-code.svg', email: string = 'ali.faqih@outlook.com') {
+  setUser(name: string = 'Contact', lastname: string = 'US', image: string = '../assets/icons/logos/ali-code.svg', email: string = 'ali.faqih@outlook.com') {
     // this sets a default user for the template
     this.loggedUser = new LoggedUserModel();
     this.loggedUser.name = name;

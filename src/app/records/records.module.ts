@@ -7,7 +7,7 @@ import { RegularTablesComponent } from './regular-tables/regular-tables.componen
 import { RegularTablesResolver, ExtendedTablesResolver, SmartTablesResolver,
   ExternalFiltersTableResolver } from '../resolvers/tables.resolver';
 import {TennisService} from '../services/tennis.service';
-import {TennisResolver} from '../resolvers/tennis.resolver';
+import {PlayerResolver, TennisResolver} from '../resolvers/tennis.resolver';
 import {BigDataResolver} from '../resolvers/tennis.resolver';
 import { StaticService } from '../services/static-service';
 import { ExtendedTablesComponent } from './extended-tables/extended-tables.component';
@@ -15,6 +15,8 @@ import { SmartTablesComponent } from './smart-tables/smart-tables.component';
 import { TennisFiltersComponent } from './tennis-filters/tennis-filters.component';
 import { AngularFirestoreModule} from '@angular/fire/firestore';
 import { AngularFireAuthModule} from '@angular/fire/auth';
+import { MatButtonModule } from '@angular/material/button';
+import { MatTableExporterModule } from 'mat-table-exporter';
 import { HttpClient } from '@angular/common/http';
 import {environment} from '../../environments/environment';
 import {AngularFireModule} from '@angular/fire';
@@ -24,7 +26,18 @@ import { PlayerDetailComponent } from './player-detail/player-detail.component';
 import {CovidComponent} from "./covid-data/covid-data.component";
 import {NewsService} from "../services/news.service";
 import {DashboardsService} from "../services/dashboards.service";
-import {CovidTablesResolver} from "../resolvers/grid.resolver";
+import {HealthDataResolver} from "../resolvers/grid.resolver";
+import { GlobalCovidGridComponent} from "./covid-global/global-data.component";
+import {GlobalCovidTablesResolver} from "../resolvers/tables.resolver";
+import { AddDataComponent } from './dialogs/add-data/add-data.component';
+import {HealthDataComponent} from "./health/health-data.component";
+
+import {PlayerDetailResolver} from "../resolvers/dashboards.resolver";
+import {NosqlService} from "../services/nosql.service";
+import { UploadComponent } from './upload/upload.component';
+import { DialogOverviewComponent } from './dialog-overview/dialog-overview.component';
+import { RankingsComponent } from './rankings/rankings.component';
+import { DemoAlertComponent } from './dialogs/demo-alert/demo-alert.component';
 
 export const recordRoutes = [
   {
@@ -53,10 +66,28 @@ export const recordRoutes = [
     }
   },
   {
-    path: 'covid-data',
-    component: CovidComponent,
+    path: 'health-data',
+    component: HealthDataComponent,
     resolve: {
-      tableData : CovidTablesResolver
+      bigData : HealthDataResolver
+    }
+  },
+  {
+    path: 'rankings',
+    component: RankingsComponent
+  },
+  {
+    path: 'player/:id/overview',
+    component: PlayerDetailComponent,
+    resolve: {
+      data : PlayerResolver
+    }
+  },
+  {
+    path: 'covid-data',
+    component: GlobalCovidGridComponent,
+    resolve: {
+      tableData : GlobalCovidTablesResolver
     }
   },
   {
@@ -76,18 +107,28 @@ export const recordRoutes = [
     TennisFiltersComponent,
     BigDataComponent,
     PlayerDetailComponent,
-    CovidComponent
+    CovidComponent,
+    GlobalCovidGridComponent,
+    AddDataComponent,
+    HealthDataComponent,
+    UploadComponent,
+    DialogOverviewComponent,
+    RankingsComponent,
+    DemoAlertComponent
   ],
   imports: [
     CommonModule,
     SharedModule,
-    DragDropModule,
+  MatTableExporterModule,
+  DragDropModule,
+    MatButtonModule,
     AngularFireModule.initializeApp(environment.firebase), // imports firebase/app
     AngularFirestoreModule, // imports firebase/firestore
     AngularFireAuthModule, // imports firebase/auth
     AngularFireStorageModule, // imports firebase/storage
     RouterModule.forChild(recordRoutes)
   ],
+  entryComponents: [AddDataComponent,DemoAlertComponent],
   providers: [
     StaticService,
     HttpClient,
@@ -100,7 +141,11 @@ export const recordRoutes = [
     BigDataResolver,
     NewsService,
     DashboardsService,
-    CovidTablesResolver
+    HealthDataResolver,
+    GlobalCovidTablesResolver,
+    PlayerDetailResolver,
+      PlayerResolver,
+    NosqlService
   ]
 })
 

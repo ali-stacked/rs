@@ -1,0 +1,101 @@
+<div class="container-fluid content-wrapper">
+  <h1 class="page-title">Visualization Warehouse, We Offer a very large variety of Cutting Edge products with animations that can scale and are edited by clients directly on The User's Interface with
+    Any Domain Data from the RealStack Mobile, Desktop, Or Saas Web Application Options </h1>
+
+  <div class="callout-message-wrapper">
+    <div class="callout-icon d-none d-md-block">
+  Chart Menu
+    </div>
+    <div class="callout-message">
+     <span>
+        <p class="viz-item"><a routerLink="/charts/scalable-viz" >D3 Extensions</a></p>
+       <p class="viz-item"><a routerLink="/charts/stacked-charts" >NGX Integrations</a></p>
+       <p class="viz-item"><a routerLink="/charts/custom-charts" >RealStack Visualizations</a></p>
+      </span>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-6 col-sm-12">
+      <div class="chart-card">
+        <div class="chart-card-header">
+          <span>Total transactions</span>
+        </div>
+        <div class="chart-card-body">
+          <canvas *ngIf="isBrowser" baseChart
+            [datasets]="lineChartData"
+            [labels]="lineChartLabels"
+            [options]="lineChartOptions"
+            [colors]="lineChartColors"
+            [legend]="lineChartLegend"
+            [chartType]="lineChartType">
+          </canvas>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 col-sm-12">
+      <div class="chart-card">
+        <div class="chart-card-header">
+          <span>Sales by source</span>
+        </div>
+        <div class="chart-card-body">
+          <canvas *ngIf="isBrowser" baseChart
+            [data]="pieChartData"
+            [labels]="pieChartLabels"
+            [chartType]="pieChartType"
+            [options]="pieChartOptions"
+            [colors]="pieChartColors"
+            [legend]="pieChartLegend">
+          </canvas>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 col-sm-12">
+      <div class="chart-card">
+        <div class="chart-card-header">
+          <span>Sales by Product</span>
+        </div>
+        <div class="chart-card-body">
+          <canvas *ngIf="isBrowser" baseChart
+            [datasets]="barChartData"
+            [labels]="barChartLabels"
+            [options]="barChartOptions"
+            [plugins]="barChartPlugins"
+            [legend]="barChartLegend"
+            [chartType]="barChartType">
+          </canvas>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 col-sm-12">
+      <div class="chart-card">
+        <div class="chart-card-header">
+          <span>Sales by device</span>
+        </div>
+        <div class="chart-card-body">
+          <canvas *ngIf="isBrowser" baseChart
+            [data]="doughnutChartData"
+            [labels]="doughnutChartLabels"
+            [colors]="doughnutChartColors"
+            [chartType]="doughnutChartType">
+          </canvas>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 col-sm-12">
+      <div class="chart-card">
+        <div class="chart-card-header">
+          <span>Project Hours Distribution</span>
+        </div>
+        <div class="chart-card-body">
+          <canvas *ngIf="isBrowser" baseChart
+            [datasets]="radarChartData"
+            [options]="radarChartOptions"
+            [labels]="radarChartLabels"
+            [chartType]="radarChartType">
+          </canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

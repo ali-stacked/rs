@@ -1,0 +1,69 @@
+<div class="container-fluid content-wrapper">
+
+  <div class="page-title-wrapper real-title-grid">
+    <h1 class="page-title">Sort, Edit, Add, & Export Test Data</h1>
+<!--    <span class="page-subtitle">RealStack Reusable Grid Component</span>-->
+  </div><br>
+  <div class="row">
+    <div class="col-12">
+      <div *ngIf="filtersVisible">
+        <form [formGroup]="filtersForm" class="filters-form">
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="form-group">
+<!--                <label class="col-form-label">Search</label>-->
+                <input class="form-control" type="text" (keyup)="search($event.target.value)" formControlName="search"  placeholder="Search by any field...">
+              </div>
+            </div>
+          </div>
+        </form>
+        <div class="row buttons-row no-gutters">
+          <button class="col-sm-6 col-md-3 col-lg-2 filters-button rs-btn" type="button" >Export To CSV</button>
+          <button class="col-sm-6 col-md-3 col-lg-2 filters-button rs-btn" type="button" (click)="buildRecord()">Add Record</button>
+        </div>
+      </div>
+    </div>
+
+      <div class="recent-orders row">
+        <div class="col table-wrapper table-responsive">
+          <table mat-table matSort [dataSource]="dataSource" class="table table-borderless table-sm recent-orders-table"   id="rsTableElementId">
+
+            <ng-container matColumnDef="policyId">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+              <td class="ali-td" mat-cell *matCellDef="let element"  routerLink="/records/policy/{{element.policyId}}/detail"> {{element.policyId}}  </td>
+            </ng-container>
+
+            <ng-container matColumnDef="name">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Policy Name </th>
+              <td mat-cell *matCellDef="let element"  routerLink="/records/policy/{{element.policyId}}/detail"> {{element.name}} </td>
+            </ng-container>
+
+
+            <ng-container matColumnDef="organizationName">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Owner </th>
+              <td mat-cell *matCellDef="let element"  routerLink="/records/policy/{{element.policyId}}/detail"> {{element.organizationName}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="recordStatusName">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Status</th>
+              <td mat-cell *matCellDef="let element"  routerLink="/records/policy/{{element.policyId}}/detail"> {{element.recordStatusName}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="startDate">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Effective Date </th>
+              <td mat-cell *matCellDef="let element"  routerLink="/records/policy/{{element.policyId}}/detail"> {{element.startDate | date}} </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+          <mat-paginator class="table-paginator" [pageSizeOptions]="[5, 10, 25]" [pageSize]="5"></mat-paginator>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+

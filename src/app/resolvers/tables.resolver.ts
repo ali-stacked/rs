@@ -10,6 +10,22 @@ export class RegularTablesResolver implements Resolve<any> {
   resolve() {
     return new Promise((resolve, reject) => {
       this.tableDataService.getRegularTableData()
+          .subscribe((tableData: any) => {
+            return resolve(tableData);
+          });
+    });
+  }
+}
+
+
+@Injectable()
+export class GlobalCovidTablesResolver implements Resolve<any> {
+
+  constructor(private tableDataService: StaticService) {}
+
+  resolve() {
+    return new Promise((resolve, reject) => {
+      this.tableDataService.getGlobalCovidData()
       .subscribe((tableData: any) => {
         return resolve(tableData);
       });

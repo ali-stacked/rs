@@ -1,9 +1,13 @@
 <div class="container-fluid content-wrapper">
 
-  <div class="page-title-wrapper">
-    <h1 class="page-title">Warehouse Covid Data</h1>
-    <span class="page-subtitle">records from NO-SQL Collection, SQL DB, and API ForkJoined on the UI to Populated The RealStack Reusable Grid Component</span>
-  </div>
+  <div class="page-title-wrapper real-title-grid">
+
+    <h4 class="grid-sub-title -pull-right"> We pulled over 4k data records! locally with sound serverless architecture. The approach for this sandbox instance only demonstrates flexibity with data sets. For Filtering on larger frequently mutable data we build or integrate server side pagination or parallax scroll components  based on our client requirements.
+      Full Data Solutions allow teams to work cross functionally in one consolidated data operational system, bolstering effieciency with realtime record locking, permissions, & file uploads / exports. Data for all User Sessions are always up to date with RXJS, Realtime Database, or AWS Lambda Functions.
+      Contact us for a live demo and test account</h4>
+    <h1 class="page-title">Sort, Add, & Search On Test Data In a demo Populated From our sandbox DB.</h1>
+<!--    <span class="page-subtitle">RealStack Reusable Grid Component</span>-->
+  </div><br>
   <div class="row">
     <div class="col-12">
       <div *ngIf="filtersVisible">
@@ -11,70 +15,69 @@
           <div class="row">
             <div class="col-sm-4">
               <div class="form-group">
-                <label class="col-form-label">Search</label>
+<!--                <label class="col-form-label">Search</label>-->
                 <input class="form-control" type="text" (keyup)="search($event.target.value)" formControlName="search"  placeholder="Search by any field...">
-              </div>
-            </div>
-            <div class="col-sm-3">
-              <div class="form-group">
-                <label class="col-form-label">Date before</label>
-                <div class="input-group">
-                  <input class="form-control" name="datepicker" formControlName="tourney_dates" ngbDatepicker #datepicker="ngbDatepicker">
-                  <div class="input-group-append">
-                    <button class="btn datepicker-toggle-btn" (click)="datepicker.toggle()" type="button"><i class="fas fa-calendar-alt"></i></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-5">
-              <div class="form-group categories">
               </div>
             </div>
           </div>
         </form>
+        <div class="row buttons-row no-gutters">
+          <button class="col-sm-6 col-md-3 col-lg-2 filters-button rs-btn" type="button">Export To CSV</button>
+          <button class="col-sm-6 col-md-3 col-lg-2 filters-button rs-btn" type="button">Export To Excel</button>
+          <button class="col-sm-6 col-md-3 col-lg-2 filters-button rs-btn" type="button">Import CSV</button>
+          <button class="col-sm-6 col-md-3 col-lg-2 filters-button rs-btn" type="button">Add Record</button>
+        </div>
       </div>
-      <div class="row buttons-row no-gutters">
-        <button class="col-sm-6 col-md-3 col-lg-2 filters-button" type="button" (click)="toggleFilters()">{{toggleFiltersLabel}}</button>
-        <button class="col-sm-6 col-md-3 col-lg-2 filters-button" type="button" (click)="clearFilters()">Clear filters</button>
-      </div>
+    </div>
+
       <div class="recent-orders row">
         <div class="col table-wrapper table-responsive">
-          <table mat-table matSort [dataSource]="dataSource" class="table table-borderless table-sm recent-orders-table">
+          <table mat-table matSort [dataSource]="dataSource" class="table table-borderless table-sm recent-orders-table"   id="rsTableElementId">
 
             <ng-container matColumnDef="singles_winner_name">
               <th mat-header-cell *matHeaderCellDef mat-sort-header> Player </th>
-              <td mat-cell *matCellDef="let element"> {{element.singles_winner_name}} </td>
+              <td mat-cell *matCellDef="let element" routerLink="/records/player/{{element.singles_winner_player_slug}}/detail">
+                {{element.singles_winner_name}}
+              </td>
             </ng-container>
             <ng-container matColumnDef="singles_winner_player_id">
               <th mat-header-cell *matHeaderCellDef mat-sort-header> ID</th>
-              <td mat-cell *matCellDef="let element"> {{element.singles_winner_player_id}} </td>
+              <td mat-cell *matCellDef="let element" routerLink="/records/player/{{element.singles_winner_player_slug}}/detail">
+                {{element.singles_winner_player_id}}&nbsp; </td>
             </ng-container>
             <ng-container matColumnDef="tourney_name">
               <th mat-header-cell *matHeaderCellDef mat-sort-header> Tournament </th>
-              <td mat-cell *matCellDef="let element"> {{element.tourney_name}} </td>
+              <td mat-cell *matCellDef="let element" routerLink="/records/player/{{element.singles_winner_player_slug}}/detail"> {{element.tourney_name}} </td>
             </ng-container>
             <ng-container matColumnDef="tourney_surface">
               <th mat-header-cell *matHeaderCellDef mat-sort-header> Tournament Surface </th>
-              <td mat-cell *matCellDef="let element"> {{element.tourney_surface}} </td>
+              <td mat-cell *matCellDef="let element" routerLink="/records/player/{{element.singles_winner_player_slug}}/detail"> {{element.tourney_surface}} </td>
             </ng-container>
             <ng-container matColumnDef="tourney_dates">
               <th mat-header-cell *matHeaderCellDef mat-sort-header> Tournament Dates</th>
-              <td mat-cell *matCellDef="let element"> {{element.tourney_dates | date}} </td>
+              <td mat-cell *matCellDef="let element" routerLink="/records/player/{{element.singles_winner_player_slug}}/detail"> {{element.tourney_dates | date}} </td>
             </ng-container>
             <ng-container matColumnDef="tourney_year">
               <th mat-header-cell *matHeaderCellDef mat-sort-header> Year </th>
-              <td mat-cell *matCellDef="let element"> {{element.tourney_year}} </td>
+              <td mat-cell *matCellDef="let element" routerLink="/records/player/{{element.singles_winner_player_slug}}/detail"> {{element.tourney_year}} </td>
             </ng-container>
 
             <ng-container matColumnDef="tourney_conditions">
               <th mat-header-cell *matHeaderCellDef mat-sort-header> Conditions </th>
-              <td mat-cell *matCellDef="let element"> {{element.tourney_conditions}} </td>
+              <td mat-cell *matCellDef="let element" routerLink="/records/player/{{element.singles_winner_player_slug}}/detail"> {{element.tourney_conditions}} </td>
             </ng-container>
 
             <ng-container matColumnDef="tourney_location">
+
               <th mat-header-cell *matHeaderCellDef mat-sort-header> Location </th>
-              <td mat-cell *matCellDef="let element"> {{element.tourney_location}} </td>
+              <td mat-cell *matCellDef="let element" routerLink="/records/player/{{element.singles_winner_player_slug}}/detail"> {{element.tourney_location}} </td>
             </ng-container>
+
+            <ng-container matColumnDef="singles_winner_player_slug">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Slug </th>
+              <td mat-cell *matCellDef="let element" routerLink="/records/player/{{element.singles_winner_player_slug}}/detail"> {{element.singles_winner_player_slug}} </td>
+            </ng-container>
+
             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
             <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
           </table>
@@ -83,8 +86,8 @@
       </div>
     </div>
   </div>
-</div>
 
+<app-footer></app-footer>
 
 
 

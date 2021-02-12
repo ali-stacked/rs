@@ -6,6 +6,7 @@ import {BigData} from '../interfaces/tennis.interface';
 import { Player } from '../interfaces/player.interface';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { AngularFireAuth } from '@angular/fire/auth';
+import {GlobalSummary} from "../interfaces/covid-global.interface";
 
 @Injectable()
 export class TennisService {
@@ -18,6 +19,18 @@ export class TennisService {
     return this.fireStore.collection<Slam>('slams').valueChanges();
 }
 
+  addDocTennis(data){
+    return new Promise<any>((resolve, reject) => {
+          this.fireStore
+              .collection("tennis")
+              .add(data)
+              .then(
+                  res => {},
+                  err => reject(err)
+              )
+        }
+    )}
+
   getGoats() {
     return this.fireStore.collection<Player>('goats').valueChanges();
   }
@@ -25,6 +38,15 @@ export class TennisService {
   getBigData() {
     return this.fireStore.collection<BigData>('tennis').valueChanges();
   }
+
+  getPlayer(id:string) {
+    return this.fireStore.collection('tennis').valueChanges({ singles_winner_player_slug: 'singles_winner_player_slug' });
+
+  }
+
+    getGlobalCovidSum() {
+        return this.fireStore.collection<GlobalSummary>('global').valueChanges();
+    }
 
 }
 

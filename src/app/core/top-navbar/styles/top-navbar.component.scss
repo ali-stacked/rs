@@ -1,9 +1,12 @@
 @import './partials/navbar-branding';
 @import './partials/navbar-dividers';
 
+.non {
+  text-underline: none !important;
+}
 :host {
 
-  --top-navbar-color: #000fff;
+  --top-navbar-color: #000;
   --top-navbar-alt-color: #E6E6E6;
   --top-navbar-background: #fff;
   --top-navbar-border-color: #fff;
@@ -18,10 +21,40 @@
   --top-navbar-controls-height: 30px;
   --top-navbar-icon-size: 27px;
 }
-
-.real-svg {
-  height:30px !important;
+.real-home-svg:hover {
+  //pointer-events: visibleStroke !important;
+  //border-bottom: 1px solid #7371f2 !important;
 }
+.real-svg {
+  height:2rem !important;
+  margin-right:3em;
+}
+
+.real-svg:hover {
+pointer-events: visibleStroke;
+}
+
+[_nghost-serverApp-c5] .top-navbar-toolbar[_ngcontent-serverApp-c5] .navbar-search[_ngcontent-serverApp-c5] {
+  padding-top:1.5rem !important;
+}
+
+//.home-text-top{
+//  font-family: Operetta !important;
+//  text-align: left;
+//  color:#000 !important;
+//  font-size:1.5rem !important;
+//  -webkit-font-smoothing: antialiased;
+//  text-rendering: optimizelegibility;
+//  font-feature-settings: 'lnum';
+//  font-variant-numeric: lining-nums;
+//
+//}
+
+.real.search-input.form-control.form-control-lg {
+  visibility: hidden !important;
+}
+
+
 
 :host([mode = 'condensed']) {
   --top-navbar-controls-height: 30px;
@@ -58,9 +91,9 @@
     //padding: 0px var(--top-navbar-padding);
   }
   mat-toolbar-row {
-    height: var(--top-navbar-height);
-    padding: 0px;
-    margin-top:20px;
+    height: 5rem;
+    padding-top: 20px;
+    margin-top:0px;
   }
 
   .top-navbar-toolbar {
@@ -78,7 +111,7 @@
 
         // Override Bootstrap styles
         &.form-control-lg {
-          height: var(--top-navbar-controls-height);
+          height:5px;
         }
         &.form-control {
           border: none;
@@ -99,7 +132,7 @@
       height: var(--top-navbar-controls-height);
       margin-inline-start: auto;
       display: flex;
-      align-items: center;
+      align-items: stretch;
 
       .action-button {
         color: var(--top-navbar-color);
@@ -112,6 +145,10 @@
       mat-icon.navbar-icons {
         width: var(--top-navbar-icon-size);
         height: var(--top-navbar-icon-size);
+        margin-top:2rem;
+
+
+
       }
     } // .navbar-actions
 
@@ -172,17 +209,31 @@
           }
         }
 
+        //.user-name {
+        //  font-family:realistnarrow, sans-serif !important;
+        //  font-size: 1.3rem;
+        //  font-weight: 600;
+        //  color: #000;
+        //  margin-inline-end: 5px;
+        //}
+
+        .user-name:hover {
+          border-bottom:1px solid #9e34df !important;
+          pointer-events: auto !important;
+        }
+
         .user-name {
-          font-family: proxima-nova-1, proxima-nova-2, sans-serif;
-          font-size: 16px;
-          color: pink;
+          font-family:realistnarrow, sans-serif !important;
+          font-size: 1.3rem;
+          font-weight: 600;
+          color: #000;
           margin-inline-end: var(--top-navbar-spacing);
         }
 
         .user-name > cc-text-shell {
           --text-shell-line-height: 14px;
 
-          min-width: 80px;
+          min-width: 10px;
 
           &.text-loaded {
             min-width: 0px;

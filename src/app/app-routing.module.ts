@@ -25,7 +25,8 @@ const routes: Routes = [
   // top level application routes). In any other module, you must call the RouterModule.forChild method to register additional routes.
   imports: [RouterModule.forRoot(routes, {
     onSameUrlNavigation: 'reload',
-    initialNavigation: 'enabled'
+    initialNavigation: 'enabled',
+    useHash: true
   })],
   exports: [RouterModule]
 })

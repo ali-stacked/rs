@@ -10,21 +10,23 @@ import { FileUploaderComponent } from './file-uploader/file-uploader.component';
 import { CreateAccountModalComponent } from './modals/templates/create-account-modal/create-account-modal.component';
 import { SignInModalComponent } from './modals/templates/sign-in-modal/sign-in-modal.component';
 import { UtilitiesService } from './utilities.service';
-import {CrmDashboardResolver} from '../resolvers/dashboards.resolver';
-import {DashboardsService} from '../services/dashboards.service';
-import {MatListModule} from '@angular/material/list';
-import {MatCardModule} from '@angular/material';
-import {WorkComponent } from './work/work.component';
-import {NgxSpinnerModule } from 'ngx-spinner';
+import { CrmDashboardResolver} from '../resolvers/dashboards.resolver';
+import { DashboardsService} from '../services/dashboards.service';
+import { MatListModule} from '@angular/material/list';
+import { MatCardModule} from '@angular/material';
+import { WorkComponent } from './work/work.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { HomeBottomComponent } from './home-bottom/home-bottom.component';
+import {InsightsComponent
 
 
 export const homeRoutes = [
   {
     path: '',
-    redirectTo: 'ali'
+    redirectTo: 'landing-page'
   },
   {
-    path: 'ali',
+    path: 'landing-page',
     component: AliComponent,
     resolve: {
       data: CrmDashboardResolver
@@ -57,7 +59,8 @@ export const homeRoutes = [
     FileUploaderComponent,
     CreateAccountModalComponent,
     SignInModalComponent,
-    WorkComponent
+    WorkComponent,
+    HomeBottomComponent
   ],
   providers: [
     UtilitiesService,

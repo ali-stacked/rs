@@ -2,7 +2,7 @@
 <!-- The CSS grid that makes up the entirety of the hero image/banner image area -->
 <section class="top-banner-section">
   <div class="banner-image-div">
-      <img class="banner-image"/>
+      <img src="/assets/sexy-bg.svg" alt="Banner Image" class="real-image-baby banner-image"/>
 
   </div>
   <!-- The CSS grid area that displays the semi-transparent gradient overlay (layer 2) -->
@@ -10,55 +10,45 @@
   <!-- The CSS grid area that displays the content (layer 3) -->
   <div class="banner-text-div">
     <span class="banner-text">
-      <h2 class="ship-it">Lets Build The World Today,<span class="contrast-color"> In Real-Time</span></h2>
-      <p class="lead nova"> No More Waiting, Data Notifications On all Devices.</p>
-      <p class="lead nova">People Science In Software Engineering.</p>
-      <p class="lead nova">Easily Configurable Visualizations For Mobile.</p>
-<main class="wrapper">
-
+        <h2 class="ship-it">Lets <span class="contrast-color"> Build The World</span>  Today <span class="contrast-color"> In Real-Time</span></h2>
+           <p class="lead nova">People Science In Software Engineering.</p>
+        <p class="lead nova"> Realtime Data & Visualization Web & Mobile platform</p>
+         <p class="lead nova"> Event Driven Data Combined on a range of data sources </p>
+          <p class="lead nova">real-time events, flexible serverless architecture</p>
+          <p class="lead nova"> Import, Create, & Edit Big Data In Real-Time</p>
+           <p class="lead nova">Configure Beautifully Responsive Reports From anywhere</p>
+         <p class="lead nova"> AWS AppSync Single Sign On with Amplify and Lambda</p>
+      <p class="lead nova"> Defined KPI Event Driven Data on S3 Uploads, Data Change Triggers</p>
+      <p class="lead nova">Scalable Visualization library For Desktop & Mobile.</p>
+        <p class="lead nova">  Single Sign On Platform Integrations outside of AWS</p>
+      <p class="lead nova"> Reactive, Single Page, Data Driven Angular Applications.</p>
+      <p class="lead nova"> Multi-User Record Notifications & Locking</p>
+           <p class="lead nova">People Science In Software Engineering.</p>
+        <p class="lead nova"> AWS Certified Cloud Architects, Digital Ocean, Azure </p>
+        <p class="lead nova"> CI/CD - Integrates in Pipeline Builds </p>
+<main class="wrapper realstack">
     <!--    </section>-->
     <section class="breweries" id="breweries">
         <ul>
-            <li [routerLink]="['/dashboards/covid/']">
+            <li class="width-real">
                 <figure>
-                    <img class="banner-svg" src="/assets/illustrations/real-1.svg" alt="Several hands holding beer glasses">
+                     <a class="thide-txt" routerLink="/dashboards/covid-kpi" class="btn blue"><img class="real-banner-svg thide"
+                                                                                                   src="/assets/illustrations/real-3.svg" >
+                         <p class="elevator">
+                       <span class="dropit">Dashboards & Alerts</span></p></a>
 
+                 <a class="thide-txt" routerLink="/records/big-data" class="btn blue">
+                     <img class="real-banner-svg thide " src="/assets/illustrations/real-2.svg" ><p class="elevator">
+                     <span class="dropit" (click)="showSpinner()"> Platform & Services </span></p></a>
+                    <a  class="thide-txt" routerLink="/charts/stacked-charts" class="btn blue">
+                        <img class="real-banner-svg thide" src="/assets/illustrations/real-1.svg"><p class="elevator">
+                        <span class="dropit"> Interactive Visualizations</span></p></a>
                 </figure>
-                <p>
-                    <span class="hot">KPI Visualizations<br>
-                    for Mobile & Desktop</span>
-                </p>
-               <button class="bigal-button" (click)="showSpinner()">Learn More </button>
-            </li>
-            <li>
-                <figure>
-                    <img class="banner-svg" src="/assets/illustrations/real-2.svg" alt="real svg">
-                </figure>
-                <p>
-                    <span class="hot">Render Big Data <br>With Fast UI Views
-                    </span>
-                </p>
-               <button class="bigal-button" (click)="showSpinner()" [routerLink]="['/records/big-data/']">Learn More </button>
-            </li>
-            <li>
-                <figure>
-
-                    <img class="banner-svg" src="/assets/illustrations/real-3.svg" alt="Three different glasses of beer">
-                </figure>
-                <p>
-                      <span class="hot">Real-Stack Team,<br>
-                          Platform & Services</span>
-
-                </p>
-                <button class="bigal-button" (click)="showSpinner()" [routerLink]="['/dashboards/team']">Learn More  </button>
             </li>
         </ul>
     </section>
 </main>
-
  </span>
-
-
       <ngx-spinner
               bdColor = "rgba(51, 51, 51, 0.8)"
               size = "large"
@@ -66,30 +56,4 @@
               type = "pacman"></ngx-spinner>
   </div>
 </section>
-<!--        <div class="social-logins row no-gutters real">-->
-<!--        -->
-<!--    -->
-<!--    <span class="purple">Non-Tech Users Can Configure All</span>-->
-<!--       <img src="/assets/illustrations/real-3.svg">-->
-<!--          <span class="purple">Mobile & Web Application Visualization</span>-->
-<!--     </button>-->
-<!--      <button type="button" class="col-xs-12 col-sm-12 real" (click)="showSpinner()"   [routerLink]="['/dashboards/stat-calc/']">-->
-<!--        <span class="purple"> AWS (Saas) Solutions, Enterprise Implementations </span>-->
-<!--        <img src="/assets/illustrations/real-1.svg">-->
-<!--          <span class="purple"> Real-Time UI Data Record Notifications </span>-->
-<!--      </button>-->
-
-<!--      <button type="button" class="col-xs-12 col-sm-12 real" (click)="showSpinner()" [routerLink]="['/records/big-data/']">-->
-<!--          <span class="purple">Resolving Big Data Grids </span>-->
-<!--      <img src="/assets/illustrations/real-2.svg">-->
-<!--          <span class="purple"> Custom Filters & UI Performance </span>-->
-<!--      </button>-->
-
-<!--    </div>-->
-
-
-<!--<div class="bg-na-blue white" style="letter-spacing:-1px; padding:5px 0 5px 6px;"><span class="bg-white na-blue" style="margin:0 3px 0 8px; padding:0 8px;"></span></div>-->
-
-
-
-
+<app-home-bottom></app-home-bottom>

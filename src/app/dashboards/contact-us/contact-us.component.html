@@ -1,0 +1,67 @@
+
+        <div class="row no-gutters signup-page">
+          <div class="col-md-6 col-sm-12 form-section">
+            <h1 class="page-title">Contact Us</h1>
+            <form class="signup-form" [formGroup]="contactForm">
+
+              <div class="form-row">
+                <div class="form-group col-lg-6 col-md-12">
+                  <label for="firstname">First Name</label>
+                  <input type="text" class="form-control" id="firstname" formControlName="firstname">
+                </div>
+                <div class="form-group col-lg-6 col-md-12">
+                  <label for="lastname">Last Name</label>
+                  <input type="text" class="form-control" id="lastname" formControlName="lastname">
+                </div>
+              </div>
+
+
+          <div class="form-row">
+          <div class="form-group col-lg-6 col-md-12">
+            <label for="company">Company</label>
+            <input type="text" class="form-control" id="company" formControlName="company">
+          </div>
+                <div class="form-group col-lg-6 col-md-12">
+                  <label for="email">Email</label>
+                  <input type="email" class="form-control" id="email" formControlName="email">
+                </div>
+          </div>
+
+        <div class="form-row">
+                <div class="form-group col-lg-12 col-md-12">
+                  <label for="lastname">Inquiry</label>
+                  <input type="text" class="form-control inq"  id="inquiry" formControlName="inquiry">
+                </div>
+              </div>
+
+
+              <div class="form-call-to-actions">
+                <button class="create-account-btn" type="submit">Submit</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-6 d-none d-md-block image-section">
+            <cc-image-shell class="signup-image add-overlay" animation="spinner" [mode]="'cover'" [src]="'/assets/imgs/authentication/signup-image.jpg'" [alt]="'app image'"></cc-image-shell>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

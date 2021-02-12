@@ -10,6 +10,11 @@ export class StaticService {
   getRegularTableData(): Observable<any> {
     return this.http.get('../assets/data/regular_table.json');
   }
+
+  getGlobalCovidData(): Observable<any> {
+    return this.http.get('../assets/data/covidglobal.json');
+  }
+
   getExtendedTableData(): Observable<any> {
     return this.http.get('../assets/data/extended_table.json');
   }
@@ -19,6 +24,6 @@ export class StaticService {
   }
 
   getRecentOrdersTableData(): Observable<any> {
-    return this.http.get('../assets/data/ecommerce-dashboard/recent-orders-table.json');
+    return this.http.get('../assets/data/covidKpi-dashboard/recent-orders-table.json');
   }
 }

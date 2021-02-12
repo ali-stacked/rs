@@ -12,6 +12,10 @@ import {
   MatPaginatorModule,
   MatSortModule
 } from "@angular/material";
+// echarts - lib: https://github.com/xieziyu/ngx-echarts
+import { NgxEchartsModule } from 'ngx-echarts';
+import {ChartsModule, ChartsModule as Ng2ChartsModule} from 'ng2-charts';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 
 @NgModule({
@@ -29,7 +33,12 @@ import {
     MatSelectModule,
     MatPaginatorModule,
     CommonModule,
-    MatSortModule
+    MatSortModule,
+    NgxEchartsModule,
+    ChartsModule,
+    NgxChartsModule
+
+
   ]
 })
 export class ToolsModule { }

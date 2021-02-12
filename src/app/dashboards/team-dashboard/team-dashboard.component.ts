@@ -22,6 +22,7 @@ export class TeamDashboardComponent implements OnInit {
               private formBuilder: FormBuilder
   ) {}
   team: any;
+  adv: any;
 
   
 
@@ -29,7 +30,9 @@ export class TeamDashboardComponent implements OnInit {
 this.team = this.service.getTeam().subscribe((res => {
   this.team = res;
 }))
-
+this.adv = this.service.getAdvisors().subscribe(data => {
+  this.adv = data;
+})
   }
 
 

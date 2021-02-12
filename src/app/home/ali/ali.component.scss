@@ -2,33 +2,97 @@
 
 :host {
   // // Default variables
-  font-family: Operetta;
+  font-family: 'Bodoni Moda', serif !important;
 }
 
+.btn {
+  padding: 0 !important;
+}
 .lead {
-  font-family: realistnarrow, sans-serif !important;
-  font-weight: 100;
+  font-family: 'Bodoni Moda', serif !important;
+  font-weight: 100 !important;
+  font-size: 1.8rem;
   font-style: normal;
+  margin-bottom: 3.7rem !important;
 }
 
 .ship-it {
-  font-family: operetta-12, serif !important;
+  margin-top:2.2rem !important;
 }
 
-.detail-grid-container {
-  display: grid;
-  grid-template-columns: auto auto;
-  padding: 10px;
-}
-.detail-grid-item {
-  /*  border: 1px solid rgba(0, 0, 0, 0.8);*/
-  margib:10px;
-  text-align: left;
-}
-.banner-svg {
-  vertical-align: top !important;
+
+#breweries > ul > li > figure > a:nth-child(1) > span{
+  color: #3b3939 !important;
+  font-family: "Bodoni Moda", serif !important;;
+  margin-right:17px !important;
+  margin-left: 17px !important;
+  font-weight: 100;
+  word-wrap: break-word;
+  font-size: 25px;
 }
 
+
+//.wrapper.realstack {
+//  margin-bottom: 5rem !important;
+//}
+
+//#breweries > ul > li > figure > a:nth-child(1) > span:hover {
+//  color: #9e34df !important;
+//}
+//#breweries > ul > li > figure > a:nth-child(2) > span:hover {
+//  color: #9e34df !important;
+//}
+//#breweries > ul > li > figure > a:nth-child(3) > span:hover {
+//  color: #9e34df !important;
+//}
+
+#breweries > ul > li > figure > a:nth-child(2) > span {
+  color: #3b3939 !important;
+  font-family: "Bodoni Moda", serif !important;;
+  margin-right:17px !important;
+  margin-left: 17px !important;
+  font-weight: 100;
+  word-wrap: break-word;
+  font-size: 25px;
+}
+
+#breweries > ul > li > figure > a:nth-child(3) > span {
+  color: #3b3939 !important;
+  font-family: "Bodoni Moda", serif !important;;
+  margin-right:17px !important;
+  margin-left: 17px !important;
+  font-weight: 100;
+  word-wrap: break-word;
+  font-size: 25px;
+
+}
+//.thide{
+//  height: 7rem;
+//}
+//
+//
+//.thide-txt {
+//  font-size:2.3rem;
+//  font-family: realistnarrow, sans-serif;
+//
+//}
+//.drop-it {
+//  font-size:3rem;
+//  font-family: realistnarrow, sans-serif;
+//}
+// for svg btn styles
+.svg-label {
+
+  font-size: 20px;
+  font-weight: 400;
+  color: #363636;
+  text-transform: capitalize;
+
+  // Force two line ellipsis
+  line-height: 1.2;
+  height: calc(20px * 1.2 *2);
+  overflow: hidden;
+}
 
 
 /* Generic styles */
@@ -36,48 +100,35 @@ html {
   scroll-behavior: smooth;
 }
 
-
-
-/* footer */
-footer {
-  background-color: #333;
-  padding: .75rem;
-  color: white;
-  text-align: center;
-  font-size: .75rem;
+.breweries > li {
+  list-style-type: none;
 }
-
-
-
 
 .wrapper{
   display:grid;
-  height:100%;
+  height:auto;
   grid-template-columns: auto;
-  grid-template-rows: auto 30% 40% auto auto;
+  grid-template-rows: auto auto auto;
   grid-template-areas:
   "hd"
   "hero  "
-  "casestudies"
-  "contact"
-  "ft";
+  "casestudies";
 }
 /* case studies */
 .casestudies {
   align-items: stretch;
-
   display:grid;
   grid-area: casestudies;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
   justify-self: stretch;
-  margin:3px;
+
 }
 
 .content{
   position:relative;
 }
-.content .content-overlay {
+.content.content-overlay {
   background: rgba(0,0,0,0.7);
   position: absolute;
   width: 100%;
@@ -93,9 +144,9 @@ footer {
   transition: all 0.4s ease-in-out 0s;
 }
 
-.content:hover .content-overlay{
-  opacity: 1;
-}
+//.content:hover .content-overlay{
+//  opacity: 1;
+//}
 
 .content-image{
   width: 100%;
@@ -120,11 +171,11 @@ footer {
   transition: all 0.3s ease-in-out 0s;
 }
 
-.content:hover .content-details{
-  top: 50%;
-  left: 50%;
-  opacity: 1;
-}
+//.content:hover .content-details{
+//  top: 50%;
+//  left: 50%;
+//  opacity: 1;
+//}
 .highlighted-section{
   --highlighted-background: rgb(var(--palette-primary-rgb));
   --heading-color: rgb(var(--palette-primary-contrast-rgb));
@@ -139,9 +190,6 @@ footer {
   margin-bottom: 0.5rem;
 }
 
-.big-al {
-
-}
 
 .content-details p{
   color: #F4FAFF;
@@ -154,12 +202,12 @@ footer {
 
 .top-banner-section {
   display: grid;
-  grid-template-columns: 1fr; // stretch to the full frame
-  grid-template-rows: 100vh !important; //  tall
-  grid-column-gap: 2px;
-  grid-row-gap: 2px;
-  align-content: center;
-  justify-content: center;
+  grid-template-columns: auto ; // stretch to the full frame
+  grid-template-rows: auto !important; //  tall
+  grid-column-gap: 3rem;
+  grid-row-gap: 10rem;
+  align-content: space-evenly;
+  justify-content: space-evenly;
 
   .banner-image-div {
     grid-area: 1 / 1 / 2 / 2;
@@ -170,6 +218,7 @@ footer {
   } // overlay
   .banner-text-div {
     grid-area: 1 / 1 / 2 / 2;
+
   } // overlay objects like text, buttons, etc.
 }
 
@@ -178,26 +227,67 @@ footer {
   display: grid;
   min-width: 350px; // Min for mobile
   width: 100%;
-  height:fit-content;
+  height:69vh !important;
   margin-left:auto;
   margin-right: auto;
-
   object-fit: cover; // Using this so the image can be any size and still look halfway decent.
 }
+.elevator{
+  max-width:335px !important;
+  font-family: realistnarrow, sans-serif,"Bodoni Moda";
+  font-size: 1.9rem !important;
+  font-weight: 600;
+  line-height: 1.1;
+}
 
+#breweries > ul > li > figure > a:nth-child(1) {
+  margin:1.4rem;
+  padding:1.4rem;
+}
+#breweries > ul > li > figure > a:nth-child(2) {
+  margin:1.4rem;
+  padding:1.4rem;
+}
+#breweries > ul > li > figure > a:nth-child(3) {
+  margin:1.4rem;
+  padding:1.4rem;
+}
+
+#breweries > ul > li > figure > a:nth-child(1):hover {
+  background-color: #9358b7;
+  color:#F2F2F2 !important;
+  font-weight: bold;
+  border-radius: 20px !important;
+
+}
+#breweries > ul > li > figure > a:nth-child(2):hover {
+  background-color: #9e34df;
+  color:#F2F2F2 !important;
+  border-radius: 20px !important;
+}
+#breweries > ul > li > figure > a:nth-child(3):hover {
+  background-color: #9e34df;
+  color:#F2F2F2 !important;
+  border-radius: 20px !important;
+}
 // Gradient overlay (layer 2)
 // gradient overlay going from black to transparent.
 
 .banner-overlay-div {
   display: grid;
-  max-width: 100%;
-  min-height:100%;
-  background: #fff;
+
+
   background: linear-gradient(
-      75deg,
-      rgba(0, 0, 0, 0.4) 20%,
-      rgba(0, 0, 0, 0.5) 20%
+                  1deg,
+                  rgba(#4a2a85, 0.4) 5%,
+                  rgba(#fff, 0.1) 15%
   );
+//background: linear-gradient(to bottom,rgba(0,0,0,0.1) 0,rgba(0,0,0,0) 100%);
+  //background: linear-gradient(
+  //    75deg,
+  //    rgba(0, 0, 0, 0.4) 20%,
+  //    rgba(0, 0, 0, 0.5) 20%
+  //);
 }
 
 //  (layer 3)
@@ -206,7 +296,8 @@ footer {
   display: grid;
   align-items: center;
   justify-content: center;
-  margin: auto;
+  margin-left:15px;
+  margin-right:15px;
 
 }
 

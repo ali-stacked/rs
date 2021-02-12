@@ -1,0 +1,66 @@
+<div class="container-fluid content-wrapper">
+
+  <div class="page-title-wrapper">
+    <h1 class="page-title">Global Covid Data, Our Client's Enjoy Equivalent Component Integration Services </h1>
+    <h4 class="caps page-subtitle">Updated Asynchronously in real-time when our NO-SQL or relational Database's SQL
+      Trigger's index detects a property value has changed </h4>
+  <div class="row">
+    <div class="col-12">
+      <div class="recent-orders row">
+        <div class="col table-wrapper table-responsive">
+          <table mat-table matSort [dataSource]="recentOrdersTableDataSource" class="table table-borderless table-sm recent-orders-table">
+
+
+
+            <ng-container matColumnDef="name">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>Name </th>
+              <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="deathWeek">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Weekly Deaths</th>
+              <td mat-cell *matCellDef="let element"> {{element.deathWeek}} </td>
+            </ng-container>
+            <ng-container matColumnDef="casesTotal">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>Positive Cases </th>
+              <td mat-cell *matCellDef="let element"> {{element.casesTotal}} </td>
+            </ng-container>
+            <ng-container matColumnDef="perMill">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Cases Per Million </th>
+              <td mat-cell *matCellDef="let element"> {{element.perMill}} </td>
+            </ng-container>
+              <ng-container matColumnDef="yesterday">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Yesterday </th>
+                  <td mat-cell *matCellDef="let element"> {{element.yesterday}} </td>
+              </ng-container>
+            <ng-container matColumnDef="thisWeak">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>Weekly Cases </th>
+              <td mat-cell *matCellDef="let element"> {{element.thisWeak}} </td>
+            </ng-container>
+            <ng-container matColumnDef="deathsYesterday">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Deaths, Yesterday</th>
+              <td mat-cell *matCellDef="let element"> {{element.deathsYesterday }} </td>
+            </ng-container>
+            <ng-container matColumnDef="deathTotal">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Death Total </th>
+              <td mat-cell *matCellDef="let element"> {{element.deathTotal}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="deathsPerMill">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Deaths - Million </th>
+              <td mat-cell *matCellDef="let element"> {{element.deathsPerMill}} </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="recentOrdersTableDisplayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: recentOrdersTableDisplayedColumns;"></tr>
+          </table>
+          <mat-paginator class="table-paginator" [pageSizeOptions]="[5, 10, 25]" [pageSize]="5"></mat-paginator>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+

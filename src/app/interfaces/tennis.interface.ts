@@ -7,4 +7,6 @@ tourney_name: string;
 tourney_surface: string;
 tourney_year: string;
 singles_winner_player_id: string;
+tourney_id: number;
+singles_winner_player_slug: string;
 }

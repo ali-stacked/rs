@@ -1,31 +1,110 @@
 @import 'shared';
 @import '../../styles/partials/visualization-heading';
 @import '../../styles/partials/banner-callout';
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;1,200&family=Bodoni+Moda:wght@400;600&family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krub:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@1,300&display=swap');
+
 .cover-image.team-real {
   border-radius: 1rem !important;
+}
+
+h2.real.heading-title {
+  //font-size:1.4rem;
+  //color:#000000 !important;
+  line-height: 1.3 !important;
+  font-size: 1.8rem;
+  font-weight: 100 !important;
+  //font-family: Bodoni Moda, serif !important;
+  //font-family: 'Krub', sans-serif;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  //font: 100 20px/37px "Raleway" !important;
+  color: #686f72 !important;
+}
+
+[_nghost-serverApp-c12] .visualization-heading[_ngcontent-serverApp-c12] .heading-info[_ngcontent-serverApp-c12] .heading-title[_ngcontent-serverApp-c12] {
+  color: #000000 !important;
 }
 .article-title.team-title {
   font-size: 1.3em;
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
-  font-family: Canela,Georgia,serif !important;
+font-family: Bodoni Moda, serif !important;
+}
+
+
+ .container {
+   position: relative;
+   width: 100%;
+ }
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+}
+
+.container:hover .overlay {
+  width: 100%;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+
+
+
+
+
+.heading-title-Big {
+
+  color: #000000;
+  font-family: "Bodoni Moda", sans-serif !important;
+  font-size:1.3rem !important;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  font-feature-settings: 'lnum';
+  font-variant-numeric: lining-nums;
+}
+.real-team {
+  margin-top: -2rem !important;
 }
 :host-context(.layout-c) {
-  --overlap-padding: 80px;
+  --overlap-padding: 0px;
 
   .highlighted-section {
-    --highlighted-background: #{palette-color('primary')};
-    --heading-color: #{palette-color('primary-contrast')};
+    --highlighted-background: #620d0d;
+    --heading-color: #000;
 
-    padding-bottom: var(--overlap-padding);
+    padding-bottom: 0rem;
 
     // Next sibling
     & + * {
-      margin-top: calc(var(--overlap-padding) * -1);
+      //margin-top: calc(var(--overlap-padding) * -1);
     }
 
     .highlighted-stats-visualization {
-      padding-bottom: 30px;
+      padding-bottom: 0px;
 
       .stat-item {
         --stat-item-background: transparent;
@@ -36,7 +115,7 @@
 
         .stat-trend {
           &.positive-trend {
-            --stat-trend-color: #{palette-color('primary-contrast')};
+            --stat-trend-color: red;
           }
           &.negative-trend {
             --stat-trend-color: #{palette-color('primary-contrast')};
@@ -77,8 +156,8 @@
 
   .highlighted-section {
     padding: 30px;
-    padding-top: 60px;
-    background-color: var(--highlighted-background);
+    padding-top: 30px;
+    background-color: #FFFFFF;
 
     // Override Bootstrap styles
     & > .container-fluid {
@@ -520,37 +599,6 @@
       display: flex;
       justify-content: space-between;
 
-      .seller-image-wrapper {
-        width: var(--seller-details-height);
-        flex-shrink: 0;
-
-        cc-image-shell.seller-image {
-          --image-shell-border-radius: 50%;
-          --image-shell-spinner-size: 20px;
-        }
-      }
-
-      .seller-info {
-        margin-inline-start: 10px;
-        margin-top: 5px;
-        margin-bottom: 5px;
-
-        .seller-name {
-          display: block;
-          font-family: Nunito;
-          font-weight: 500;
-          font-size: 16px;
-          color: #4C5661;
-          line-height: calc((var(--seller-details-height) - 10px) / 2);
-        }
-
-        .seller-company {
-          display: block;
-          line-height: calc((var(--seller-details-height) - 10px) / 2);
-          font-family: Nunito;
-          font-size: 14px;
-          color: var(--seller-trend-color);
-        }
       }
 
       .seller-actions {
@@ -639,14 +687,14 @@
     // --callout-illustration-negative-margin: 109px;
     // XL?
     --callout-illustration-negative-margin: 100px;
-    --callout-padding: 30px;
+    //--callout-padding: 30px;
 
     // Add 30px after the bottom end of the illustration overlap
-    margin-bottom: calc(var(--callout-illustration-negative-margin) + var(--callout-padding));
+    //margin-bottom: calc(var(--callout-illustration-negative-margin) + var(--callout-padding));
 
     .callout-illustration-wrapper {
       width: var(--callout-illustration-width);
-      margin-bottom: calc(var(--callout-illustration-negative-margin) * -1);
+      //margin-bottom: calc(var(--callout-illustration-negative-margin) * -1);
     }
   } // .push-sellers-banner
 
@@ -722,7 +770,7 @@
             &.btn {
               // Override Bootstrap styles
               padding: 0px;
-              background-color: none;
+
               border: none;
               font-size: initial;
               line-height: initial;
@@ -760,7 +808,7 @@
               &::after {
                 position: absolute;
                 display: block;
-                background: no-repeat 50%/50% 50%;
+                //background: no-repeat 50%/50% 50%;
                 content: '';
                 top: 0;
                 left: 0px;
@@ -888,10 +936,10 @@
   .knowledge-articles-visualization {
 
     .knowledge-articles-list {
-      margin-top: -30px;
+      margin-top: 30px;
 
       .knowledge-article-wrapper {
-        margin-top: 30px;
+        margin-top: 60px;
       }
     }
 
@@ -899,7 +947,7 @@
       background-color: #FFFFFF;
       border-radius: 12px;
       box-shadow: 0px 14px 89px #C5C7CB4D;
-      padding: 0px 20px 20px;
+      padding: 20px 40px 20px 40px;
       font-family: Nunito;
 
       .article-cover-wrapper {
@@ -936,7 +984,8 @@
 
           .author-name {
             display: block;
-            font-size: 12px;
+            font-size: 20px;
+            line-height: 1.3;
             font-weight: 500;
             color: #898D93;
             line-height: calc((var(--article-author-height) - (var(--article-author-margin) + var(--article-details-margin))) / 2);
@@ -944,7 +993,7 @@
 
           .article-date {
             display: block;
-            font-size: 12px;
+            font-size: 20px;
             font-weight: 300;
             color: #898D93;
             line-height: calc((var(--article-author-height) - (var(--article-author-margin) + var(--article-details-margin))) / 2);
@@ -996,7 +1045,6 @@
       }
     } // .knowledge-article
   } // .knowledge-articles-visualization
-}
 
 
 ::ng-deep {

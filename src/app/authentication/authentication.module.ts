@@ -9,7 +9,7 @@ import { SharedModule } from '../shared/shared.module';
 export const authenticationRoutes = [
   {
     path: '',
-    redirectTo: 'signup',
+    redirectTo: 'contact-us',
     pathMatch: 'full'
   },
   {
@@ -17,7 +17,7 @@ export const authenticationRoutes = [
     component: SigninComponent
   },
   {
-    path: 'signup',
+    path: 'contact-us',
     component: SignupComponent
   },
   {

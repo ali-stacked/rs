@@ -1,0 +1,99 @@
+.wrapper {
+  height: auto;
+  width: auto;
+}
+
+.real-buttons-row {
+  justify-content: space-evenly;
+  display: flex;
+}
+
+//@import 'shared';
+//
+//:host {
+//  // Default variables
+//  --new-modal-title-color: #{palette-color('primary')};
+//  --text-color: #{palette-color('grey-7')};
+//  --checkbox-label-color: #{palette-color('primary')};
+//  --facebook-btn-background: #{palette-color('facebook')};
+//  --facebook-btn-color: #{palette-color('white')};
+//
+//}
+//
+//
+//.modal-container {
+//  color: var(--text-color);
+//  overflow: scroll;
+//  padding: 5px;
+//
+//
+//  .modal-title {
+//    text-align: center;
+//    font-size: 25px;
+//    //margin-bottom: calc(var(--modal-spacing) * 3);
+//    color: var(--modal-title-color);
+//  }
+//
+//  .modal-form {
+//    @include form-group-styles();
+//    top:-20px;
+//    .custom-control.custom-checkbox {
+//      @include bootstrap-checkbox-styles();
+//      .custom-label {
+//        color: var(--checkbox-label-color);
+//      }
+//    }
+//
+//    .buttons-row {
+//      display: flex;
+//      justify-content: space-between;
+//      margin: calc(var(--modal-spacing) * 2) 0px;
+//
+//      .register-btn {
+//        width: 100%;
+//        margin-right: calc(var(--modal-spacing) / 2);
+//        @include button();
+//      }
+//      .log-in-btn {
+//        width: 100%;
+//        margin-left: calc(var(--modal-spacing) / 2);
+//        @include button-outline();
+//      }
+//    }
+//  }
+//
+//  .register-divider {
+//    align-items: center;
+//    color: var(--text-color);
+//    display: flex;
+//
+//    .line {
+//      flex-grow: 1;
+//    }
+//
+//    span {
+//      margin: 0 calc(var(--modal-spacing) * 1.5);
+//    }
+//  }
+//
+//  .fb-signin {
+//    margin: 0px auto;
+//    margin-top: calc(var(--modal-spacing) * 1.5);
+//    display: flex;
+//    --button-background-color: var(--facebook-btn-background);
+//    --button-border-color: var(--facebook-btn-background);
+//    --button-color: var(--facebook-btn-color);
+//    @include button();
+//    padding-left: calc(var(--modal-spacing) * 3);
+//    padding-right: calc(var(--modal-spacing) * 3);
+//  }
+//}
+//
+//::ng-deep {
+//  .register-modal {
+//    .mat-dialog-container {
+//      border-radius: 6px;
+//      padding: 0px;
+//    }
+//  }
+//}

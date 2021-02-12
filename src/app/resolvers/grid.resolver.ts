@@ -1,29 +1,17 @@
 import { Injectable } from '@angular/core';
 import { Resolve } from '@angular/router';
-import {DashboardsService} from "../services/dashboards.service";
+import {NosqlService} from "../services/nosql.service";
 
 @Injectable()
-export class RegularTablesResolver implements Resolve<any> {
-  constructor(private gridService: DashboardsService) {}
+export class HealthDataResolver implements Resolve<any> {
+  constructor(private service: NosqlService) {}
     resolve() {
     return new Promise((resolve, reject) => {
-      this.gridService.getAllStatesCovid()
-      .subscribe((tableData: any) => {
-        return resolve(tableData);
+      this.service.getPolicies()
+      .subscribe((data: any) => {
+        return resolve(data);
       });
     });
   }
 }
 
-@Injectable()
-export class CovidTablesResolver implements Resolve<any> {
-  constructor(private covidService: DashboardsService) {}
-  resolve() {
-    return new Promise((resolve, reject) => {
-      this.covidService.getAllStatesCovid()
-          .subscribe((tableData: any) => {
-            return resolve(tableData);
-          });
-    });
-  }
-}

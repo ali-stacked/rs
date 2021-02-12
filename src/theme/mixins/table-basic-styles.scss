@@ -1,7 +1,7 @@
 @import 'palettes/shared';
 
 @mixin table-basic-styles() {
-  --table-header-color: #{palette-color('primary-dark')};
+  --table-header-color: #000;
   --table-text-color: #{palette-color('grey-7')};
   --table-row-hover-background: #{palette-color('white')};
 
@@ -29,6 +29,7 @@
       color: var(--table-header-color);
       font-size: 15px;
       font-weight: 600;
+      font-family: 'Bodoni Moda', serif;
 
       &.mat-header-cell {
         border-bottom-style: none;
@@ -88,18 +89,18 @@
 
   .mat-paginator-page-size {
     .mat-paginator-page-size-label {
-      color: var(--paginator-text-color);
+      color: #000000;
       font-size: 14px;
     }
 
     .mat-paginator-page-size-select {
       .mat-select-value {
-        color: var(--paginator-controls-color);
+        color: #000000;
         font-size: 14px;
       }
 
       .mat-select-arrow {
-        color: var(--paginator-controls-color);
+        color: #000000;
       }
 
       .mat-form-field-underline {
@@ -110,17 +111,17 @@
 
   .mat-paginator-range-actions {
     .mat-paginator-range-label {
-      color: var(--paginator-text-color);
+      color: #000000;
       font-size: 14px;
     }
 
     .mat-paginator-navigation-previous,
     .mat-paginator-navigation-next {
       &:not([disabled]) {
-        color: var(--paginator-controls-color);
+        color: #000000;
       }
       &[disabled] {
-        color: var(--paginator-disabled-controls-color);
+        color: #000000;
       }
     }
   } // .mat-paginator-range-actions

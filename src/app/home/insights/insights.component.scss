@@ -1,0 +1,110 @@
+.knowledge-articles-visualization {
+
+    .knowledge-articles-list {
+      margin-top: -30px;
+
+      .knowledge-article-wrapper {
+        margin-top: 30px;
+      }
+    }
+
+    .knowledge-article {
+      background-color: #FFFFFF;
+      border-radius: 12px;
+      box-shadow: 0px 14px 89px #C5C7CB4D;
+      padding: 0px 20px 20px;
+      font-family: Nunito;
+
+      .article-cover-wrapper {
+        margin-inline-start: -20px;
+        margin-inline-end: -20px;
+
+        cc-image-shell.cover-image {
+          --image-shell-border-radius: 12px 12px 0px 0px;
+        }
+      }
+
+      .article-info {
+        --article-author-height: 60px;
+        --article-author-margin: 15px;
+
+        display: flex;
+        margin-top: calc(var(--article-author-margin) * -1);
+        margin-bottom: 20px;
+
+        .author-image-wrapper {
+          width: calc(var(--article-author-height) + 10px);
+          padding-inline-end: 10px;
+
+          cc-image-shell.author-image {
+            --image-shell-border-radius: 50%;
+            --image-shell-spinner-size: 20px;
+          }
+        }
+
+        .article-details {
+          --article-details-margin: 10px;
+
+          margin-top: calc(var(--article-author-margin) + var(--article-details-margin));
+
+          .author-name {
+            display: block;
+            font-size: 12px;
+            font-weight: 500;
+            color: #898D93;
+            line-height: calc((var(--article-author-height) - (var(--article-author-margin) + var(--article-details-margin))) / 2);
+          }
+
+          .article-date {
+            display: block;
+            font-size: 12px;
+            font-weight: 300;
+            color: #898D93;
+            line-height: calc((var(--article-author-height) - (var(--article-author-margin) + var(--article-details-margin))) / 2);
+          }
+        }
+      } // .article-info
+
+      .article-title {
+        margin-bottom: 10px;
+        font-size: 20px;
+        font-weight: 400;
+        color: #363636;
+        text-transform: capitalize;
+        // Force two line ellipsis
+        line-height: 1.2;
+        height: calc(20px * 1.2 *2);
+        overflow: hidden;
+      }
+
+      .article-category {
+        --article-category-color: #CCCCCC;
+        --article-category-background: #F2F2F2;
+
+        color: var(--task-priority-color);
+        background-color: var(--task-priority-background);
+
+        &[category='Podcast'] {
+          --task-priority-color: #FF9A21;
+          --task-priority-background: rgba(255, 179, 0, .4);
+        }
+        &[category='Article'] {
+          --task-priority-color: #38D997;
+          --task-priority-background: #CCF7E5;
+        }
+        &[category='Tutorial'] {
+          --task-priority-color: #FF0E18;
+          --task-priority-background: #FFCED0;
+        }
+
+        // Override Bootstrap styles
+        &.badge {
+          // Same as Top sellers card
+          padding: 4px 8px;
+          font-size: 14px;
+          font-weight: 500;
+          border-radius: 6px;
+        }
+      }
+    } // .knowledge-article
+  } // .knowledge-articles-visualization

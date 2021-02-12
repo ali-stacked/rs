@@ -1,0 +1,93 @@
+<div class="container-fluid content-wrapper">
+  <h1 class="page-title">Visualization Warehouse, We Offer a very
+    large variety of Cutting Edge products with animations that scale.
+    Our Integrations allow clients to directly edit charts via The UI Modeling
+    Any Domain Specified KPI Data with the RealStack Mobile, Desktop, Or Saas Web Application Options </h1>
+
+  <div class="callout-message-wrapper">
+    <div class="callout-icon d-none d-md-block">
+      Chart Menu
+    </div>
+    <div class="callout-message">
+     <span>
+        <p class="viz-item"><a routerLink="/charts/scalable-viz" >D3 Extensions</a></p>
+       <p class="viz-item"><a routerLink="/charts/stacked-charts" >NGX Integrations</a></p>
+       <p class="viz-item"><a routerLink="/charts/custom-charts" >RealStack Visualizations</a></p>
+      </span>
+    </div>
+  </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-6 col-sm-12">
+      <div class="chart-card">
+        <div class="chart-card-header">
+          <span>Page Views</span>
+        </div>
+        <div class="chart-card-body">
+          <div *ngIf="isBrowser" echarts [options]="multipleLineChartOption" [theme]="'admin-template'"></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 col-sm-12">
+      <div class="chart-card">
+        <div class="chart-card-header">
+          <span>Transactions Completed - By Country</span>
+        </div>
+        <div class="chart-card-body">
+          <div *ngIf="isBrowser" echarts [options]="pieChartOption" [theme]="'admin-template'"></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 col-sm-12">
+      <div class="chart-card">
+        <div class="chart-card-header">
+          <span>Monthly Transactions</span>
+        </div>
+        <div class="chart-card-body">
+          <div *ngIf="isBrowser" echarts [options]="barChartOption" [theme]="'admin-template'"></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 col-sm-12">
+      <div class="chart-card">
+        <div class="chart-card-header">
+          <span>Sales</span>
+        </div>
+        <div class="chart-card-body">
+          <div *ngIf="isBrowser" echarts [options]="smoothLineOption" [theme]="'admin-template'"></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 col-sm-12">
+      <div class="chart-card">
+        <div class="chart-card-header">
+          <span>Project Distribution</span>
+        </div>
+        <div class="chart-card-body">
+          <div *ngIf="isBrowser" echarts [options]="multiplePieChartOption" [theme]="'admin-template'"></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 col-sm-12">
+      <div class="chart-card">
+        <div class="chart-card-header">
+          <span>Devices</span>
+        </div>
+        <div class="chart-card-body">
+          <div *ngIf="isBrowser" echarts [options]="doughnutChartOption" [theme]="'admin-template'"></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="chart-card">
+        <div class="chart-card-header">
+          <span>Referral Source</span>
+        </div>
+        <div class="chart-card-body">
+          <div *ngIf="isBrowser" echarts [options]="areaStackChartOption" [theme]="'admin-template'"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+

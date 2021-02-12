@@ -3,8 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../ali-custom/.idea/ali-custom.iml" filepath="$PROJECT_DIR$/../ali-custom/.idea/ali-custom.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../WebstormProjects/apimongo/.idea/apimongo.iml" filepath="$PROJECT_DIR$/../WebstormProjects/apimongo/.idea/apimongo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../awsapi/.idea/awsapi.iml" filepath="$PROJECT_DIR$/../awsapi/.idea/awsapi.iml" />
       <module fileurl="file://$PROJECT_DIR$/../RELEASE/src/app/dashboards/.idea/dashboards.iml" filepath="$PROJECT_DIR$/../RELEASE/src/app/dashboards/.idea/dashboards.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/mean.iml" filepath="$PROJECT_DIR$/.idea/mean.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../BeastMode/postgresRealStack/.idea/postgresRealStack.iml" filepath="$PROJECT_DIR$/../BeastMode/postgresRealStack/.idea/postgresRealStack.iml" />
     </modules>
   </component>
 </project>

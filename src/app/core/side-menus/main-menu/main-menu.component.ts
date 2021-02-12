@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgxSpinnerService } from 'ngx-spinner';
+import { SideMenusService } from '../side-menus.service';
+
 @Component({
   selector: 'app-main-menu',
   templateUrl: './main-menu.component.html',
@@ -9,12 +11,17 @@ import { NgxSpinnerService } from 'ngx-spinner';
 })
 export class MainMenuComponent implements OnInit {
 
-  constructor(private spinner:NgxSpinnerService) {
+  constructor(private spinner:NgxSpinnerService,
+              private sideMenusService: SideMenusService
+
+              ) {
   }
 
   ngOnInit() {
   }
-
+  toggleMainMenu(): void {
+    this.sideMenusService.toggleMainMenuSubject.next('toggle');
+  }
   showQuick() {
     this.spinner.show();
     setTimeout(() => {
@@ -25,6 +32,6 @@ export class MainMenuComponent implements OnInit {
     this.spinner.show();
     setTimeout(() => {
       this.spinner.hide();
-    }, 6000);
+    }, 3000);
   }
 }

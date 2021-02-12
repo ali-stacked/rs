@@ -3,117 +3,65 @@
 
     "published_date": "14 Nov 2019",
     "id": 1,
-    "image": "/assets/imgs/users/becca.jpeg",
-    "title": "Founder, Chief Executive Officer",
-    "name": "Ali Faqih"
+    "advisor":true,
+    "featured_image":"/assets/imgs/advisors/Andrew-Perlmutter.jpeg",
+    "image": "/assets/imgs/advisors/Andrew-Perlmutter.jpeg",
+    "title": "Advisor,Founder of Quartz",
+    "name": "Andrew Perlmutter"
   },
   {
-    "author": {
 
-      "picture": "/assets/imgs/users/ali.jpeg"
-    },
+    "published_date": "14 Nov 2019",
+    "id": 1,
+    "advisor":true,
+    "featured_image":"/assets/imgs/advisors/Corey-Gottlieb.jpeg",
+    "image": "/assets/imgs/advisors/Corey-Gottlieb.jpeg",
+    "title": "Advisor, VP, Draft Kings",
+    "name": "Corey Gotlib"
+  },
+  {
+
+    "published_date": "14 Nov 2019",
+    "id": 1,
+    "advisor":true,
+    "featured_image":"/assets/imgs/advisors/jones-fish.jpg",
+    "title": "Advisor. CTO, Keypoint Intelligence",
+    "name": "Chris Jones",
+    "image": "/assets/imgs/advisors/jones-fish.jpg"
+  },
+
+
+  {
+
+    "published_date": "14 Nov 2019",
+    "id": 1,
+    "advisor":true,
+    "featured_image": "/assets/imgs/advisors/James-Barone.jpeg",
+    "image": "/assets/imgs/advisors/James-Barone.jpeg",
+    "title": "Advisor, CEO BusinessOne Technologies",
+    "name": "James Barone"
+  },
+  {
+
+    "published_date": "14 Nov 2019",
+    "id": 1,
+    "advisor":true,
+    "featured_image":"/assets/imgs/advisors/angus-durocher.jpeg",
+    "image": "/assets/imgs/advisors/angus-durocher.jpeg",
+    "title": "Advisor,Founder of Quartz and Former EVP - Boston Globe",
+    "name": "Angus Durocher, YouTube Team Lead Prior To Going Public, Cultural Advisor "
+  },
+
+
+  {
+
     "published_date": "07 Nov 2019",
-    "image": "/assets/imgs/users/ali.jpeg",
+    "advisor":true,
+    "image": "/assets/imgs/users/harry-skeffington.jpeg",
+    "featured_image":"/assets/imgs/users/harry-skeffington.jpeg",
     "id": 2,
-    "title": "Chief Technology Officer, Enterprise Architect",
+    "title": "Database Architect, Oracle & IBM, Advisor",
     "category": "Article",
-    "name": "Ali Faqih"
-  },
-  {
-
-    "published_date": "25 Sept 2019",
-    "image": "/assets/imgs/users/ankur.jpg",
-    "title": "Manager, Service Delivery ",
-    "category": "Article",
-    "name": "Ankur Patel",
-    "id":10
-  },
-  {
-    "author": {
-
-      "picture": "/assets/imgs/users/josh-burkart.jpg"
-    },
-    "published_date": "25 Sept 2019",
-    "image": "/assets/imgs/users/david-cipoletta.jpg",
-    "title": "Director of Marketing",
-    "category": "Article",
-    "id": 3,
-    "name": "David Cipoletta"
-  },
-  {
-    "author": {
-
-      "picture": "/assets/imgs/users/kevin-moy.jpg"
-    },
-    "published_date": "03 Oct 2019",
-    "image": "/assets/imgs/users/kevin-moy.jpg",
-    "title": "Sr. Director of Infrastructure & Quality Assurance, ",
-    "id": 4,
-    "category": "Tutorial",
-    "name": "Kevin Moy"
-  },
-  {
-    "published_date": "25 Sept 2019",
-    "image": "/assets/imgs/users/simon-lueng.jpg",
-    "title": "Sr. Director of Mobile Development ",
-    "id": 5,
-    "category": "Article",
-    "name": "Simon Lueng"
-  },
-
-  {
-    "published_date": "25 Sept 2019",
-    "image": "/assets/imgs/users/hernan-balc.jpg",
-    "title": "Agile Director",
-    "category": "Article",
-    "id":5,
-    "name": "Hernan Balc"
-  },{
-  "published_date": "25 Sept 2019",
-  "image": "/assets/imgs/users/sean-stockson.jpg",
-  "title": "Mobile Application Developer",
-  "name": "Sean Stockson",
-  "id":6,
-  "category": "Article"
-},
-  {
-    "published_date": "25 Sept 2019",
-    "image": "/assets/imgs/users/josh-burkart.jpg",
-    "title": "Sr. TypeScript Engineer",
-    "category": "Article",
-    "name": "Josh Burkart",
-    "id":7
-  },
-  {
-    "published_date": "25 Sept 2019",
-    "image": "/assets/imgs/users/lana-nassar.jpg",
-    "title": "Sr. Angular Developer",
-    "category": "Article",
-    "name": "Lana Nassar",
-    "id":8
-  },
-  {
-    "published_date": "25 Sept 2019",
-    "image": "/assets/imgs/users/joe-wong.jpg",
-    "title": "Sr.Javascript Engineer",
-    "category": "Article",
-    "name": "Joe Wong",
-    "id":9
-  },
-  {
-
-    "published_date": "25 Sept 2019",
-    "image": "/assets/imgs/users/ankur.jpg",
-    "title": "Manager, Service Delivery ",
-    "category": "Article",
-    "name": "Ankur Patel",
-    "id":10
+    "name": "Harry Skeffington"
   }
-
-
-
-
-
-
-
 ]

@@ -1,0 +1,103 @@
+<div class="container-fluid content-wrapper">
+  <h1 class="page-title">Visualization Warehouse, We Offer a very
+    large variety of Cutting Edge products with animations that scale.
+    Our Integrations allow clients to directly edit charts via The UI Modeling
+    Any Domain Specified KPI Data with the RealStack Mobile, Desktop, Or Saas Web Application Options </h1>
+
+  <div class="callout-message-wrapper">
+    <div class="callout-icon d-none d-md-block">
+      Chart Menu
+    </div>
+    <div class="callout-message">
+     <span>
+        <p class="viz-item"><a routerLink="/charts/scalable-viz" >D3 Extensions</a></p>
+       <p class="viz-item"><a routerLink="/charts/stacked-charts" >NGX Integrations</a></p>
+       <p class="viz-item"><a routerLink="/charts/custom-charts" >RealStack Visualizations</a></p>
+      </span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 chart-card">
+      <div>
+        <div class="chart-card-header">
+          <span>Covid - By Country</span>
+        </div>
+        <div class="chart-card-body bar-vertical">
+          <ngx-charts-bar-vertical *ngIf="isBrowser"
+            [scheme]="colorScheme"
+            [results]="countriesData"
+            [gradient]="verticalBarOptions.gradient"
+            [xAxis]="verticalBarOptions.showXAxis"
+            [yAxis]="verticalBarOptions.showYAxis"
+            [legend]="verticalBarOptions.showLegend"
+            [showXAxisLabel]="verticalBarOptions.showXAxisLabel"
+            [showYAxisLabel]="verticalBarOptions.showYAxisLabel"
+            [xAxisLabel]="verticalBarOptions.xAxisLabel"
+            [yAxisLabel]="verticalBarOptions.yAxisLabel"
+            [barPadding]="verticalBarOptions.barPadding"
+            [showGridLines]="verticalBarOptions.showGridLines">
+          </ngx-charts-bar-vertical>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 chart-card">
+      <div>
+        <div class="chart-card-header">
+          <span>Active Covid Cases Per Million By Country</span>
+        </div>
+        <div class="chart-card-body bar-horizontal">
+          <ngx-charts-bar-horizontal-2d *ngIf="isBrowser"
+            [scheme]="colorScheme"
+            [results]="countriesData2"
+            [legendPosition]="horizontalBarOptions.legendPosition"
+            [xAxis]="horizontalBarOptions.showXAxis"
+            [yAxis]="horizontalBarOptions.showYAxis"
+            [legend]="horizontalBarOptions.showLegend"
+            [showXAxisLabel]="horizontalBarOptions.showXAxisLabel"
+            [showYAxisLabel]="horizontalBarOptions.showYAxisLabel"
+            [xAxisLabel]="horizontalBarOptions.xAxisLabel"
+            [barPadding]="horizontalBarOptions.barPadding"
+            [groupPadding]="horizontalBarOptions.groupPadding"
+            [showGridLines]="horizontalBarOptions.showGridLines">
+          </ngx-charts-bar-horizontal-2d>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 chart-card">
+      <div>
+        <div class="chart-card-header">
+          <span>Contest Results - % of correct answers</span>
+        </div>
+        <div class="chart-card-body pie-grid">
+          <ngx-charts-pie-grid *ngIf="isBrowser"
+          [label]="'Points'"
+          [scheme]="colorScheme"
+          [results]="contestData">
+          </ngx-charts-pie-grid>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 chart-card">
+      <div>
+        <div class="chart-card-header">
+          <span>Page Vistis</span>
+        </div>
+        <div class="chart-card-body line-chart">
+          <ngx-charts-line-chart *ngIf="isBrowser"
+          [scheme]="colorScheme"
+          [results]="lineChartData"
+          [legendPosition]="lineChartOptions.legendPosition"
+          [xAxis]="lineChartOptions.showXAxis"
+          [yAxis]="lineChartOptions.showYAxis"
+          [legend]="lineChartOptions.showLegend"
+          [showXAxisLabel]="lineChartOptions.showXAxisLabel"
+          [showYAxisLabel]="lineChartOptions.showYAxisLabel"
+          [roundDomains]="lineChartOptions.roundDomains"
+          [autoScale]="lineChartOptions.autoScale"
+          [showGridLines]="lineChartOptions.showGridLines">
+          </ngx-charts-line-chart>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

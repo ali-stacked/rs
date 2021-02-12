@@ -51,6 +51,24 @@
       }
     }
 
+    .stacked-svg {
+      height: 50px !important;
+      width:50px !important;
+      vertical-align: middle;
+      float: left;
+      margin-left:1rem !important;
+      margin-right:1rem !important;
+    }
+
+    .rs-svg {
+      height: 50px !important;
+      width:50px !important;
+      vertical-align: middle;
+      float:right;
+      margin-left:1rem !important;
+
+    }
+
     .menu-item {
       font-size: .7rem;
       color: var(--main-menu-color);
@@ -97,7 +115,7 @@
             // height: auto !important;
             // min-height: 45px;
 
-            padding-inline-start: var(--main-menu-h-padding-start);
+            padding-inline-start:4px;
             padding-inline-end: var(--main-menu-h-padding-end);
 
             // Use property from .menu-item
@@ -173,7 +191,7 @@
         color:#000 !important;
         margin-top:1rem !important;;
         font-size: 1.2rem !important;
-        line-height: 1.1;
+        line-height: 2.1;
       }
 
       mat-icon.menu-item-icon {

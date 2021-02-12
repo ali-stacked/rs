@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Resolve } from '@angular/router';
+import {ActivatedRouteSnapshot, Resolve, RouterStateSnapshot} from '@angular/router';
 import { TennisService} from '../services/tennis.service';
+import {DashboardsService} from "../services/dashboards.service";
 
 @Injectable()
 export class TennisResolver implements Resolve<any> {
@@ -25,5 +26,13 @@ export class BigDataResolver implements Resolve<any> {
           return resolve(tableData);
         });
     });
+  }
+}
+
+@Injectable()
+export class PlayerResolver implements Resolve<any> {
+  constructor(private tennisService: TennisService) {}
+  resolve(route: ActivatedRouteSnapshot,state: RouterStateSnapshot) {
+    return this.tennisService.getPlayer(route.paramMap.get('id'));
   }
 }

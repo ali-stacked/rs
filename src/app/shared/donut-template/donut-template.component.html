@@ -1,0 +1,64 @@
+
+<!--  <div class="custom-notification-wrapper">-->
+<!--    <div role="alert" [ngClass]="classes">-->
+<!--      <i *ngIf="icon" [ngClass]="'notification-icon fas fa-' + icon"></i>-->
+<!--      <span *ngIf="message" class="notification-line">{{ message }}</span>-->
+<!--      <button type="button" class="close" *ngIf="dismissible" (click)="dismiss()">-->
+<!--        <i class="fas fa-times"></i>-->
+<!--      </button>-->
+<!--      <p *ngIf="text" class="notification-text">{{ text }}</p>-->
+<!--    </div>-->
+<!--  </div>-->
+  <form  novalidate
+         [formGroup]="donutForm">
+    <div class="formGrid">
+      <div>
+        <label> USA Value
+          <input
+                  type="number" placeholder="Enter A Number"
+
+                  formControlName="usValue">
+        </label>
+      </div>
+      <div>
+        <label> UK Value
+          <input
+                  type="number" placeholder="Enter A Number"
+
+                  formControlName="ukValue">
+        </label>
+      </div>
+      <div>
+        <label> India Value
+          <input
+                  type="number" placeholder="Enter A Number"
+
+                  formControlName="indiaValue">
+        </label>
+      </div>
+      <div>
+        <label> Italy Value
+          <input
+                  type="number" placeholder="Enter A Number"
+
+                  formControlName="italyValue">
+        </label>
+      </div>
+      <div>
+        <label> China Value
+          <input
+                  type="number" placeholder="Enter A Number"
+
+                  formControlName="chinaValue">
+        </label>
+      </div>
+    </div>
+  </form>
+
+<div *ngIf="input" class="alert-with-input">
+  <input class="form-control" [(ngModel)]="inputData">
+  <div class="alert-buttons" *ngIf="input">
+    <button type="button" class="button-success" [mat-dialog-close]="inputData">Confirm</button>
+    <button type="button" class="button-error" [mat-dialog-close]="false">Cancel</button>
+  </div>
+</div>

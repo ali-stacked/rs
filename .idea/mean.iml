@@ -11,5 +11,8 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="ali-custom" />
     <orderEntry type="module" module-name="dashboards" />
+    <orderEntry type="module" module-name="awsapi" />
+    <orderEntry type="module" module-name="apimongo" />
+    <orderEntry type="module" module-name="postgresRealStack" />
   </component>
 </module>

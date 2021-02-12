@@ -94,9 +94,7 @@ import { MobileLayoutComponent } from './layouts/mobile/mobile-layout.component'
     SearchMenuComponent,
     MobileLayoutComponent
   ],
-  providers: [
-
-    {
+  providers: [{
       provide: APP_INITIALIZER,
       useFactory: (colorPalettesService: ColorPalettesService) => {
         return () => colorPalettesService.init();

@@ -1,0 +1,18 @@
+<div class="row">
+<!--    <div class="col-12 chart-card">-->
+        <div class="col-12">
+        <div>
+            <div class="chart-card-header">
+                <span>Fatalities For Every Million,Country Comparison</span>
+            </div>
+<!--            <div class="chart-card-body pie-grid">-->
+                <div>
+                <ngx-charts-pie-grid *ngIf="isBrowser"
+                                     [label]="'Fatalities'"
+                                     [scheme]="colorScheme"
+                                     [results]="donutData">
+                </ngx-charts-pie-grid>
+            </div>
+        </div>
+    </div>
+</div>

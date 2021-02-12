@@ -9,6 +9,7 @@ import { FormLayoutsComponent } from './form-layouts/form-layouts.component';
 import { ControlsAndValidationsComponent } from './controls-and-validations/controls-and-validations.component';
 import { FormsService } from './forms.service';
 import { AgileComponent } from './agile/agile.component';
+import { CreateDialogComponent } from './create-dialog/create-dialog.component';
 
 export const widgyRoutes = [
   {
@@ -16,7 +17,7 @@ export const widgyRoutes = [
     redirectTo: 'agile'
   },
   {
-    path: 'midget-forms',
+    path: 'forms',
     component: MaterialFormsComponent,
   },
   {
@@ -48,7 +49,8 @@ export const widgyRoutes = [
     ExtendedControlsComponent,
     FormLayoutsComponent,
     ControlsAndValidationsComponent,
-    AgileComponent
+    AgileComponent,
+    CreateDialogComponent
   ],
   providers: [
     FormsService

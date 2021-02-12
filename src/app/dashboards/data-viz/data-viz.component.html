@@ -38,13 +38,13 @@
       </div>
 
       <div class="highlighted-stats-visualization row no-gutters">
-        <div class="stat-item col-md-6 col-lg-3" [ngClass]="{'highlighted-item': i === 0}" *ngFor="let item of viz">
+        <!-- <div class="stat-item col-md-6 col-lg-3" *ngFor="let item of viz">
           <div class="stat-item-wrapper">
             <div class="row no-gutters">
               <div class="stat-icon col-2 col-md-3 col-lg-4 col-xl-3">
                 <cc-aspect-ratio [ratio]="{w: 1, h: 1}">
-<!--                  <mat-icon svgIcon="{{item.icon}}"></mat-icon>-->
-                </cc-aspect-ratio>
+<!-             <mat-icon svgIcon="{{item.icon}}"></mat-icon>-->
+                <!-- </cc-aspect-ratio>
               </div>
               <div class="stat-info col-4 col-md-5 col-lg-12 col-xl-6 order-lg-2 order-xl-0">
                 <span class="stat-reference">New Deaths </span>
@@ -56,7 +56,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> --> 
       </div>
 
     </div>
@@ -158,7 +158,7 @@
             </div>
             <div class="callout-illustration-wrapper">
               <cc-aspect-ratio [ratio]="{w: 39, h: 19}">
-                <cc-image-shell class="callout-illustration" [mode]="'cover'" animation="spinner" [src]="'/assets/illustrations/ecommerce-dashboard-full-report.svg'" [alt]="'Dashboard full report'"></cc-image-shell>
+                <cc-image-shell class="callout-illustration" [mode]="'cover'" animation="spinner" [src]="'/assets/illustrations/covidKpi-dashboard-full-report.svg'" [alt]="'Dashboard full report'"></cc-image-shell>
               </cc-aspect-ratio>
             </div>
             <button type="button" class="callout-btn btn">See reports</button>

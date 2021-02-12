@@ -23,9 +23,9 @@ export class AliComponent implements OnInit {
         function showNextLead() {
           ++leadIndex;
           lead.eq(leadIndex % lead.length)
-            .fadeIn(3500)
+            .fadeIn(2000)
             .delay(3000)
-            .fadeOut(3500, showNextLead);
+            .fadeOut(3400, showNextLead);
         }
         showNextLead();
       })();
@@ -34,7 +34,7 @@ export class AliComponent implements OnInit {
     this.spinner.show();
     setTimeout(() => {
       this.spinner.hide();
-    }, 2000);
+    }, 1800);
   }
   showSpinner() {
     this.spinner.show();

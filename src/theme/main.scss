@@ -1,89 +1,131 @@
 @import 'third-party/font-awesome';
 @import 'third-party/bootstrap';
 @import 'third-party/override-material-variables';
-@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@500&display=swap');
+
 
 html, body {
-  height:100%;
+  margin: 0 !important;
+  padding: 0 !important;
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
 }
-.menu-item-icon.real {
-  height:40px !important;
+
+.page-title {
+  color: #3b3939 !important;
+  font-family: "Bodoni Moda", serif !important;
+}
+
+.mat-paginator-icon {
+  color: #000000 !important;
+}
+.mat-select-arrow-wrapper {
+  color: #000000 !important;
+}
+
+body > app-root > app-option-c-layout > mat-sidenav-container > mat-sidenav-content > app-health-data > div > div.row > div.recent-orders.row > div > mat-paginator > div > div > div.mat-paginator-page-size.ng-star-inserted > mat-form-field > div > div.mat-form-field-flex > div {
+  color: #000000 !important;
+}
+.rs-btn {
+  color:#000000 !important;
+  border-color: #000000 !important;
+}
+a {
+color: #000 !important;
+  text-decoration: none !important;
+  text-underline: none !important;
 }
 .ship-it {
-font-size: 3.2em !important;
-margin-top: 2rem;
-color: #410C71 !important;
-line-height:.1;
-font-family: operetta-12, serif !important;
-font-style: normal;
-font-weight: 200;
+
+font-size: 2.8rem !important;
+color:#000000!important;
+line-height:1;
+  font-family: 'Bodoni Moda', serif;
+  font-style: normal;
+font-weight: 400;
 text-align: center;
 -webkit-font-smoothing: antialiased;
 text-rendering: optimizelegibility;
 font-feature-settings: 'lnum';
 font-variant-numeric: lining-nums;
+  margin: 2rem;
+
 }
 
 .contrast-color {
-line-height:.1;
-color: #fff;
-font-family: operetta-12, serif;
+  color: navy !important;
+  font-family: Bodoni Moda, serif !important;
 font-style: normal;
-font-weight: 100 !important;
+font-weight: 500 !important;
 }
 
-.hot {
-  font-size:1.5rem;
-  text-align: center;
-  font-weight:200 !important;
-  //font-family: realistnarrow, sans-serif !important;
-  font-family: operetta-12, serif !important;
-  //width: 10rem;
-  word-break-wrap: wrap;
-  text-transform: capitalize;
-  color:#000 !important;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizelegibility;
-  font-feature-settings: 'lnum';
-  text-align: center;
-  font-variant-numeric: lining-nums;
+.mat-toolbar-multiple-rows {
+  min-height: 57px !important;
 }
+
+.real-image-baby {
+    display: grid;
+    //min-width: 350px; // Min for mobile
+    //padding-top: -2rem;
+    width: 100%;
+    //height: 35rem !important;
+    margin-left:0px;
+    margin-right: 0px;
+;
+    object-fit: cover; // Using this so the image can be any size and still look halfway decent.
+
+}
+body > app-root > app-option-c-layout > mat-sidenav-container > mat-sidenav-content > app-top-navbar > mat-toolbar > mat-toolbar-row > div.navbar-controls > div.navbar-search.d-none.d-md-block > span > img:hover {
+  pointer-events: fill !important;
+  border-bottom: 1px solid #7371f2 !important;
+}
+
+
+ rs-btn:hover {
+   color: #FFFFFF !important;
+ }
 
 .bigal-button {
-  border: 2px solid #FFFFFF;
+  font-family: 'Bodoni Moda', serif;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.2;;
+  color: #fff !important;;
   text-align: center;
-  color: #fff;
-  font-weight: 300;
-  padding:.5rem;
-  font-family: Operetta !important;
-  font-size:1.5em !important;
+  text-transform: capitalize;
+  padding:1rem;
+  word-wrap: break-word;
+  font-size:1.5rem !important;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizelegibility;
   font-feature-settings: 'lnum';
   font-variant-numeric: lining-nums;
-  font-style: oblique !important;
-  width: 90%;
-  background-color: transparent !important;
+  width: 100%;
+  background-color: #000 !important;
 }
 
 .bigal-button:hover {
+  border: 1px solid deeppink;
   pointer-events: visibleStroke;
-  color:#FFF;
-  border: 1px solid #9e34df;;
-  background-color: #9e34df !important;
+  color:#FFF !important;
+
+  background-color: navy !important;
+
 }
-.lead {display: none;}
+.highlighted-section {
+  background-color: #F2F2F2 !important;
+}
+.lead {display: none; min-height:2rem !important;}
 .lead {
-  font-size: 2.3em !important;
-  color:#FFFFFF;
+  font-size: 1.9rem!important;
+  color:#000000 !important;
   line-height:1;
+  font-style: oblique;
   text-align: center;
-  font-weight:200 !important;
-  font-family: Operetta !important;
-  margin-bottom: 1.3em;
-  margin-top: 1em;
+  font-weight: 100 !important;
+  //min-height:2rem !important;
+  font-family: 'Bodoni Moda', serif;
+  margin: 2rem !important;
   text-transform: capitalize;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizelegibility;
@@ -94,14 +136,30 @@ font-weight: 100 !important;
 .mat-expansion-panel {
 margin-top:2rem !important;
 }
+.jumbotron {
+  border-radius:0 !important;
+}
 
+[_nghost-serverApp-c5] .top-navbar-toolbar[_ngcontent-serverApp-c5] .navbar-actions[_ngcontent-serverApp-c5] .action-button[_ngcontent-serverApp-c5] {
+  color:#000000 !important;
+}
+
+[_nghost-serverApp-c5] .top-navbar-toolbar[_ngcontent-serverApp-c5] .navbar-actions[_ngcontent-serverApp-c5] {
+  height:auto !important;
+}
+h2.large-heading {
+  font-size: 64px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  line-height: 72px;
+
+}
 .mat-icon svg{
   padding:1px !important;
 }
 
 .mat-expansion-panel-header-title {
   width:25rem !important;
-
 }
 
 /* top navigation */
@@ -110,37 +168,33 @@ margin-top:2rem !important;
   //color: #000000 !important;
 }
 .breweries {
-  padding: 2rem;
+  //padding: 2rem;
+}
+
+figure {
+  margin: 0 0 0rem !important;
+}
+
+.btn-blue:hover {
+  background-color: #7371f2;
 }
 
 .breweries > ul {
   display: grid;
-  //grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  grid-gap: 2rem;
-  grid-template-columns:auto auto auto;
+  grid-template-columns:1fr;
 }
 
 .breweries > ul > li {
-  //border: 1px solid #E2E2E2;
-  border-radius: .5rem;
+
 }
 /* Styles for the hero svg banner container */
 .hero {
   background-size: cover;
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr 1fr 1fr;
   //align-items: auto;
 }
-.breweries > ul > li > figure {
-  border-top-left-radius: .5rem;
-  border-top-right-radius: .5rem;
-  position: relative;
-}
 
-.breweries > ul > li > figure > img {
-  height: 10rem;
-  text-align: center;
-}
 
 .breweries > ul > li > figure > figcaption > h3 {
   color: white;
@@ -156,16 +210,14 @@ margin-top:2rem !important;
 .real.home-style {
   color:#5553ff !important;
 }
-.real.navbar-user {
 
+[_nghost-serverApp-c5] .top-navbar-toolbar[_ngcontent-serverApp-c5] .navbar-search[_ngcontent-serverApp-c5] {
+  padding-top:1.5rem !important;
+  margin-left: -15px !important;
 }
 
-
-.ali-home:hover {
-  cursor: pointer !important;
-}
 .ali-home{
-  font-family: Operetta !important;
+  font-family: 'Bodoni Moda', serif;
   text-align: center;
   font-size:1.6rem !important;
   -webkit-font-smoothing: antialiased;
@@ -173,6 +225,25 @@ margin-top:2rem !important;
   font-feature-settings: 'lnum';
   font-variant-numeric: lining-nums;
   font-style: oblique !important;
+}
+.real-menu-close {
+  pointer-events: visibleStroke !important;
+}
+
+.covid-chart {
+  margin-top:4rem;
+  padding-top:2rem;
+}
+.real.line {
+  margin-bottom: 0 !important;
+  margin-top:5px !important;
+}
+.real-menu-close {
+  height:25px !important;
+  margin:5px;
+}
+.mat-expansion-panel-header-description, .mat-expansion-panel-header-title {
+  margin-top:.5rem !important;
 }
 
 .hero > article > a {
@@ -183,7 +254,7 @@ margin-top:2rem !important;
 .real-grid-container {
   display: grid;
   grid-template-columns: auto auto auto;
-  padding: 10px;
+  padding: 20px;
 }
 .real-detail-grid-item {
   /*  border: 1px solid rgba(0, 0, 0, 0.8);*/
@@ -207,23 +278,25 @@ margin-top:2rem !important;
 .hero {
 
   background-size: cover;
-  padding: 4rem 2rem;
+  padding: .5rem .5rem;
   /* grid styles */
   display: grid;
   grid-template-columns: auto;
-  align-items: center;
+  align-items: flex-start;
 }
 .real-grid-container > ul > li > figure {
 
   overflow: -moz-scrollbars-horizontal;
   border-top-left-radius: .5rem;
   border-top-right-radius: .5rem;
+  text-align: left;
   position: relative;
 }
 
 .real-grid-container > ul > li > figure > img {
 
-  height: 10rem;
+  height: 7rem;
+  //margin-right:2rem;
 }
 
 .real-grid-container > ul > li > figure > figcaption > h3 {
@@ -243,24 +316,13 @@ color: #9e34df !important;
   margin-top:1rem;
 margin-bottom:1rem;
 }
-.real-grid-container > ul > li > p {
-  //font-family: Canela,Georgia,serif !important;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizelegibility;
-  font-feature-settings: 'lnum';
-  font-variant-numeric: lining-nums;
-  line-height: 1.6;
-  padding: .3rem;
-  color: #fff;
-  font-weight:200;
-  font-size:1.2rem;
-}
 
 
-.real-grid-container > ul > li > a {
-  padding: .5rem 1rem;
-  margin: .5rem;
-}
+//
+//.real-grid-container > ul > li > a {
+//  padding: .5rem 1rem;
+//  margin: .5rem;
+//}
 
 .ali-home.home-style {
   font-size:2em !important;
@@ -272,10 +334,8 @@ body > app-root > app-option-c-layout > mat-sidenav-container > mat-sidenav-cont
   height:30px !important;
 }
 
-.strip-style a {
-  text-decoration: none !important;
-  color: #fff;
-  font-size: large;
+.viz-item {
+  color: #FFFFFF !important;
 }
 
 .flex-allday {
@@ -285,14 +345,13 @@ body > app-root > app-option-c-layout > mat-sidenav-container > mat-sidenav-cont
   justify-content: space-between;
 }
 .navbar-user.bigal {
-  cursor: pointer;
+  pointer-events: visibleStroke;
 }
 .nav-user:hover {
-  cursor: pointer;
+  pointer-events: visibleStroke;
 }
 .bigdata.banner-btn:hover {
   pointer-events: auto;
-
 }
 
 .banner-btn-item:hover {
@@ -305,29 +364,13 @@ body > app-root > app-option-c-layout > mat-sidenav-container > mat-sidenav-cont
   padding-left:1px !important;
 }
 .banner-text {
-  //font-weight:100 !important;
-  //font-family: Canela,Georgia,serif;
   margin-left:auto;
   margin-right:auto;
 }
 
 
-
-.site-footer .section .container {
-  max-width: 1490px;
-  padding-top: 100px;
-  padding-bottom: 88px;
-}
-.banner-h1-bigal {
-  //font-family: Canela,Georgia,serif;
-  //font-size: 12em;
-  //font-weight: 100 !important;
-  color: #fff;
-}
-
 .mat-toolbar h1 {
   font-weight:100 !important;
-  //color:#fff !important;
 }
 
 mat-icon {
@@ -718,19 +761,23 @@ mat-icon {
 
 @media only screen
 and (min-device-width: 414px)
-and (max-device-width: 736px)
+and (max-device-width: 790px)
 and (-webkit-min-device-pixel-ratio: 3) {
   .ship-it {
-    font-size: 2.3em !important;
+    font-size: 2.5rem !important;
     color: #7371f2;
     line-height:.1;
-    font-weight: 200 !important;
-    font-family: Operetta important;
+    margin-top:2rem !important;
+    font-weight: 400 !important;
+    font-family: realistnarrow, sans-serif !important;
     text-align: center;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizelegibility;
     font-feature-settings: 'lnum';
     font-variant-numeric: lining-nums;
+  }
+  .thide svg {
+    height:3rem;
   }
   .lead {display: none;}
   .lead {

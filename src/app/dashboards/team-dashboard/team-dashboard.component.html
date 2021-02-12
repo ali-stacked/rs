@@ -6,10 +6,17 @@
       <div class="row no-gutters">
         <div class="visualization-heading col-12">
           <div class="heading-info">
-            <h2 class="heading-title">Real-Stack Executive Team</h2>
-            <p class="heading-message">
-        Excellence In Relevant Expertise
-            </p>
+            <h2 class="real heading-title"> Excellence In Relevant Expertise, in 2011 the Boston Globe Won numerous awards for pioneering the first responsive web application of it's kind.
+              The team later went on to build boston.com lead by Corey Gotlib and Andrew Perlmutter, the highest trafficked site in New England, averaging 90 million page views a day. The RealStack team is comprised of many of those pioneers including The Boston Globes 2014 Hackathon
+              Champion and Former Boston Globe Engineering Manager Ali Faqih, Former 1st Lead Developer of Wayfair, Simon Leung prior to Wayfair successfully going public and many more talented & passionate technologists. </h2>
+<!--            <p class="heading-message">-->
+<!--              The Performant Real-Stack Platform Was Engineered For Real-Time-->
+<!--              Data Operations With Easy Real-Time Business Intelligence For Non-Technical-->
+<!--              Analysts To Render Relevant Reporting And Stunningly Responsive Visualizations.-->
+<!--              Integrations are continuously tested,-->
+<!--              and available for Web, Desktop, and Mobile. Contact Us for a demo,-->
+<!--              embedded integration with your enterprise products, and / or service tier pricing-->
+<!--            </p>-->
           </div>
 
         </div>
@@ -18,58 +25,49 @@
   </div>
 
   <div class="knowledge-articles-list row">
-    <div class="knowledge-article-wrapper col-12 col-md-6 col-lg-4 col-xl-3" >
-      <div class="knowledge-article">
+<!--    <h1> &nbsp;&nbsp; Platform & Integration Services </h1>-->
+    <div class="real-team visualizations-section knowledge-articles-visualization">
 
+      <div class="knowledge-articles-list row">
+        <p class="hot">
+        </p>
 
-      </div>
-    </div>
+        <div *ngFor="let t of team" class="knowledge-article-wrapper col-12 col-md-6 col-lg-4 col-xl-3">
 
-
-
-  <div class="visualizations-section knowledge-articles-visualization">
-    <div class="row">
-      <div class="visualization-heading col-12">
-        <div class="heading-info">
-          <h4 class="heading-title">team dashboard</h4>
-        </div>
-      </div>
-    </div>
-    <div class="knowledge-articles-list row">
-      <div *ngFor="let t of team" class="knowledge-article-wrapper col-12 col-md-6 col-lg-4 col-xl-3">
-        <div class="knowledge-article">
-          <div class="article-cover-wrapper">
-            <cc-aspect-ratio [ratio]="{w: 35, h: 23}">
-              <cc-image-shell [alt]="'cover image'" [mode]="'cover'" [src]="t.featured_image"
-                              animation="spinner"
-                              class="cover-image"></cc-image-shell>
-            </cc-aspect-ratio>
-          </div>
-          <div class="article-info">
-            <div class="author-image-wrapper">
-              <cc-aspect-ratio [ratio]="{w: 1, h: 1}">
-                <cc-image-shell [alt]="'author image'" [src]="t.image"
+          <div class="knowledge-article">
+            <div class="article-cover-wrapper">
+              <cc-aspect-ratio [ratio]="{w: 35, h: 35}">
+                <cc-image-shell [alt]="'cover image'" [mode]="'cover'" [src]="t.featured_image"
                                 animation="spinner"
-                                class="author-image"></cc-image-shell>
+                                class="cover-image"></cc-image-shell>
               </cc-aspect-ratio>
             </div>
-            <div class="article-details">
-              <span class="author-name">{{ t.name }}</span>
-<!--              <span class="article-date">{{ t.published_date }}</span>-->
+            <div class="article-info">
+              <div class="author-image-wrapper">
+                <cc-aspect-ratio [ratio]="{w: 1, h: 1}">
+                  <cc-image-shell [alt]="'author image'" [src]="t.image"
+                                  animation="spinner"
+                                  class="author-image"></cc-image-shell>
+                </cc-aspect-ratio>
+              </div>
+              <div class="article-details">
+                <span class="author-name">{{ t.name }}</span>
+                <!--              <span class="article-date">{{ t.published_date }}</span>-->
+              </div>
             </div>
+            <h3 class="article-title">{{ t.title }}</h3>
+            <!--          <span [attr.category]="t.category"-->
+            <!--                class="article-category badge">{{ t.category }}</span>-->
           </div>
-          <h3 class="article-title">{{ t.title }}</h3>
-<!--          <span [attr.category]="t.category"-->
-<!--                class="article-category badge">{{ t.category }}</span>-->
         </div>
       </div>
     </div>
-  </div>
+
 
 </div>
 </div>
 
-
+<app-footer></app-footer>
 
 
 

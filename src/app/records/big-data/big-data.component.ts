@@ -11,6 +11,10 @@ import { DatePipe } from '@angular/common';
 import { COMMA, ENTER } from '@angular/cdk/keycodes';
 import { BigData } from '../../interfaces/tennis.interface';
 import { TennisService } from '../../services/tennis.service';
+import {MatDialog, MatDialogConfig, MatDialogRef, MAT_DIALOG_DATA, DialogPosition} from "@angular/material/dialog";
+import {AddDataComponent} from "../dialogs/add-data/add-data.component";
+import {MatButton} from "@angular/material/button";
+import {AlertTemplateComponent} from "../../shared/alert-template/alert-template.component";
 
 @Component({
   selector: 'app-big-data',
@@ -19,6 +23,8 @@ import { TennisService } from '../../services/tennis.service';
   providers: [ DatePipe ]
 })
 export class BigDataComponent implements OnInit {
+
+
   // Filters for the smart table
   filtersForm: FormGroup;
   filtersVisible = true;
@@ -31,11 +37,14 @@ export class BigDataComponent implements OnInit {
     'tourney_name',
     'tourney_surface',
     'tourney_year',
-    'singles_winner_player_id'];
+    'singles_winner_player_id',
+    'singles_winner_player_slug'
+  ];
     dataSource: any;
 
   @ViewChild(MatSort, {static: true}) sort: MatSort;
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
+  @ViewChild(MatButton, {static: true}) button: MatButton;
 
   // Data from the resolver
   originalData = [];
@@ -46,6 +55,7 @@ export class BigDataComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private tennisService: TennisService,
+    public dialog: MatDialog,
     private datePipe: DatePipe
   ) {
     // tslint:disable-next-line:no-string-literal
@@ -60,14 +70,8 @@ export class BigDataComponent implements OnInit {
     this.filtersForm.valueChanges.subscribe(form => this.applyFilters(form));
   }
 
-  // getTennis(): void {
-  // this.tennisService.getGrandSlams().subscribe((res: Slam) => {
-  //   this.tennisStats = res;
-  //   });
-  // }
   ngOnInit() {
     this.dataSource.paginator = this.paginator;
-
     // define a custom sort for the date field
     this.dataSource.sortingDataAccessor = (item, property) => {
       switch (property) {
@@ -76,6 +80,23 @@ export class BigDataComponent implements OnInit {
       }
     };
     this.dataSource.sort = this.sort;
+  }
+  buildRecord(event) {
+    const dialogPosition: DialogPosition = {
+      top: event.y + 'px',
+      left: event.x + 'px'
+    };
+    const dialogRef = this.dialog.open(AddDataComponent, {
+      position: dialogPosition,
+      width: '100vh',
+      height:'90vh'
+        });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('dialog output:');
+      // To get the output data from the modal:
+      // var output = result;
+    });
   }
 
 
@@ -120,9 +141,7 @@ export class BigDataComponent implements OnInit {
     });
 
     this.categories = [];
-
     this.resetDatePicker();
-
     this.search('');
     this.applyFilters(this.filtersForm.value);
   }

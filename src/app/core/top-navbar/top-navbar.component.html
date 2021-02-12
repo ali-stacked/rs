@@ -1,40 +1,70 @@
 <!-- Conditional template Outlet (see: https://stackoverflow.com/a/52448001/1116959) -->
+
+
+<!-- Mobile Top Nav Menu Layout -->
 <ng-container *ngTemplateOutlet="(_mode === 'condensed') ? condensedToolbar : expandedToolbar;"></ng-container>
 <ng-template #condensedToolbar>
   <mat-toolbar class="real top-navbar-toolbar">
     <div class="navbar-branding">
-      <a routerLink="/home/ali/">
-  <img src="/assets/RealStack.svg" class="real-svg">
+      <a class="real-home-svg" routerLink="/home/landing-page/">
+  <img src="/assets/RealStack.svg" class="menu-real real-svg">
       </a>
       <button class="btn toggle-sidenav-btn" type="button" (click)="toggleMainMenu()">
         <i class="fa fa-bars"></i>
       </button>
     </div>
+  </mat-toolbar>
+</ng-template>
 
-<!--    <div class="real navbar-user" [routerLink]="['/home/ali']">-->
-<!--      <h1 class="ali-home"><a class="home-style" routerLink="'/home/ali"> </a></h1>-->
-<!--    </div>-->
-  </mat-toolbar>
+
+
+<!-- Desktop Top Nav Menu Layout -->
+<ng-template #expandedToolbar>
+    <mat-toolbar class="top-navbar-toolbar">
+        <mat-toolbar-row>
+            <div class="navbar-branding">
+                <mat-icon class="brand-logo" svgIcon="angular-logo-2"></mat-icon>
+                <button class="btn toggle-sidenav-btn" type="button" (click)="toggleMainMenu()">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </div>
+            <div class="navbar-controls">
+                <div class="navbar-search d-none d-md-block">
+                     <span [routerLink]="['/home/landing-page']" class="user-name">
+                        <img src="/assets/RealStack.svg" class="real-svg home-text-top">
+                     </span>
+
+                    <input class="real search-input form-control form-control-lg" type="text" placeholder="Search">
+                </div>
+                <div class="navbar-actions">
+                    <button type="button" class="action-button btn btn-link" (click)="toggleNotificationsMenu()">
+
+                    </button>
+
+                </div>
+                <div class="navbar-user">
+                    <div class="user-image-wrapper">
+                    </div>
+                    <div ngbDropdown class="user-actions-dropdown" placement="bottom-right" display="static">
+                        <button class="user-action-toggle-btn btn btn-link" id="accountMenu" ngbDropdownToggle>
+                            <a class="non" href="mailto:admin@realstackapps.com">
+                                <span class="user-name">
+<img height="27px" src="/assets/contact-us.svg" >
+                 Contact Us  |
+                                </span></a>
+              <span [routerLink]="['/home/landing-page']" class="user-name">
+
+                   <i class="fas fa-home"></i> Home
+              </span>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </mat-toolbar-row>
+    </mat-toolbar>
 </ng-template>
- <ng-template #expandedToolbar>
-  <mat-toolbar class="top-navbar-toolbar">
-    <mat-toolbar-row>
-      <div class="navbar-branding">
-        <mat-icon class="brand-logo" svgIcon="angular-logo-2"></mat-icon>
-        <button class="btn toggle-sidenav-btn" type="button" (click)="toggleMainMenu()">
-          <i class="fa fa-bars"></i>
-        </button>
-      </div>
-      <div class="real navbar-user" [routerLink]="['/home/ali']">
-        <a routerLink="/home/ali/">
-          <img src="/assets/RealStack.svg" class="real-svg">
-        </a>
-      </div>
-      <div class="navbar-right" [routerLink]="['/home/ali']">
-<!--        <img  src="/assets/RealStack.svg" class="real-svg">-->
-      </div>
-    </mat-toolbar-row>
-  </mat-toolbar>
-</ng-template>
+<hr class="real line">
+
 
 
